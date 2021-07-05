@@ -1,0 +1,46 @@
+.presentations-list {
+  display: flex;
+  flex-wrap: wrap;
+  
+  .columns {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .post-subtitle {
+    font-size: 1rem;
+    display: block;
+  }
+  
+  a {
+    color: inherit;
+  }
+}
+
+.presentation-preview {
+  min-height: 14rem;
+  position: relative;
+}
+
+.presentation-thumbnail {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.presentation-event {
+  
+}
+
+.presentation-content {
+  border: 1px solid $black;
+}
+
+.presentation-slides {
+  
+}

@@ -1,0 +1,14 @@
+<h1 itemprop="name">{{ page.title }}{% if page.subtitle %}
+  <span class="post-subtitle">{{ page.subtitle }}</span>
+  {% endif %}
+</h1>
+
+<p>
+  {% if page.eventurl %}
+    <a href="{{ page.eventurl }}">{{ page.event }}</a>
+  {% else %}
+    {{ page.event }}
+  {% endif %}
+</p>
+
+{% include post-meta-author.html %}

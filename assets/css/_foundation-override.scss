@@ -1,0 +1,46 @@
+body {
+  font-family: $open;
+  height: auto;
+  min-height: 100%;
+  line-height: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  font-family: $montserrat;
+}
+
+button,
+.button {
+  background-color: $blue-mid;
+}
+
+button:focus,
+button:hover,
+.button:focus,
+.button:hover {
+  background-color: $blue;
+  color: $white;
+}
+
+a {
+  color: $blue;
+}
+
+a:focus,
+input:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3pt $yellow;
+}
+
+a:focus {
+  background-color: $yellow;
+  //  We want to override all colours for consistency
+  color: $black !important;
+}

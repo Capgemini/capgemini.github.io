@@ -1,0 +1,517 @@
+.post-template .notepad-post-header {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 35rem;
+
+  .notepad-post-menu-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    z-index: 9999;
+  }
+}
+
+.post-template .notepad-post-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.25em;
+  z-index: 1000;
+  text-align: center;
+  transform: translateX(-50%) translateY(-50%);
+
+  a {
+    @include black-link;
+  }
+}
+
+.background--light {
+  color: $black;
+}
+
+.background--dark {
+  color: $grey-lighter;
+
+  h1,
+  a,
+  .notepad-page-title a,
+  .notepad-post-title-simple a {
+    color: $grey-lighter;
+  }
+}
+
+.notepad-post-content {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.notepad-page-content {
+  margin: 0 auto;
+  padding: 0 0 5rem;
+}
+
+.article-body {
+  margin: 0 auto;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+
+  a,
+  code {
+    color: $blue;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.25rem;
+    font-size: 1.125rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  ol,
+  blockquote,
+  pre,
+  hr,
+  .highlight {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $width-full;
+  }
+
+  h2 {
+    margin-top: 3rem;
+    clear: both;
+  }
+
+  p {
+    margin: 0 auto 2em;
+    max-width: $width-full;
+    font-size: 1.125rem;
+    text-align: left;
+
+    a {
+      color: $blue-mid;
+      text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  > p:first-child {
+    font-weight: 300;
+    font-size: 1.375rem;
+
+    @include breakpoint(tablet) {
+      font-size: 1.625rem;
+    }
+
+    .notepad-presentation-container & {
+      font-weight: normal;
+      font-size: 1.125rem;
+    }
+  }
+
+  table {
+    margin: 0 auto 2em;
+    max-width: $width-full;
+    font-size: 1.125rem;
+  }
+
+  img.centered {
+    display: block;
+    margin: 0 auto 1em;
+  }
+
+  img {
+    &.medium-8 {
+      width: auto;
+      max-width: 66.666667%;
+    }
+  }
+
+  img.half-width {
+    @extend .columns;
+    @extend .medium-6;
+    margin-bottom: 1em;
+  }
+
+  .image-source {
+    display: block;
+    text-align: center;
+    margin-top: .5rem;
+    font-size: .8rem;
+  }
+
+  blockquote {
+    margin-bottom: 2em;
+    padding: .5625rem 1.25rem 0 1.1875rem;
+    color: $black;
+    border: none;
+
+    &:before,
+    &:after {
+      display: inline-block;
+      vertical-align: top;
+      font-family: $serif;
+      font-size: 4rem;
+      line-height: 1rem;
+      margin-top: .9rem;
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: '\201C'; // Open quote.
+    }
+
+    &:after {
+      content: '\201D'; // Close quote.
+      vertical-align: bottom;
+    }
+
+    p {
+      display: inline;
+      max-width: 65%;
+      margin-bottom: 0;
+
+      @include breakpoint(22rem) {
+        max-width: 75%;
+      }
+    }
+
+    &.has-cite {
+      p {
+        display: inline-block;
+      }
+    }
+
+    cite {
+      display: block;
+      font-size: .8125rem;
+      color: $grey-mid;
+
+      &:before {
+        content: "\2014 \0020"; // Em dash space.
+      }
+    }
+
+    a,
+    a:visited {
+      color: $grey-mid;
+    }
+  }
+}
+
+.pulledquote {
+  display: block;
+  font-family: $serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 2rem;
+  text-align: initial;
+
+  @include breakpoint(tablet) {
+    max-width: 15em;
+    margin: 0 1.5rem 1.5rem 0;
+    float: left;
+
+    &.even {
+      float: right;
+      margin-right: 0;
+      margin-left: .75rem;
+    }
+  }
+
+  blockquote {
+    display: block;
+    padding: 0;
+    max-width: 17rem;
+
+    @include breakpoint(350px) {
+      max-width: 16rem;
+    }
+
+    @include breakpoint(tablet) {
+      display: inline;
+      max-width: 17rem;
+    }
+  }
+}
+
+.pulledquoteparent {
+  position: relative;
+}
+
+@media screen and (max-width: 47em) {
+  .post-template .notepad-post-title,
+  .post-template .notepad-post-content {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 27em) {
+  .post-template .notepad-post-title,
+  .post-template .notepad-post-content {
+    font-size: 50%;
+  }
+
+  .post-template button.trigger::before {
+    display: none;
+  }
+}
+
+.notepad-post-share {
+  padding: 3.75rem 0;
+  font-size: 1.875rem;
+  border-top: .0625rem solid $grey-light;
+  color: $blue;
+
+  @include breakpoint(tablet) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  a {
+    display: inline-block;
+    margin: 0 .9375rem;
+    color: $blue;
+  }
+}
+
+.notepad-post-title-wrapper.has-image {
+  margin-bottom: 2rem;
+  background-size: cover;
+}
+
+.notepad-page-title,
+.notepad-post-title-simple {
+  width: 100%;
+  margin: 0 auto;
+
+  a {
+    @include black-link;
+  }
+
+  h1 {
+    margin: 0 auto 1.5rem;
+    padding: 5rem 0 4.375rem;
+    font-weight: 800;
+    font-size: 3.125rem;
+    line-height: 1.25;
+    text-align: center;
+
+    @include breakpoint(mobileonly) {
+      font-size: xx-large;
+    }
+  }
+}
+
+.notepad-post-meta-simple {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
+
+  @include breakpoint(mobileonly) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  h1 {
+    padding: 0;
+  }
+
+  p.meta {
+    padding-top: .625rem;
+  }
+
+  .post-subtitle {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 1.5rem;
+  }
+}
+
+.post-meta-author,
+.post-meta-tags {
+  margin-bottom: 0;
+}
+
+.post-meta-time {
+  font-weight: bold;
+}
+
+.post-meta-reading-time {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+
+.post-meta-original {
+  font-size: 0.9rem;
+  font-weight: lighter;
+  a {
+    color: $blue;
+  }
+}
+
+@media screen and (max-width: 47em) {
+  .notepad-page-title,
+  .notepad-page-content {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 27em) {
+  .notepad-page-title,
+  .notepad-page-content {
+    font-size: 50%;
+  }
+}
+
+.notepad-post-title-simple.row,
+.notepad-disqus.row,
+.social-icons.row,
+.notepad-author-info .row {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  max-width: 58.125rem;
+
+  p {
+    margin: 0 auto 1em;
+    max-width: $width-full;
+    font-size: 1.125rem;
+  }
+
+  .post-author {
+    margin: 0;
+    font-size: 0.95rem;
+    color: $grey-mid;
+  }
+}
+
+@media only screen and (min-width: 58.125em) {
+  .row {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+::selection {
+  background: $blue-mid;
+  color: $grey-lighter;
+}
+
+::-moz-selection {
+  background: $blue-mid;
+  color: $grey-lighter;
+}
+
+pre {
+  margin-bottom: 1.5625rem;
+  padding: 15px;
+  border-radius: 5px;
+  background: $grey-light;
+  word-wrap: break-word;
+}
+
+code {
+  font-size: .9375rem;
+  line-height: 1.2;
+}
+
+iframe {
+  border: 0;
+}
+
+.flex-video {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75rem;
+  background: black; // This is so, when the video loads in, it's not jarring to the user to see a video suddenly appear.
+}
+
+.notepad-disqus {
+  padding: 3.75rem 1.875rem 5.625rem;
+
+  .notepad-comments-header {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+@include breakpoint(tablet) {
+  .notepad-disqus {
+    padding-top: 5.3125rem;
+    padding-bottom: 9.375rem;
+  }
+}
+
+.post-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  clear: both;
+}
+
+.tag-box {
+  @extend %notepad-clearfix;
+
+  margin: 0;
+  padding: 4px 0;
+  overflow: hidden;
+  list-style: none;
+  *zoom: 1;
+
+  a {
+    display: inline-flex;
+    margin: 2px;
+    padding: 0 6px;
+    border: .0625rem solid $black;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  &.inline li {
+    float: left;
+    font-size: 14px;
+    line-height: 2.5;
+  }
+}
+
+.article-count {
+  font-size: 10px;
+  vertical-align: super;
+  color: $black;
+  order: 2;
+  margin-left: 5px;
+}
+
+.caption {
+  color: #666665;
+  margin-top: -20px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.print-link-footnote,
+.print-links {
+  display: none;
+}

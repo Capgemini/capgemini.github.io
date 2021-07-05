@@ -1,0 +1,81 @@
+title:            Capgemini Engineering
+description:      "Engineering"
+logo:             logo.svg
+disqus_shortname: capgeminiengineering
+share:            true
+dropcap:			true
+# Change url to your domain. Leave localhost server or blank when working locally.
+# or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same
+# whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
+url:        	 'https://capgemini.github.io'
+
+# Owner/author information
+owner:
+  name:           Capgemini
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        CapgeminiUK
+  facebook:       CapgeminiUK
+  github:         capgemini
+#  instagram:
+  # For Google Authorship https://plus.google.com/authorship
+#  google_plus:
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:   UA-54431406-1
+google_verify: NAMn3kLHbz1A13sKn4vI-gSXvdkLDp_4_Hu3QAwMZF0
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Links to include in footer navigation
+# For external links add external: true
+links:
+  - title: About
+    url: /about
+  - title: Presentations
+    url: /presentations
+  - title: Categories
+    url: /categories
+  - title: Tags
+    url: /tags
+  - title: Bloggers
+    url: /authors
+  - title: Grade Ladder
+    url: https://capgemini.github.io/grade-ladder/
+    external: true
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    Europe/London
+future:      false
+highlighter: rouge
+markdown:    kramdown
+paginate:    10
+paginate_path: "page:num"
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  syntax_highlighter: coderay
+
+  syntax_highlighter_opts:
+    line_numbers:
+    line_numbers_start: 1
+    tab_width: 4
+    bold_every: 10
+    css: class
+
+include: [".htaccess"]
+exclude: [".idea", "lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "gulpfile.js", "package.json", "node_modules", "README.md", "scss-lint.yml", "src", "backstop.json", "backstop_data"]
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-paginate
+
+sass:
+  sass_dir: assets/css
+  style: compressed

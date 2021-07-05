@@ -1,0 +1,61 @@
+{% assign authors = "" | split: "" %}
+{% for auth in page.author %}
+  {% assign authors = authors | push: site.data.authors[auth] %}
+{% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include head.html %}
+{% if site.dropcap %}<style type="text/css">@media only screen and (min-width:43.75em){.notepad-post-content div>p:first-child:first-letter{float:left;font-size:4.688rem;line-height:4.375rem;padding-top:.25rem;padding-right:.5rem;padding-left:.188rem;font-family:serif}}</style>{% endif %}
+</head>
+<body class="post-template {% if page.imagefeature %}post-with-image{% endif %}">
+  {% include skip-link.html %}
+  {% include browser-upgrade.html %}
+  <main id="notepad-post-container-simple" class="notepad-post-container-simple" role="main" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+    <header class="notepad-post-header-simple">
+      {% include header.html %}
+
+      <div class="notepad-post-title-wrapper">
+        <a id="main-content"></a>
+
+        <div class="notepad-post-title-simple row">
+          <div class="small-12 columns">
+            <div class="notepad-post-meta-simple">
+              {% include post-meta.html %}
+              {% include reading-time.html %}
+              {% include post-original.html %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <article class="notepad-post-content post tag-simple">
+      <div class="article-body" itemprop="description articleBody">{{ content }}</div>
+    </article>
+      <div class="cf"></div>
+      {% if site.share %}{% include share.html %}{% endif %}
+      <div class="cf"></div>
+
+
+      {% include posts-related.html %}
+      {% include jobs.html %}
+      {% include signoff.html %}
+
+      <div class="cf"></div>
+      {% if site.disqus_shortname and page.comments != false %}
+        <section class="notepad-disqus row">
+          <div class="small-12 columns">
+            <h2 class="notepad-comments-header">Comments</h2>
+            <div id="disqus_thread"></div>
+            {% include disqus_comments.html %}
+          </div>
+        </section>
+      {% endif %}
+      <div class="cf"></div>
+
+      {% include footer.html %}
+    </main>
+    {% include scripts.html %}
+  </body>
+</html>

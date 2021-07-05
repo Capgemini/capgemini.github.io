@@ -1,0 +1,71 @@
+
+.notepad-site-footer {
+  background: $black;
+
+  &.with-bg-cover {
+    background-color: rgba(0, 0, 0, .7);
+  }
+
+  .social-icons,
+  .copyright {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .copyright {
+    float: none;
+    padding-top: 3.75rem;
+    padding-bottom: 1.25rem;
+    color: $grey-lighter;
+
+    p {
+      margin-bottom: 0;
+      font-size: .8125rem;
+    }
+
+    a {
+      color: $grey-lighter;
+    }
+  }
+
+  .social-icons {
+    float: none;
+    padding-bottom: 3.75rem;
+    text-align: center;
+    font-size: 1.5rem;
+
+    a {
+      display: inline-block;
+      color: $white;
+      margin-left: 0.5rem;
+      text-align: center;
+
+      span {
+        display: block;
+      }
+
+      &:hover {
+        color: $yellow
+      }
+    }
+  }
+}
+
+@include breakpoint(desktop) {
+  .notepad-site-footer .social-icons,
+  .notepad-site-footer .copyright {
+    width: 49%;
+    padding: 2rem 5rem;
+  }
+
+  .notepad-site-footer .copyright {
+    float: left;
+    text-align: left;
+  }
+
+  .notepad-site-footer .social-icons {
+    float: right;
+    text-align: right;
+  }
+}

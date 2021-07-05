@@ -1,0 +1,27 @@
+{% assign related_posts = "" | split: ""  %}
+{% for tag in page.tags %}
+  {% assign pages_list = site.tags[tag] %}
+  {% for post in pages_list %}
+    {% if post.title != null %}
+      {% unless related_posts contains post %}
+        {% if post.url != page.url %}
+          {% assign related_posts = related_posts | push: post %}
+        {% endif %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+  {% assign pages_list = nil %}
+{% endfor %}
+
+{% if related_posts.size > 1 %}
+<div class="row" id="posts-related">
+  <div class="columns">
+    <h2>Related Posts</h2>
+    <ul class="post-list">
+      {% for post in related_posts limit:5 %}
+        {% include post-listing.html %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}

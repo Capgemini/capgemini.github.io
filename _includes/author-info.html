@@ -1,0 +1,71 @@
+{% assign author_classes = 'author-info columns' %}
+<div class="author-info-wrapper clearfix">
+  {% if author.avatar %}
+    {% assign author_classes = author_classes | append: ' medium-9' %}
+    <img itemprop="image" src="{{ author.avatar }}" class="notepad-post-author-avatar medium-3 columns" alt="">
+  {% endif %}
+  
+  <div class="{{ author_classes }}">
+    <h2 itemprop="name">
+      {% if author.ex %}
+        {% capture authorlink %}/alumni{% endcapture %}
+      {% else %}
+        {% capture authorlink %}/authors{% endcapture %}
+      {% endif %}
+      {% assign authorslug = 'author-' | append: author.name | slugify %}
+      <a href="{{ authorlink }}#{{ authorslug }}" id="{{ authorslug }}" class="author-link">
+        {{ author.name }}
+      </a>
+    </h2>
+  
+    {% unless author.ex %}
+      {% if author.description %}
+        <p itemprop="description">{{ author.description | markdownify }}</p>
+      {% endif %}
+    {% endunless %}
+  
+    <ul class="no-bullet author-social-links">
+      {% if author.twitter %}
+      <li>
+        <a class="twitter-icon" href="https://twitter.com/{{ author.twitter }}" title="@{{ author.twitter }} Twitter">
+          <svg class="icon">
+            <use xlink:href="#twitter"></use>
+          </svg>&nbsp;Follow @{{ author.twitter }} on Twitter
+        </a>
+      </li>
+      {% endif %}
+  
+      {% if author.linkedin %}
+      {% assign name = author.name | split: ' ' %}
+      <li>
+        <a class="linkedin-icon" href="{{ author.linkedin }}" title="{{ author.linkedin }} LinkedIn">
+          <svg class="icon">
+            <use xlink:href="#linkedin-square"></use>
+          </svg>&nbsp;Meet {{ name.first }} on LinkedIn
+        </a>
+      </li>
+      {% endif %}
+  
+      {% if author.github %}
+      <li>
+        <a class="github-icon" href="https://github.com/{{ author.github }}" title="@{{ author.github }} GitHub">
+          <svg class="icon">
+            <use xlink:href="#github"></use>
+          </svg>&nbsp;{{ author.github }} on GitHub
+        </a>
+      </li>
+      {% endif %}
+  
+      {% if author.drupal %}
+      <li>
+        <a class="drupal-icon" href="https://www.drupal.org/u/{{ author.drupal }}" title="@{{ author.drupal }} Drupal">
+          <svg class="icon">
+            <use xlink:href="#drupal"></use>
+          </svg>&nbsp;{{ author.drupal }} on drupal.org
+        </a>
+      </li>
+      {% endif %}
+  
+    </ul>
+  </div>
+</div>

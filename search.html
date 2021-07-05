@@ -1,0 +1,26 @@
+---
+layout: page
+title: Search
+permalink: /search/
+pageclasses: page-search
+---
+
+<!-- Search results placeholder -->
+<div id="search-results" class="search-results"></div>
+
+{% comment %}JSON for the search - see assets/js/search.js {% endcomment %}
+<script>
+  var searchIndex = [
+      {% for post in site.posts %}
+  {
+      "title"      : "{{ post.title | escape }}",
+      "category"   : "{{ post.category }}",
+      "description": {{ post.description | markdownify | strip_html | jsonify }},
+      "content"    : {{ post.content | markdownify | strip_html | jsonify }},
+      "url"        : "{{ post.url }}",
+      "date"       : "{{ post.date }}",
+      "shortdate"  : "{{ post.date | date: '%B %-d, %Y' }}"
+  } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+  ]
+</script>

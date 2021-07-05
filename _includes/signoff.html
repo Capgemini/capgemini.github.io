@@ -1,0 +1,10 @@
+{% assign rownum = 1 %}
+{% for author in authors %}
+  <div class="notepad-author-info row">
+    <section class="notepad-post-author columns" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+      {% include author-info.html %}
+    </section>
+    {% include author-posts-capture.html %}
+    {% include author-posts.html %}
+  </div>
+{% endfor %}

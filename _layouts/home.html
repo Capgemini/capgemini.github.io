@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="home-template" itemscope itemtype="http://schema.org/WebPage">
+    {% include skip-link.html %}
+    {% include browser-upgrade.html %}
+    <header class="notepad-site-head">
+      {% include header.html %}
+      </div>
+      <div class="notepad-site-head-content">
+        <div class="notepad-site-head-bg"></div>
+        <h1 class="notepad-blog-title">
+          <span class="notepad-site-head-title-bg">{{ site.title }}</span>
+        </h1>
+
+        <h2 class="notepad-blog-description">{{ site.description }}</h2>
+      </div>
+    </header>
+
+    <main class="notepad-content" role="main">
+      <a id="main-content"></a>
+      {{ content }}
+    </main>
+
+    {% include jobs.html %}
+
+    {% include footer.html %}
+
+    {% include scripts.html %}
+  </body>
+</html>

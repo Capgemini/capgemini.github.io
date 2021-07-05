@@ -1,0 +1,31 @@
+
+<nav class="pagination" role="navigation">
+  {% if paginator.previous_page %}
+  {% if paginator.previous_page == 1 %}
+  {% assign newer_link = site.url %}
+  {% else %}
+  {% assign newer_link = site.url %}
+  {% endif %}
+
+  <a class="newer-posts" href="{{ newer_link }}">
+    <svg class="icon"><use xlink:href="#chevron-left"></use></svg> Newer<span class="element-invisible"> Posts</span>
+  </a>
+  {% else %}
+  <span class="newer-posts faded">
+    <svg class="icon">
+      <use xlink:href="#chevron-left"></use>
+    </svg><span class="element-invisible">There are no </span> Newer<span class="element-invisible"> Posts</span></span>
+  {% endif %}
+
+  <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+  <a class="older-posts" href="/page{{ paginator.next_page }}/">Older<span class="element-invisible"> Posts</span> <svg class="icon">
+    <use xlink:href="#chevron-right"></use>
+  </svg>
+  </a>
+  {% else %}
+  <span class="older-posts faded"><span class="element-invisible">There are no </span>Older<span class="element-invisible"> Posts</span> <svg class="icon">
+        <use xlink:href="#chevron-right"></use>
+      </svg></span>
+  {% endif %}
+</nav>

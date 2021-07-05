@@ -1,0 +1,73 @@
+.search-form {
+  display: block;
+  margin: 0;
+
+  @include breakpoint($nav-one-line, 'max') {
+    display: inline-block;
+  }
+
+  label {
+    @extend %element-invisible;
+  }
+
+  .search-text {
+    float: left;
+    width: 12rem;
+    margin: 4px 0 0;
+
+    @include breakpoint($nav-one-line) {
+      width: 4rem;
+    }
+
+    @include breakpoint(940px) {
+      width: 6rem;
+    }
+
+    @include breakpoint(1000px) {
+      width: 8rem;
+    }
+
+    @include breakpoint($tablet_landscape) {
+      width: 7rem;
+    }
+
+    @include breakpoint(1115px) {
+      width: 12rem;
+    }
+  }
+
+  .search-submit {
+    float: left;
+    height: 2.3125rem;
+    margin: 4px 4px 0 0;
+    padding: .575rem .4rem .575rem .6rem;
+
+    span {
+      display: inline-block;
+      text-indent: -9999px;
+      line-height: 0;
+    }
+  }
+}
+
+.search-results-count {
+  margin: 0 auto 2em;
+  max-width: $width-full;
+  font-weight: 300;
+  font-size: 1.375rem;
+}
+
+.search-results {
+  .entry-description {
+    margin: 0;
+    font-size: .9rem;
+  }
+}
+
+.page-search {
+  margin-bottom: 2rem;
+
+  .notepad-page-content {
+    padding-bottom: 1rem;
+  }
+}

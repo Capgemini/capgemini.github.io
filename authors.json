@@ -1,0 +1,20 @@
+---
+---
+[
+  {% assign authors = site.data.authors %}
+
+  {% for authorloop in authors %}
+    {% assign author = authorloop[1] %}
+    {% unless author.ex %}
+      {
+        "name"      : "{{ author.name }}",
+        "description": {{ author.description | markdownify | strip_html | jsonify }},
+        "twitter"   : "{{ author.twitter }}",
+        "linkedin"   : "{{ author.linkedin }}",
+        "github"   : "{{ author.github}}",
+        "avatar"   : "{{ author.avatar }}",
+        "url"        : "{{site.url}}/authors/author-{{ author.name|slugify }}"
+      } {% unless forloop.last %},{% endunless %}
+    {% endunless %}
+  {% endfor %}
+]

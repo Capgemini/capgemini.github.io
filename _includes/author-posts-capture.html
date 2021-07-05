@@ -1,0 +1,19 @@
+{% assign posts_by_author = "" | split: ""  %}
+{% assign presentations_by_author = "" | split: ""  %}
+
+{% assign name = author.name | split: ' ' %}
+
+{% for post in site.posts %}
+  {% unless page.url == post.url %}
+    {% for postauthor in post.author %}
+      {% assign post_author = site.data.authors[postauthor] %}
+      {% if post_author.name == author.name %}
+        {% if post.category == 'Presentations' %}
+          {% assign presentations_by_author = presentations_by_author | push: post %}
+        {% else %}
+          {% assign posts_by_author = posts_by_author | push: post %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endunless %}
+{% endfor %}

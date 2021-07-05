@@ -1,0 +1,60 @@
+---
+layout: page
+title: Presentations
+description: "Presentations"
+---
+
+{% assign rownum = 0 %}
+
+<div class="presentations-list row">
+{% for post in site.posts %}
+  {% capture rownum %}
+    {% increment rownum %}
+  {% endcapture %}
+  {% assign mod = rownum | modulo:2 %}
+  {% if mod == 1 %}
+    {% assign rowstyle = 'odd' %}
+  {% else %}
+    {% assign rowstyle = 'even' %}
+  {% endif %}
+
+  {% if post.category == 'Presentations' %}
+    <a href="{{ post.url }}" class="columns large-4 {{ rowstyle }}">
+      <div class="presentation-preview">
+      {% if post.image %}
+        <img src="{{ post.image }}" class="presentation-thumbnail"/>
+      {% elsif post.video %}
+        {% if post.video contains "youtube" %}
+          {% assign videothumb = post.video | replace: "https://www.youtube.com/watch?v=", "https://img.youtube.com/vi/" | append: "/sddefault.jpg" %}
+          <img src="{{ videothumb }}" class="presentation-thumbnail"/>
+        {% endif %}
+      {% elsif post.slides %}
+        <iframe src="{{ post.slides }}" scrolling="no" class="presentation-thumbnail" width="280" height="224"></iframe>
+      {% endif %}
+      </div>
+      
+      <h2>{{ post.title }}{% if post.subtitle %}
+        <span class="post-subtitle">{{ post.subtitle }}</span>
+        {% endif %}</h2>
+      <p class="post-author">
+        {% assign authors = "" | split: "" %}
+        {% for auth in post.author %}
+        {% assign authors = authors | push: site.data.authors[auth] %}
+        {% endfor %}
+
+        {% assign authorname = '' %}
+        {% assign authornames = "" | split: "" %}
+        {% for author in authors %}
+        {% assign authornames = authornames | push: author.name %}
+        {% endfor %}
+        {{ authornames | join: ', ' }}
+      </p>
+      <p class="presentation-event">{{ post.event }}</p>
+      <time datetime="{{ post.date | date_to_xmlschema }}">
+        <span class="day">{{ post.date | date: "%-d" }}</span>
+        <span class="month-year">{{ post.date | date: "%B %Y" }}</span>
+      </time>
+    </a>
+  {% endif %}
+{% endfor %}
+</div>

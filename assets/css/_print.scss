@@ -1,0 +1,41 @@
+@media print {
+  a,
+  .article-body p a {
+    text-decoration: none;
+  }
+
+  a[href]:after {
+    font-size: 80%;
+  }
+
+  .notepad-post-author-avatar {
+    width: 25%;
+  }
+
+  .author-info {
+    width: 75%;
+  }
+
+  // Hide URLs for links because they get added to footnotes.
+  a[href]:after {
+    content: '' !important;
+  }
+
+  .flex-video,
+  .notepad-blog-menu,
+  .notepad-post-share,
+  #posts-related,
+  .job-listing,
+  .posts-by-author,
+  .notepad-comments-header,
+  .notepad-disqus,
+  #disqus_thread,
+  .social-icons {
+    display: none;
+  }
+
+  .print-link-footnote,
+  .print-links {
+    display: inline;
+  }
+}

@@ -1,0 +1,52 @@
+.post-list {
+  margin: 0 0 1rem;
+  padding: 0 1.25rem;
+  list-style-type: none;
+
+  li {
+    @extend %notepad-clearfix;
+    padding: .5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    *zoom: 1;
+  }
+
+  .post-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .post-subtitle {
+    display: block;
+    font-size: .7rem;
+  }
+
+  .entry-date {
+    display: none;
+
+    @include breakpoint(laptop) {
+      display: inline;
+      float: right;
+      text-transform: uppercase;
+      font-size: .875rem;
+    }
+  }
+}
+
+.notepad-post-title {
+
+  a {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .anchorjs-link {
+    &:hover
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+}

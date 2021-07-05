@@ -1,0 +1,101 @@
+{% assign authors = "" | split: "" %}
+{% for auth in page.author %}
+{% assign authors = authors | push: site.data.authors[auth] %}
+{% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body class="post-template {% if page.imagefeature %}post-with-image{% endif %}">
+{% include skip-link.html %}
+{% include browser-upgrade.html %}
+<main id="notepad-post-container-simple" class="notepad-post-container-simple notepad-presentation-container" role="main" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+  <header class="notepad-post-header-simple">
+    {% include header.html %}
+
+    <div class="notepad-post-title-wrapper">
+      <a id="main-content"></a>
+      {% if page.imagefeature %}
+      <img src="{{ site.baseurl }}/images/{{ page.imagefeature }}" id="post-image-feature">
+      {% endif %}
+
+      <div class="notepad-post-title-simple row">
+        <div class="small-12 columns">
+          <div class="notepad-post-meta-simple">
+            {% include presentation-meta.html %}
+            {% include post-original.html %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <article class="notepad-post-content post tag-simple">
+    <div class="article-body" itemprop="description articleBody">
+      <div class="row">
+        <div class="small-12 columns">
+          {{ content }}
+
+          {% if page.video %}
+          {% if page.video contains "youtube" %}
+          {% assign videoembed = page.video | replace: "watch?v=", "embed/" %}
+          {% elsif page.video contains "vimeo" %}
+          {% assign videoembed = page.video | replace: "vimeo.com", "player.vimeo.com/video" %}
+          {% endif %}
+          <div class="small-12 medium-8 small-centered columns">
+            <h2><a href="{{ page.video }}">Video</a></h2>
+            <div class="flex-video">
+              <iframe src="{{ videoembed }}" class="presentation-content presentation-video">
+                <p>Your browser does not support iframes. Please visit <a href="{{ page.video }}">{{ page.video }}</a> to view the presentation.</p>
+              </iframe>
+            </div>
+          </div>
+          {% endif %}
+
+          {% if page.slides %}
+          {% if page.slidesembed %}
+          {% assign slidesembed = page.slidesembed %}
+          {% else %}
+          {% assign slidesembed = page.slides %}
+          {% endif %}
+          <div class="small-12 medium-8 small-centered columns">
+            <h2><a href="{{ page.slides }}">Slides</a></h2>
+            <div class="flex-video">
+              <iframe src="{{ slidesembed }}" class="presentation-content presentation-slides">
+                <p>Your browser does not support iframes. Please visit <a href="{{ page.slides }}">{{ page.slides }}</a> to view the presentation.</p>
+              </iframe>
+            </div>
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </article>
+  <div class="cf"></div>
+  {% if site.share %}{% include share.html %}{% endif %}
+  <div class="cf"></div>
+
+
+  {% include posts-related.html %}
+  {% include jobs.html %}
+  {% include signoff.html %}
+
+  <div class="cf"></div>
+  {% if site.disqus_shortname and page.comments != false %}
+  <section class="notepad-disqus row">
+    <div class="small-12 columns">
+      <h2 class="notepad-comments-header">Comments</h2>
+      <div id="disqus_thread"></div>
+      {% include disqus_comments.html %}
+    </div>
+  </section>
+  {% endif %}
+  <div class="cf"></div>
+
+  {% include footer.html %}
+</main>
+{% include scripts.html %}
+</body>
+</html>

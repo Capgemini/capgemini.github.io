@@ -1,0 +1,77 @@
+// Fonts
+$open: "Open Sans", sans-serif;
+$montserrat: "Montserrat", sans-serif;
+$serif: "Georgia, Times New Roman, serif";
+
+
+// Colours
+$white: #fff;
+$white-off: #fafafa;
+$grey-lighter: #f8f9fa;
+$grey-light: #f1f3f5;
+$grey: #dee2e6;
+$grey-mid: #6f777f;
+$grey-dark: #343a40;
+$grey-darker: #373d3f;
+$grey-transparent: rgba(0, 0, 0, .4);
+$blue-pale: #ccedff;
+$blue: #135490;
+$blue-mid: #0070ad;
+$blue-dark: #1862ab;
+$green: #2f9e44;
+$green-lime: #82c91e;
+$yellow: #ffe066;
+$orange: #fd7e14;
+$red: #f03e3e;
+$black: #000;
+$purple: #be4bdb;
+$magenta: #c2255c;
+
+$base-font-size: 16px;
+
+// Breakpoints
+
+$mobile: 320px;
+$nav-one-line: 905px;
+$tablet_landscape: 1024px;
+
+$width-full: 56.25rem;
+
+@mixin breakpoint($point, $width:'min') {
+  @if $point == verywidescreen {
+    @media only screen and (min-width: 90em) { @content ; }
+  }
+  @else if $point == widescreen {
+    @media only screen and (min-width: 90em) { @content ; }
+  }
+  @else if $point == desktop {
+    @media only screen and (min-width: 70em) { @content ; }
+  }
+  @else if $point == laptop {
+    @media only screen and (min-width: 43.75em) { @content ; }
+  }
+  @else if $point == tablet {
+    @media only screen and (min-width: 40.063em) { @content ; }
+  }
+  @else if $point == smallnav {
+    @media only screen and (min-width: $nav-one-line) and (max-width: $tablet_landscape) { @content ; }
+  }
+  @else if $point == phablet {
+    @media only screen and (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobile {
+    @media only screen and (min-width: $mobile)  { @content ; }
+  }
+  @else if $point == mobileonly {
+    @media only screen and (max-width: 37.5em)  { @content ; }
+  }
+  @else if $width == max {
+    @media only screen and (max-width: $point)  { @content ; }
+  }
+  @else if $width != min {
+    @media only screen and (min-width: $point) and (max-width: $width)  { @content ; }
+  }
+  @else {
+    @media only screen and (min-width: $point)  { @content ; }
+  }
+}

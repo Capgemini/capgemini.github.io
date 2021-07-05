@@ -1,0 +1,16 @@
+/* Literal.Number.Integer.Long */
+.chart {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 56.250rem;
+}
+
+.highlight {
+  margin-bottom: 3rem;
+
+  // Sometimes Jekyll nests code blocks weirdly.
+  pre,
+  .highlight {
+    margin-bottom: 0;
+  }
+}

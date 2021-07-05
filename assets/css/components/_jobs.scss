@@ -1,0 +1,24 @@
+
+.job-listing {
+  border-style: solid;
+  border-width: 1px;
+  border-color: $grey;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: $grey-lighter;
+  color: $grey-dark;
+
+  @extend .clearfix;
+
+  h2 {
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: .625rem
+  }
+
+  .button {
+    @include breakpoint(desktop) {
+      float: right;
+    }
+  }
+}

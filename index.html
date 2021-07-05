@@ -1,0 +1,60 @@
+---
+layout: home
+title: Capgemini Engineering Team Blog
+description: ""
+headline: An Engineer's Diary
+tags: [Capgemini, engineering, blog]
+---
+
+{% for post in paginator.posts %}
+  {% if post.category != 'Presentations' %}
+    <article class="notepad-index-post post row">
+      <div class="small-12 medium-3 large-2 columns datetime">
+        <span class="notepad-post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">
+            <span class="day">{{ post.date | date: "%-d" }}</span>
+            <span class="month-year">{{ post.date | date: "%B %Y" }}</span>
+          </time>
+        </span>
+      </div>
+      <div class="small-12 medium-9 large-10 columns">
+        <header class="notepad-post-header">
+          <h3 class="notepad-post-title">
+            <a href="{{ post.url }}">{{ post.title }}{% if post.subtitle %}
+              <span class="post-subtitle">{{ post.subtitle }}</span>
+              {% endif %}</a>
+          </h3>
+          <p class="post-author">
+            {% assign authors = "" | split: "" %}
+            {% for auth in post.author %}
+              {% assign authors = authors | push: site.data.authors[auth] %}
+            {% endfor %}
+    
+            {% assign authorname = '' %}
+            {% assign authornames = "" | split: "" %}
+            {% for author in authors %}
+              {% assign authornames = authornames | push: author.name %}
+            {% endfor %}
+            By {{ authornames | join: ', ' }}
+          </p>
+        </header>
+        <section class="notepad-post-excerpt">
+          <p>
+            {% if post.summary %}
+              {{ post.summary }}
+            {% else %}
+              {{ post.content | strip_html | truncatewords:40 }}
+            {% endif %}
+          </p>
+        </section>
+        <div class="notepad-index-post-tags">
+          {% for category in post.categories %}
+            <a href="/categories/index.html#{{ category | cgi_encode }}" title="Other posts from the {{ category }} category">{{ category }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </article>
+  {% endif %}
+{% endfor %}
+
+{% include paginator.html %}

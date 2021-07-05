@@ -1,0 +1,27 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+{% assign add_protocol = false %}
+{% assign protocol = site.url | split: '/' | first %}
+{% if site.url != '' and protocol != 'http:' and protocol != 'https:' %}
+  {% assign site_url = site.url | prepend: 'http:' %}
+  {% assign add_protocol = true %}
+{% else %}
+  {% assign site_url = site.url %}
+{% endif %}
+<title type="text">{{ site.title }}</title>
+<generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="{{ site_url }}/feed.java.xml" />
+<link rel="alternate" type="text/html" href="{{ site_url }}/" />
+<updated>{{ site.time | date_to_xmlschema }}</updated>
+<id>{{ site_url }}/</id>
+<author>
+  <name>{{ site.owner.name }}</name>
+  <uri>{{ site_url }}/</uri>
+</author>
+{% for post in site.categories.Agile limit:20 %}
+    {% include feed-post.html %}
+{% endfor %}
+</feed>

@@ -1,0 +1,19 @@
+{% assign total_words = 0 %}
+{% assign reading_speed = 200 %}
+{% assign total_readtime = 0 %}
+{% assign featuredcount = 0 %}
+{% assign statuscount = 0 %}
+
+{% assign post_words = page.content | strip_html | number_of_words %}
+{% assign readtime = post_words | append: '.0' | divided_by:reading_speed %}
+
+{% assign minutes = readtime | floor %}
+
+{% if readtime > 2 %}
+  {% assign minutes_text = minutes  | append: ' minutes' %}
+{% elsif readtime < 1 %}
+  {% assign minutes = 1 %}
+  {% assign minutes_text = 'less than ' | append: minutes | append: ' minute' %}
+{% endif %}
+
+<p class="post-meta-reading-time">Estimated reading time {{ minutes_text }}</p>

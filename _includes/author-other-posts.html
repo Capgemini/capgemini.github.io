@@ -1,0 +1,28 @@
+
+{% if posts_by_author.size > 1 %}
+  <div class="row posts-by-author">
+    <div class="columns">
+      <h3>Other posts by {{ name.first  }}</h3>
+      <ul class="post-list">
+        {% for post in posts_by_author %}
+          {% unless page.url == post.url %}
+            {% include post-listing.html %}
+          {% endunless %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endif %}
+
+{% if presentations_by_author.size > 1 %}
+  <div class="row posts-by-author">
+    <h3>Presentations by {{ name.first }}</h3>
+    <ul class="post-list">
+      {% for post in presentations_by_author %}
+        {% unless page.url == post.url %}
+          {% include post-listing.html %}
+        {% endunless %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

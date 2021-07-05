@@ -1,0 +1,17 @@
+box: wercker/android
+no-response-timeout: 16
+build:
+  steps:
+    - script:
+        name: upgrade npm
+        code: |
+          sudo apt-get purge nodejs npm
+          curl -sL https://deb.nodesource.com/setup | sudo bash -
+          sudo apt-get install -y nodejs
+          java -version
+    - install-packages:
+        packages: curl unzip
+    - capgemini/language-qa:
+        files_folder: _posts
+        lang: en
+        lang_country: en-GB

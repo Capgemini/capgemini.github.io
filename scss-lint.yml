@@ -1,0 +1,52 @@
+exclude: assets/css/vendor/*
+
+linters:
+  SelectorFormat:
+    enabled: false
+
+  PropertySortOrder:
+    order:
+      - display
+      - position
+      - top
+      - left
+      - right
+      - bottom
+      - float
+      - width
+      - height
+      - margin
+      - margin-top
+      - margin-left
+      - margin-right
+      - margin-bottom
+      - padding
+      - padding-top
+      - padding-left
+      - padding-right
+      - padding-bottom
+      - border
+      - border-radius
+      - background
+      - content
+      - counter-increment
+      - font
+      - font-weight
+      - colour
+
+  PropertyUnits:
+    global: ['em', 'rem', '%'] # Allow relative units globally
+    properties:
+      border: ['px'] # Pixels only allowed for border
+      line-height: [] # No units allowed
+      transition: ['s']
+
+  StringQuotes:
+    exclude:
+      - sass/base.scss
+
+  Comment:
+    enabled: false
+
+  ElsePlacement:
+    style: new_line

@@ -1,0 +1,57 @@
+---
+layout: page
+title: Category Index
+permalink: /categories/index.html
+title: Category Index
+tags: [Categories]
+description: "An archive of posts sorted by categories."
+
+---
+
+
+{% comment %}
+Get all the category slugs
+{% endcomment %}
+{% capture site_categories %}{% for category in site.categories %}{% assign catslug = category | first %}{% for categoryslug in site.data.categories %}{% if categoryslug.slug == catslug %}{{ categoryslug.name }}{% else %}{{ category | first }}{% endif %}{% endfor %}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+
+{% assign category_words = site_categories | split:',' | sort %}
+
+<ul class="tag-box inline">
+{% assign category_list = category_words %}
+  {% for category in category_list %}
+    {% assign slug = category %}
+    {% for categoryslug in site.data.categories %}
+      {% if categoryslug.name == category %}
+        {% assign slug = categoryslug.slug %}
+      {% endif %}
+    {% endfor %}
+
+  <li><a href="#{{ slug }}"><span class="article-count">{{ site.categories[slug].size }}</span><span class="element-invisible"> articles tagged </span>{{ category }}</a></li>
+  {% endfor %}
+{% assign category_list = nil %}
+</ul>
+
+{% for category in category_words %}
+  {% comment %}Match the slugs back to the categories{% endcomment %}
+
+  {% assign slug = category %}
+  {% for categoryslug in site.data.categories %}
+    {% if categoryslug.name == category %}
+      {% assign slug = categoryslug.slug %}
+    {% endif %}
+  {% endfor %}
+
+<h2 id="{{ slug }}">{{ category }}</h2>
+  <ul class="post-list">
+    {% assign pages_list = site.categories[slug] %}
+    {% for post in pages_list %}
+      {% if post.title != null %}
+      {% if group == null or group == post.group %}
+        {% include post-listing.html %}
+      {% endif %}
+      {% endif %}
+    {% endfor %}
+    {% assign pages_list = nil %}
+    {% assign group = nil %}
+  </ul>
+{% endfor %}

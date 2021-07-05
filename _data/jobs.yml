@@ -1,0 +1,44 @@
+default:
+    title: Join our team
+    link: https://www.capgemini.com/gb-en/careers/?utm_source=githubmsblog&utm_medium=referral&utm_campaign=tracking
+    description: "If you like the sound of what you've read and would like to join our team, we're hiring!"
+drupal:
+    title: Join our Drupal team
+#    link: https://www.uk.capgemini.com/careers/jobs/senior-drupal-developer
+    categories: [Drupal]
+java:
+    title: Join our Java team
+#    link: https://www.uk.capgemini.com/careers/jobs/java-developer-0
+    categories: [Java, Scala]
+devops:
+    title: Join our DevOps team
+    link: https://acedevelopers.co.uk
+    categories: [DevOps]
+dynamics365:
+    title: Join our Microsoft Dynamics 365 team
+    link: https://www.capgemini.com/gb-en/careers/jobs/microsoft-dynamics-crm-developer/?utm_source=githubmsblog&utm_medium=referral&utm_campaign=tracking
+    categories: [dynamics365]
+norway:
+    title: Join our team in Norway
+#    link: http://jobb.capgemini.no
+architecture:
+    title: Join our Architecture team
+    link: https://www.capgemini.com/gb-en/careers/job-search/?search_term=Architecture&utm_source=githubmsblog&utm_medium=referral&utm_campaign=tracking
+    categories: [Architecture]
+SAP:
+    title: Join our SAP team
+    link: https://www.capgemini.com/gb-en/careers/job-search/?search_term=sap&filter_contract_type=&filter_department=&filter_location=&utm_source=githubmsblog&utm_medium=referral&utm_campaign=tracking
+    categories: [SAP]
+microsoftnetazure:
+    title: Join our Microsoft .NET and Azure team
+#    link: https://www.capgemini.com/gb-en/careers/jobs/microsoft-net-developer-1/
+    categories: [Microsoft, .NET, Azure]
+web_platforms:
+    title: Join our Web Platforms team
+    link: https://www.capgemini.com/gb-en/careers/jobs/senior-front-end-developer/
+    categories: [Frontend, React]
+Digital_Security_and_Trust:
+    title: Join our Digital Security and Trust Team
+    link: https://www.capgemini.com/gb-en/careers/shape-your-future-at-capgemini-invent/?utm_source=githubmsblog&utm_medium=referral&utm_campaign=tracking
+    description: "If you're interested in helping organisations become more secure in today's fast paced digtial environment, then take a look at our Jobs page, we're hiring!" 
+   

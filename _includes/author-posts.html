@@ -1,0 +1,31 @@
+{% capture rownum %}
+  {% increment rownum %}
+{% endcapture %}
+{% assign mod = rownum | modulo:2 %}
+{% if mod == 1 %}
+  {% assign rowstyle = 'odd' %}
+{% else %}
+  {% assign rowstyle = 'even' %}
+{% endif %}
+
+{% if posts_by_author.size > 0 %}
+  <div class="posts-by-author">
+    <h3>Posts by {{ name.first }}</h3>
+    <ul class="post-list">
+      {% for post in posts_by_author %}
+        {% include post-listing.html %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+
+{% if presentations_by_author.size > 0 %}
+  <div class="presentations-by-author">
+    <h3>Presentations by {{ name.first }}</h3>
+    <ul class="post-list">
+      {% for post in presentations_by_author %}
+        {% include post-listing.html %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

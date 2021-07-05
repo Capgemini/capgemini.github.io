@@ -1,0 +1,68 @@
+---
+layout: post
+title: Super, Smashing, Great in Barcelona
+comments: true
+author: malcolm_young
+category: Learning
+tags: [Conferences, Learning, Frontend, Design]
+description: "Reflections on the Smashing Barcelona conference"
+---
+
+I've just come back from [Smashing Conference in Barcelona](http://smashingconf.com/barcelona-2015/) and first of all, I have to thank the organisers and speakers for a great event.
+
+Secondly, I must apologise for the terribly predictable (for British people of a certain age) title, but as everyone with a passing knowledge of bad computer science jokes knows, naming things is difficult, and it's always hard to resist an obvious pun.
+
+My expectations for the conference were high. [Smashing's event in Oxford last year](http://www.red-route.org/articles/smashing-conference-oxford-2014) was excellent - an inspiring blend of talks, with a great mix of speakers on a range of topics across design, UX and development. Combine that with an opportunity to go back to Barcelona, and how could I resist?
+
+Having spent a month in Barcelona 15 years ago, it was interesting to wander around and see what's changed. I got a sense of gentrification - areas that had felt edgy then feel safe now, perhaps even a little sanitised. The same is probably true of a lot of places. It's still a wonderful city, and it was great to be back there, even if just for a few days.
+
+I also ate a ridiculous amount of _jamon_, and have to thank [my friend Tom](http://www.tomhayton.com/) for recommending tapas at [Bar Ramon](http://www.barramon.com/). Between that, the excellent catering, and the free beer at the party, the conference didn't do my waistline any favours.
+
+Anyway, to the main point of going to Barcelona - the conference.
+
+In short, I wasn't disappointed. The speakers, the venue, and the atmosphere were all excellent. Even the [conference swag](http://www.red-route.org/articles/2013-10-01/conference-swag-useless-and-ugly) from the sponsors was useful.
+
+Monday was Smashing main man [Vitaly Friedman's Responsive Design workshop](http://smashingconf.com/barcelona-2015/workshops/vitaly-friedman). With a mountain of material to cover, at times it felt more like a long conference talk than a workshop, but there was a lot of useful stuff in there, and plenty of new additions to my reading list.
+
+The conference itself was at the beautiful [Palau de la Musica Catalana](https://en.wikipedia.org/wiki/Palau_de_la_M%C3%BAsica_Catalana), and there was a buzz of anticipation, helped along by [the band](https://twitter.com/reyRodrigez/status/656383992770506752). I didn't envy them - a roomful of geeks at 9am can't be the easiest gig, but they gave it a good go, and warmed the place up for Chris Coyier. Chris hosts the [Shop Talk podcast](http://shoptalkshow.com/) and runs [CSS Tricks](https://css-tricks.com/) - both of which are great resources, so I was looking forward to his talk on SVG. It's something I've always put off looking at, mainly because of the need to support IE8, but has been on my mental to-do list for a while. With some helpful examples of when SVG is appropriate, [featuring bears](https://twitter.com/martuishere/status/656376381979369472), he discussed a [workflow for SVG icons with fallbacks](https://css-tricks.com/inline-svg-grunticon-fallback/) that I definitely plan to investigate.
+
+Jina Bolton from Salesforce gave an interesting insight into the challenges of designing and building [Living Design Systems](https://speakerdeck.com/jina/living-design-systems) at enterprise scale. Her insistence on the value of a single source of truth really resonated with me. [Style guides have been a hobby horse of mine for a while]({% post_url 2014-10-21-component-based-design %}), but I haven't yet had the chance to implement them as fully as I'd like, and certainly nowhere near the kind of thing that Jina's team are working on.
+
+I wasn't expecting a Flaubert reference in a tech talk, but the notion that [discipline can create freedom to be creative](http://www.brainyquote.com/quotes/quotes/g/gustavefla109857.html) was interesting. It may seem slightly like a Newspeak slogan, but the idea goes all the way back to [Aristotle](https://www.goodreads.com/quotes/146373-through-discipline-comes-freedom). It made me think of the need for jazz musicians to learn music theory before they can be good improvisers. The other association in my mind was with the discipline of craftsmanship, whether that's in making sushi or building software.
+
+Another point Jina made was about valuing clarity over brevity. I know this will resonate with quite a few of my colleagues - I'm always banging on about how much I dislike acronyms. Which brings me on to HTTP2 and [Patrick Hamann's talk on Embracing the Network](https://speakerdeck.com/patrickhamann/embracing-the-network-smashing-conf).
+I've long admired the work done by his old team at The Guardian - even more so since I read about [the low weight of advertising on their site](http://www.nytimes.com/interactive/2015/10/01/business/cost-of-mobile-ads.html) - so I was keen to hear what he's been working on at the FT.
+
+This was probably the most developer-focused talk of the conference, and it gave me a *lot* to think about. A particular point of note was Patrick's echo of Vitaly's suggestion that the widespread adoption of HTTP2 may lead to some of our current best practices for front-end performance becoming anti-patterns. In the shorter term, I'll be trying to implement some performance improvements on this site (and the [open source Jekyll theme we use for it](https://github.com/Capgemini/notepad2)) as soon as I get a bit of time.
+
+Just like last year, there was one talk that I suspected might be for typography geeks only, and it was from type designer and calligrapher [Seb Lester](http://smashingconf.com/barcelona-2015/speakers/seb-lester). I was pleasantly surprised. In particular, I was struck by Seb's suggestion that ["<span class='pullquote'>play working is the best investment you'll make</span>"](http://www.booooooom.com/2015/09/11/an-interview-with-master-calligrapher-seb-lester/), which reinforced a lot of my thoughts around [the value of side projects](http://www.red-route.org/articles/hooray-hackywood-joy-side-projects). 
+
+He also brought home the difficulty of pricing projects [with a story about his logo design for a NASA mission](https://twitter.com/scottwhitebread/status/656429930457243648).
+
+One of the main themes that emerged through the conference was the tension between data and creativity, which was the core of [Joe Leech's talk](http://mrjoe.uk/science/). As with his talk in Oxford last year, it was an interesting presentation, with some valuable insights from applying his background in psychology to user experience. The key takeaway for me was the importance of knowing what data is worth gathering, and focusing on a limited number of measurements - in other words, knowing "what number is most important to drive decisions".
+
+Self-confessed pencil geek Brendan Dawes closed the first day with tales of his [digital art projects using Paper, Plastic & Pixels](http://www.fivesimplesteps.com/products/paper-plastic-pixels). As with Seb's session, it was a talk which perhaps can't be directly related to my day-to-day work, and perhaps my employers might wonder if sending me to talks like this is good value for money.
+
+However, for me the point of talks like this isn't that they provide you with practical applications that you can immediately put into practice in your day job. It's that they can inspire you to take a more imaginative approach, to see the possibilities that might be out there, and that they can be invigorating, even if you're working on projects that may seem less obviously creative.
+
+It was interesting to hear him talk about "the battle to reduce the gap between the thing in your head and the thing you make", which must be familiar to anyone who's worked on any creative project. Another point he made was that it's easier to talk about things that exist, rather than in the abstract. This isn't just true for art projects - for me, it's one of the most valuable points of an iterative, agile approach to anything.
+
+On the Tuesday night was the party, and when the beer abruptly stopped flowing, there were some good-natured comments about people organising events in breweries, but it was probably for the best, with the amount of information to take in from the talks.
+
+A tradition of Smashing Conference is the Mystery Speaker - last year in Oxford [Seb-Lee Delisle's laser show](https://vimeo.com/89624072) blew everyone away. Having spotted Bruce Lawson around the conference the day before, it wasn't a big surprise to see him on stage, although I must admit that the [unicorn onesie](https://twitter.com/brucel/status/656820353713491968) was unexpected. [Bruce's talk](http://brucelawson.github.io/talks/2015/houdini/) was a welcome insight into the relationship between browser vendors, the W3C, and web developers - with the positive message that change is achievable.
+
+Next, [Anna Debenham](http://smashingconf.com/barcelona-2015/speakers/anna-debenham) showed us that the browser and device landscape is much more diverse than most of us imagined, with [surprisingly high usage of games console browsers](http://alistapart.com/article/testing-websites-in-game-console-browsers) - yet more devices to care about, and yet another reminder that device detection isn't a sustainable strategy. As ever, <span class="pullquote">from so many points of view, progressive enhancement is the way forward</span>.
+
+Zoe Mickley Gillenwater's talk on Flexbox at Smashing Oxford got the whole conference talking, and it was the tipping point for me (and many others) to finally start implementing flexbox as progressive enhancement. I've lost count of the number of times I've shared a link to [her article on Flexbox](http://zomigi.com/blog/leveling-up-with-flexbox/), so I wasn't entirely surprised that some of the content was familiar. Even so, it was a valuable session - the main takeaway for me was being reminded of the utility of flexbox, especially in situations where the size of content is unknown (i.e. always), which is an even bigger issue on multilingual sites.
+
+The next speaker, Espen Brunborg, gave us more inspiration, asking whether [the internet is killing creativity](http://smashingconf.com/barcelona-2015/speakers/espen-brunborg). Pointing out that "<span class="pullquote">the internet is a crazy scary wonderful place</span>", he drew parallels with print design, pointing out that the evolution of the web industry has a long way to go, and gaving us hope that we can push things forward. He also made an important point about the place of content in the design process, and the danger of building CMS-based sites with Lorem Ipsum. I agree about [the value of using real content](https://twitter.com/malcomio/status/575405333742489600), but I'd question his suggestion that you need to bypass the CMS if you want to create individually designed pages - for instance in Drupal, preprocess functions or the [ThemeKey module](https://www.drupal.org/project/themekey) would let you display specific content differently to the rest of the site.
+
+Andrew Tider and Jeff Greenspan's work lies somewhere in the spaces between technology, guerrilla art, improvisational comedy, and political activism. In a mildly NSFW talk, they promised ["We’ll Teach You Everything We Don’t Know"](http://smashingconf.com/barcelona-2015/speakers/jeff-greenspan), reminding us of <span class="pullquote">the value of pushing yourself beyond your comfort zone, and the exciting possibilities of starting things without knowing where you'll end up</span>, of "stepping into the unknown". Again, it calls back to the value of iteration in an agile workflow, as does their reminder of the value of learning from failures: "One project's struggle may be another project's preparation".
+
+Another inspiring message that stayed with me was their [succinct echo](https://twitter.com/nadalsol/status/656835318969143297) of the idea, so popular in open source, of [forgiveness being easier to get than permission](https://en.wikiquote.org/wiki/Grace_Hopper#Quotes).
+
+Zach Leatherman provided plenty of useful insight and practical suggestions for handling web fonts, echoing Patrick's suggestion that they can be a single point of failure, and emphasising the need to optimise performance, with the danger of the [Mitt Romney webfont problem](http://www.zachleat.com/web/mitt-romney-webfont-problem/). With everything I've learned this week from Zach, [Chris Coyier](https://css-tricks.com/icon-fonts-vs-svg/), and [Bruce Lawson](https://twitter.com/brucel/status/656824082965639172), I've finally come round to the idea that SVGs are the way forward for icon systems.
+
+Andrew Clarke rounded things off, as he did in Oxford, with more of a conceptual talk, touching on the lessons from advertising, and the difficulty of balancing creativity with processes and systems. A lot of Andrew's ideas provided a callback to Espen's discussion of the way that so many websites are becoming predictable. Again, a lot of food for thought.
+
+My flight time meant that I had to miss the photowalk, but coming home with my mind (and my Evernote) full of ideas, I know that I'll be revisiting a lot of the talks via the [collaborative notes](http://smashed.by/bcn-notes) and the slides and videos, once they've been [collected on Lanyrd](http://lanyrd.com/2015/smashingconf-barcelona/), and hopefully I'll be able to go to another Smashing conference before too long.

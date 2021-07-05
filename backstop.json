@@ -1,0 +1,131 @@
+{
+  "id": "capgemini_engineering",
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "name": "tablet_v",
+      "width": 568,
+      "height": 1024
+    },
+    {
+      "name": "tablet_h",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Home page",
+      "url": "http://127.0.0.1:4000",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "body"
+      ],
+      "readyEvent": null,
+      "delay": 500,
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Home page with menu",
+      "url": "http://127.0.0.1:4000",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "header"
+      ],
+      "readyEvent": null,
+      "delay": 500,
+      "misMatchThreshold": 0.1,
+      "onReadyScript": "showMenu.js"
+    },
+    {
+      "label": "Article with menu",
+      "url": "http://127.0.0.1:4000/learning/super-smashing-great/",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "header"
+      ],
+      "readyEvent": null,
+      "delay": 500,
+      "misMatchThreshold": 0.1,
+      "onReadyScript": "showMenu.js"
+    },
+    {
+      "label": "Authors page",
+      "url": "http://127.0.0.1:4000/authors",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "body"
+      ],
+      "readyEvent": null,
+      "delay": 500,
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Categories page",
+      "url": "http://127.0.0.1:4000/categories",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "body"
+      ],
+      "readyEvent": null,
+      "delay": 500,
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Tags page",
+      "url": "http://127.0.0.1:4000/tags",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "body"
+      ],
+      "readyEvent": null,
+      "delay": 500,
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Article with images and video",
+      "url": "http://127.0.0.1:4000/open%20source/continuously-deploying-apollo/",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "body"
+      ],
+      "readyEvent": null,
+      "delay": 500,
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Article with pull quotes",
+      "url": "http://127.0.0.1:4000/learning/super-smashing-great/",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".pulledquoteparent"
+      ],
+      "readyEvent": null,
+      "delay": 500,
+      "misMatchThreshold": 0.1
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "casper_scripts": "backstop_data/casper_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "casperFlags": [],
+  "engine": "phantomjs",
+  "report": ["browser"],
+  "debug": false
+}

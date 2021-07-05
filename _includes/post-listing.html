@@ -1,0 +1,13 @@
+<li>
+  <a href="{{ post.url }}" class="post-link">
+    <span class="post-title">
+      {{ post.title }}
+      {% if post.subtitle %}
+        <span class="post-subtitle">{{ post.subtitle }}</span>
+      {% endif %}
+    </span>
+    <span class="entry-date">
+      <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %-d, %Y" }}</time>
+    </span>
+  </a>
+</li>

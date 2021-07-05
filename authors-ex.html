@@ -1,0 +1,27 @@
+---
+layout: page
+permalink: /alumni/index.html
+title: Meet our former colleagues
+tags: [Capgemini, engineering]
+chart: true
+---
+
+<div class="notepad-author-info row text-center">
+  <a href="/authors">Meet our current colleagues</a>
+</div>
+
+{% assign authors = site.data.authors | sort %}
+{% assign rownum = 1 %}
+
+{% for authorloop in authors %}
+  {% assign author = authorloop[1] %}
+  {% if author.ex %}
+    {% include author-posts-capture.html %}
+    {% if posts_by_author.size > 0 or presentations_by_author.size > 0 %}
+      <div class="notepad-author-info row row-{{ rowstyle }}" id="author-{{ author.name | slugify }}">
+        {% include author-info.html %}
+        {% include author-posts.html %}
+      </div>
+    {% endif %}
+  {% endif %}
+{% endfor %}
