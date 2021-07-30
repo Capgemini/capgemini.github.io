@@ -1,5 +1,5 @@
 body {
-  font-family: $open;
+  font-family: $font-ubuntu;
   height: auto;
   min-height: 100%;
   line-height: 1;
@@ -12,24 +12,29 @@ h4,
 h5,
 h6 {
   font-weight: bold;
-  font-family: $montserrat;
+  font-family: $font-ubuntu;
 }
 
 button,
 .button {
-  background-color: $blue-mid;
+  background-color: $brand-blue;
 }
 
 button:focus,
 button:hover,
 .button:focus,
 .button:hover {
-  background-color: $blue;
+  background-color: $brand-blue;
   color: $white;
 }
 
 a {
-  color: $blue;
+  color: $brand-blue;
+
+  &:hover,
+  &:focus {
+    color: $brand-blue-vibrant;
+  }
 }
 
 a:focus,

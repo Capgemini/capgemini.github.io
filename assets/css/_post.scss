@@ -60,11 +60,6 @@
   padding-left: 1.875rem;
   padding-right: 1.875rem;
 
-  a,
-  code {
-    color: $blue;
-  }
-
   ul,
   ol {
     padding-left: 1.25rem;
@@ -100,7 +95,6 @@
     text-align: left;
 
     a {
-      color: $blue-mid;
       text-decoration: underline;
 
       &:hover,
@@ -165,7 +159,7 @@
     &:after {
       display: inline-block;
       vertical-align: top;
-      font-family: $serif;
+      font-family: $font-serif;
       font-size: 4rem;
       line-height: 1rem;
       margin-top: .9rem;
@@ -216,7 +210,7 @@
 
 .pulledquote {
   display: block;
-  font-family: $serif;
+  font-family: $font-serif;
   font-size: 1.5rem;
   font-style: italic;
   line-height: 2rem;
@@ -276,7 +270,7 @@
   padding: 3.75rem 0;
   font-size: 1.875rem;
   border-top: .0625rem solid $grey-light;
-  color: $blue;
+  color: $brand-blue;
 
   @include breakpoint(tablet) {
     padding-top: 5rem;
@@ -286,7 +280,7 @@
   a {
     display: inline-block;
     margin: 0 .9375rem;
-    color: $blue;
+    color: $brand-blue;
   }
 }
 
@@ -364,7 +358,7 @@
   font-size: 0.9rem;
   font-weight: lighter;
   a {
-    color: $blue;
+    color: $brand-blue;
   }
 }
 
@@ -414,12 +408,12 @@
 }
 
 ::selection {
-  background: $blue-mid;
+  background: $brand-blue-vibrant;
   color: $grey-lighter;
 }
 
 ::-moz-selection {
-  background: $blue-mid;
+  background: $brand-blue-vibrant;
   color: $grey-lighter;
 }
 

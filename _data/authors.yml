@@ -1,5 +1,5 @@
 _capgemini_uk_engineers:
-    name: Capgemini UK Engineering Team
+    name: Capgemini UK Software Engineering Team
     twitter: CapgeminiUK
     github: capgemini
     linkedin: https://uk.linkedin.com/company/capgemini
@@ -320,6 +320,7 @@ ben_hosking:
     description: "Ben Hosking is a Senior Solution Architect in the Capgemini Dynamics 365 team and author of  [Hosk's Dynamic CRM blog](https://crmbusiness.wordpress.com)."
     team: dynamics365
     avatar: https://avatars3.githubusercontent.com/u/11849994?v=3&u=8856620ed3367f4873b4ff25faa7abe0d2750e5a&s=400
+    ex: true
 rune_offerdal:
     name: Rune Offerdal
     github: rofferda
@@ -466,6 +467,7 @@ nassaz:
     description: "Tijani Nasser is a Software Engineer Lead at Capgemini who has an interest in Drupal, Software Design, Web Applications, DevOps and Industrialization."
     team: drupal
     avatar: https://avatars1.githubusercontent.com/u/14880919?s=400&u=cc838c6d2c414c592e032dd488f42b71c6352f95&v=4
+    ex: true
 nhamer:
     name: Nigel Hamer
     github: nhamer

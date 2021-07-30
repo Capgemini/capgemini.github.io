@@ -70,86 +70,26 @@ main,
 .notepad-site-head-content {
   width: 100%;
   text-align: center;
-  background-color: $black;
+  background-color: $brand-blue;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
 
   &.with-bg-cover {
     background-color: rgba(0, 0, 0, .7);
   }
 
-  .notepad-site-head-title-bg {
-    display: inline-block;
-    padding: .625rem;
-    background: $blue;
-    line-height: 1.1;
-  }
-
-  h1,
-  h2 {
+  h1 {
     margin: 0;
     padding: 0;
     color: white;
     text-transform: uppercase;
-  }
+    font-size: 3.5rem;
 
-  h1 {
-    padding-top: 4.375rem;
-    font-size: .875rem;
-    margin-bottom: .9375rem;
-  }
-
-  h2 {
-    font-size: 2.5rem;
-    padding-bottom: 5rem;
-    font-weight: 700;
-    line-height: 1.3;
-  }
-
-  @include breakpoint(tablet) {
-    h1 {
-      padding-top: 4.5rem;
-      font-size: 1rem;
-    }
-
-    h2 {
-      font-size: 3.75rem;
-      padding-bottom: 4.5rem;
-      font-weight: 700;
-    }
-  }
-
-  @include breakpoint(desktop) {
-    h1 {
-      padding-top: 5.375rem;
-      font-size: 1rem;
-    }
-
-    h2 {
-      font-size: 4.375rem;
-      padding-bottom: 5.375rem;
-      font-weight: 700;
-    }
-  }
-
-  @include breakpoint(widescreen) {
-    h1 {
-      padding-top: 6.3125rem;
-    }
-
-    h2 {
-      font-size: 5rem;
-      padding-bottom: 6.3125rem;
-    }
-  }
-
-  @include breakpoint(verywidescreen) {
-    h1 {
-      padding-top: 7.5rem;
-    }
-
-    h2 {
-      font-size: 7.25rem;
-      padding-bottom: 6.5rem;
+    @include breakpoint(mobileonly) {
+      font-size: xx-large;
     }
   }
 }
@@ -192,7 +132,7 @@ main,
   display: block;
   font-size: 3.25rem;
   font-weight: 800;
-  color: $blue;
+  color: $brand-blue;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -273,8 +213,8 @@ main,
 
   &:hover,
   &:focus {
-    color: $blue;
-    border: .0625rem solid $blue;
+    color: $brand-blue;
+    border: .0625rem solid $brand-blue;
   }
 }
 
@@ -307,7 +247,7 @@ main,
 
   &:hover,
   &:focus {
-    background-color: $blue;
+    background-color: $brand-blue;
   }
 }
 
@@ -339,8 +279,8 @@ nav.pagination {
   .newer-posts,
   .older-posts {
     &:hover {
-      border: .125rem solid $blue;
-      color: $blue;
+      border: .125rem solid $brand-blue;
+      color: $brand-blue;
     }
 
     &.faded {
@@ -430,7 +370,7 @@ nav.pagination {
 }
 
 .notepad-tags-container .notepad-tags-header .tag-name {
-  color: $blue;
+  color: $brand-blue;
   text-transform: none;
 }
 

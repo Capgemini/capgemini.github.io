@@ -1,12 +1,12 @@
 ---
 layout: page
 permalink: /about/index.html
-title: Capgemini Engineering
+title: Capgemini Software Engineering
 tags: [Capgemini, engineering]
 chart: true
 ---
 
-Welcome to the Capgemini Engineering Blog. At Capgemini we’re passionate about
+Welcome to the Capgemini Software Engineering blog. At Capgemini we’re passionate about
 software engineering and have got plenty to say on the subject! This is our
 blog, written by engineers, for engineers.
 

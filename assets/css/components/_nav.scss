@@ -5,7 +5,7 @@
   padding-bottom: 0;
   font-weight: 400;
   font-size: 2.625rem;
-  font-family: $montserrat;
+  font-family: $font-ubuntu;
 }
 
 .notepad-mobile-menu {
@@ -15,11 +15,11 @@
 
   a {
     display: inline-block;
-    color: $blue-mid;
+    color: $brand-blue-vibrant;
 
     &:hover,
     &:focus {
-      color: $blue-mid;
+      color: $brand-blue-vibrant;
     }
   }
 }

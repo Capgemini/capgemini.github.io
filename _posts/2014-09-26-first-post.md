@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Welcome to Capgemini Engineering"
+title: "Welcome to Capgemini Software Engineering"
 description: "Introducing the team blog"
 category: Blog
 author: tom_phethean
@@ -8,8 +8,8 @@ comments: true
 share: true
 ---
 
-At Capgemini, we're passionate about Engineering and the many facets that make up
-successful engineering teams.
+At Capgemini, we're passionate about software engineering and the many facets that make up
+successful software engineering teams.
 
 We like to experiment with new technologies, establishing
 patterns that make our lives easier and more efficient.

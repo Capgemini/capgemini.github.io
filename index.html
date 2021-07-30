@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Capgemini Engineering Team Blog
+title: Capgemini Software Engineering Team Blog
 description: ""
 headline: An Engineer's Diary
 tags: [Capgemini, engineering, blog]
@@ -29,7 +29,7 @@ tags: [Capgemini, engineering, blog]
             {% for auth in post.author %}
               {% assign authors = authors | push: site.data.authors[auth] %}
             {% endfor %}
-    
+
             {% assign authorname = '' %}
             {% assign authornames = "" | split: "" %}
             {% for author in authors %}
