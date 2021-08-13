@@ -91,7 +91,7 @@ gabriele_manna:
     linkedin: https://uk.linkedin.com/pub/gabriele-manna/1b/534/41a
     github: geberele
     description: "Gabriele is a Software Engineer at Capgemini passionate about Drupal."
-    avatar: https://pbs.twimg.com/profile_images/378800000647646232/2d028fc01eaf5febf08a151951a8cc85.jpeg
+    avatar: /images/authors/gab-manna.jpeg
     ex: true
 simon_lamplugh:
     name: Simon Lamplugh
@@ -122,7 +122,7 @@ nick_walter:
     twitter: njwalter78
     linkedin: https://www.linkedin.com/pub/nick-walter/13/7a4/283
     description: "Nick is a Lead Software Engineer working at Capgemini UK, with a keen interest in building Microservices"
-    avatar: https://pbs.twimg.com/profile_images/1696504206/Nick_200x200.JPG
+    avatar: /images/authors/nick-walter.jpeg
 jon_hatfield:
     name: Jon Hatfield
     linkedin: http://uk.linkedin.com/in/jonhatfield
@@ -144,7 +144,7 @@ cam_parry:
     twitter: Wallies9
     github: wallies
     description: "Cam is a Software Engineer at Capgemini with a passion for quality, security and automation"
-    avatar: https://avatars.io/twitter/wallies9
+    avatar: /images/authors/cam-parry.jpeg
     ex: true
 deji_akala:
     name: Deji Akala
@@ -204,7 +204,7 @@ mat_perry:
     linkedin: https://uk.linkedin.com/in/matthew-perry-27566b11
     description: "Mat is a Senior Solution Architect at Capgemini"
     team: java
-    avatar: https://media-exp1.licdn.com/dms/image/C5603AQFGFA1pt-ZKtw/profile-displayphoto-shrink_200_200/0/1517518486448?e=1627516800&v=beta&t=iyhoOGFvTy0g02hVJppyp6iJRVcJiSUzpnc-iZ3k30U
+    avatar: /images/authors/matt-perry.jpeg
 satvinder_hullait:
     name: Satvinder Hullait
     github: satvinder-hullait
@@ -262,7 +262,7 @@ az_madujibeya:
     team: java
     linkedin: https://uk.linkedin.com/in/azmadu
     description: "Az is a Software Engineer Lead working at Capgemini UK, with a broad interest in technology and good engineering practices"
-    avatar: https://media-exp1.licdn.com/dms/image/C4D03AQF5vCIm-03vew/profile-displayphoto-shrink_200_200/0/1516560006297?e=1627516800&v=beta&t=6HuGXAtlYvngVLyPmGPiLWMZNHlUz6zaLNzeL0LTxug
+    avatar: /images/authors/az-madujibeya.jpeg
 richard_sheppard:
     name: Richard Sheppard
     twitter: siliconmeadow
@@ -311,7 +311,7 @@ james_relph:
     linkedin: https://www.linkedin.com/in/james-relph-70b9699/
     description: "James is a DevOps Engineer at Capgemini.  He's an AWS fan and enjoys learning about new technologies."
     team: devops
-    avatar: https://media-exp1.licdn.com/dms/image/C4E03AQHWzFpgLdQ_8Q/profile-displayphoto-shrink_200_200/0/1548890368064?e=1627516800&v=beta&t=DyrXGIN8LyJcf6eNxH8w8XETUkyvAdJAegRCPKC5OWk
+    avatar: /images/authors/james-relph.jpeg
 ben_hosking:
     name: Ben Hosking
     twitter: benhosk
@@ -356,6 +356,7 @@ tosin_ogunrinde:
     description: "Tosin is a Solution Architect at Capgemini. He's a technologist who enjoys creating clean, elegant and scalable solutions to otherwise complex problems."
     team: architecture
     avatar: https://avatars2.githubusercontent.com/u/25773720?v=3&s=460
+    ex: true
 richard_mcmenamin:
     name: Richard McMenamin
     twitter: richmcm
@@ -421,13 +422,14 @@ ekhor:
     linkedin: https://www.linkedin.com/in/ekhor/
     description: "Ekhor Asemota is a Software Engineer at Capgemini, with an interest in .NET, .NET Core, DevOps, WebAssembly, game development, virtual reality, software engineering."
     team: microsoftnetazure
+    avatar: /images/authors/ekhor-asemota.jpeg
 kriss:
     name: Kriss Sulikowski
     github: ksulikow
     linkedin: https://www.linkedin.com/in/ksulikow/
     description: "Kriss Sulikowski is a Software Engineer at Capgemini, with an interest in .NET, .NET Core, DevOps, Microsoft Dynamics 365, software engineering."
     team: microsoftnetazure
-    avatar: https://media-exp1.licdn.com/dms/image/C5603AQFoj8St491DbA/profile-displayphoto-shrink_200_200/0/1517450693765?e=1627516800&v=beta&t=hLq6jU41luFkzPhjg6L2MNtLhxNAHByx07BfkKg_MQk
+    avatar: /images/authors/krzysztof.jpeg
 jay_barden:
     name: Jay Barden
     twitter: jbarden7
@@ -449,7 +451,7 @@ james_heywood:
     linkedin: https://www.linkedin.com/in/james-heywood-941b427/
     description: "James is Software Engineer Lead at Capgemini."
     team: microsoftnetazure
-    avatar: https://media.licdn.com/dms/image/C5603AQHgaXyQhx8Baw/profile-displayphoto-shrink_200_200/0?e=1538006400&v=beta&t=jt94B47NXWBj7_oRpJu4-4AY2g_bSvaFfPrsLlVqTPg
+    avatar: /images/authors/james-heywood.jpeg
     ex: true
 liamgiles:
     name: Liam Giles
@@ -475,7 +477,7 @@ nhamer:
     linkedin: https://www.linkedin.com/in/nigelhamer/
     description: "Nigel builds software using as much common sense as possible."
     team: microsoftnetazure
-    avatar: https://media-exp1.licdn.com/dms/image/C4D03AQEa4_bR7AfP5Q/profile-displayphoto-shrink_200_200/0/1560286744723?e=1627516800&v=beta&t=LSxVcY7NHbIVmE5WjEeohIGtDrjJBmZYHoozniW1hv4
+    avatar: /images/authors/nigel-hamer.jpeg
 cburns:
     name: Chris Burns
     github: ChrisJBurns
@@ -512,14 +514,14 @@ pip_turner:
     github: PipTurner
     linkedin: https://www.linkedin.com/in/pip-turner/
     description: "Pip is a Software Engineer in the OSCE team at Capgemini. He specialises in application and api development using various tech stacks"
-    avatar: https://media-exp1.licdn.com/dms/image/C4E03AQG9sOgK2hgiZQ/profile-displayphoto-shrink_200_200/0/1556878684040?e=1627516800&v=beta&t=kRFfRPl0QXq3CKKO7UI-SgHHypXThslPUFHlM2DH9Hw
+    avatar: /images/authors/pip-turner.jpeg
     team: java
 nikkialgar:
     name: Nikki Algar
     github: nikkialgar
     linkedin: https://www.linkedin.com/in/nikkialgar/
     description: "Nikki is a Software Engineer Lead focussed on UI Development at Capgemini."
-    avatar: https://media-exp1.licdn.com/dms/image/C4D03AQFLK3vCmFFkaQ/profile-displayphoto-shrink_200_200/0/1543922129975?e=1627516800&v=beta&t=hTslRONB9e_RMeJcRVE5TS8tC6jgVw1FiEo0bzQZZdo
+    avatar: /images/authors/nikki-algar.jpeg
     team: web_platforms
 manisha_sharma:
     name: Manisha Sharma
@@ -568,4 +570,4 @@ riccardo_freschi:
     linkedin: https://www.linkedin.com/in/riccardo-freschi-0b315b2
     description: "Senior Enterprise Architect at Capgemini"
     team: web_platforms
-    avatar: https://media-exp1.licdn.com/dms/image/C4E03AQEdYPvcY4oC0w/profile-displayphoto-shrink_200_200/0/1516958980415?e=1627516800&v=beta&t=7TeBoZIXsQ26Zxt4DV-b-o6AEaG8qi8HfHCbqDffgtg
+    avatar: /images/authors/riccardo-freschi.jpeg
