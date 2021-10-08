@@ -34,7 +34,6 @@
 }
 
 .notepad-post-title {
-
   a {
     &:hover,
     &:focus {
@@ -43,10 +42,9 @@
   }
 
   .anchorjs-link {
-    &:hover
+    &:hover,
     &:focus {
       text-decoration: none;
     }
   }
-
 }

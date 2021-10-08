@@ -571,3 +571,10 @@ riccardo_freschi:
     description: "Senior Enterprise Architect at Capgemini"
     team: web_platforms
     avatar: /images/authors/riccardo-freschi.jpeg
+lewis_vince:
+    name: Lewis Vince
+    github: lewis-vince
+    linkedin: https://uk.linkedin.com/in/lewis-vince-b3657b133
+    description: "Lewis is a senior full-stack engineer in Capgemini's Open Source Cloud Engineering team."
+    avatar: https://avatars.githubusercontent.com/u/8005421?v=4
+    team: java

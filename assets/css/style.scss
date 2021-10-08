@@ -181,11 +181,7 @@ main,
   color: $grey-dark;
   font-size: 1.25rem;
   margin-top: .625rem;
-  text-align: center;
-
-  @include breakpoint(tablet) {
-    text-align: left;
-  }
+  text-align: left;
 
   p {
     margin: 0;

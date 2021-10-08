@@ -14,7 +14,7 @@
   {% capture description %}{{ site.description }}{% endcapture %}
 {% endif %}
 <meta charset="utf-8">
-<title>{% if page.title %}{{ page.title }} &vert; {% endif %}{{ site.title }}</title>
+<title>{% if page.title != blank %}{{ page.title }}{% else %}}{{ site.title }}{% endif %}</title>
 <meta name="description" content="{{ description }}">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' disqus.com *.disqus.com *.disquscdn.com *.doubleclick.net *.google-analytics.com *.googletagmanager.com ; script-src 'self' 'unsafe-inline' disqus.com *.disqus.com *.disquscdn.com requirejs.org *.google-analytics.com *.googletagmanager.com ajax.googleapis.com; style-src 'self' 'unsafe-inline' *.disquscdn.com fonts.googleapis.com; img-src 'self' * data: ; media-src 'self' ; frame-src disqus.com *.github.io *.slides.com *.slideshare.net *.youtube.com *.vimeo.com; font-src 'self' fonts.googleapis.com fonts.gstatic.com data: ; " />
 {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
@@ -55,7 +55,7 @@
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
