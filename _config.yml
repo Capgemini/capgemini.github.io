@@ -68,7 +68,7 @@ kramdown:
     css: class
 
 include: [".htaccess"]
-exclude: [".idea", "lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "gulpfile.js", "package.json", "node_modules", "README.md", "scss-lint.yml", "src", "backstop.json", "backstop_data"]
+exclude: [".idea", "lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "gulpfile.js", "package.json", "node_modules", "README.md", "scss-lint.yml", "src", "backstop.json", "backstop_data", "docs"]
 
 plugins:
   - jekyll-redirect-from
