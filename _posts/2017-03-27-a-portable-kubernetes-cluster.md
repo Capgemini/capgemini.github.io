@@ -54,7 +54,7 @@ The full version of our script is available in our [GitHub repository](https://g
 
 ## Grand Designs
 
-![AWS Architecture](/images/2017-03-15-a-portable-kubernetes-cluster/aws_layout.png){: .centered.medium-8 }
+![AWS Architecture](/images/2017-03-15-a-portable-kubernetes-cluster/aws_layout.png)
 
 Our finished AWS architecture was relatively simple by the end, consisting of 6 EC2 instances, some EBS backing storage, an S3 bucket and some changes to Route53.  We deliberately chose not to use an AWS ELB - instead relying on internal load balancing using [nginx](https://www.nginx.com) instances.  There were a number of reasons for this - firstly this removed another AWS black-box and removed another AWS specific tool, which could be especially useful in situations where we could foresee cluster federation being used to deploy the cluster across two different cloud providers or between private and public clouds - potentially where IaaS type load balancers are not available (and/or not supported by the Kubernetes loadBalancer directive).  While S3 and Route53 are both specific AWS features those do not need to be local to the cluster (i.e. Route53 could still provide DNS services for a cluster hosted in Azure) and could be rapidly replaced with other programmatic DNS and blob storage.
 
@@ -196,7 +196,7 @@ Our microservices required a [mongoDB](https://www.mongodb.com) cluster, which w
 
 What this meant is that despite only deploying two microservices each node was running a minimum of 4, but more likely an average of 7 containers, and as a result we had to initially up the size of our chosen EC2 instance (to a t2.large).  This was needed to provide the speed and memory to host all of our required services but we do feel this got us close to the features required for a production level cluster.  The layout below gives an overview of the general layout of our cluster (although Kubernetes itself is in charge of allocating each individual service).
 
-![cluster node layout](/images/2017-03-15-a-portable-kubernetes-cluster/node_layout.png){: .centered.medium-8 }
+![cluster node layout](/images/2017-03-15-a-portable-kubernetes-cluster/node_layout.png)
 
 ## Deployments
 

@@ -149,7 +149,7 @@ As shown above in the policy, we are giving the pipeline permissions to update a
 
 Once the policy was attached to the pipeline user, and the pipeline user AWS credentials were provided as secrets to the pipeline, I performed another push to master to ensure everything worked as expected and within a few seconds, I had all green from the pipeline with an updated site.
 
-![Successful workflow pipeline](/images/2020-06-29-Using-GitHub-Actions-and-Hugo-Deploy-to-Deploy-to-AWS/workflow.jpg){: .centered.medium-8 }
+![Successful workflow pipeline](/images/2020-06-29-Using-GitHub-Actions-and-Hugo-Deploy-to-Deploy-to-AWS/workflow.jpg)
 
 ## Closing comments
 In this blog post I have detailed the steps I took in order to setup a fully functioning CI/CD pipeline for my site in GitHub Actions. The pipeline renders and deploys my site's assets to S3 automatically. From what used to be manual tasks, GitHub Actions and Hugo Deploy have now taken these tasks off my hands leaving me – the engineer – more time to develop new features for my site without having to worry about the manual duties in between.

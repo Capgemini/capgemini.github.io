@@ -30,22 +30,22 @@ The great thing about regional edge caches and POPs is that all this is done und
 
 Below is a picture of the current edge (POPs) and regional edge cache locations. As this picture constantly changes, [Amazon updates an AWS features page](https://aws.amazon.com/cloudfront/features/) to notify readers of any new locations.
 
-![CloudFront edge and regional edge cache locations](/images/2020-04-07-Using-AWS-CloudFront-as-a-CDN/edge-locations.jpg){: .centered.medium-8 }
+![CloudFront edge and regional edge cache locations](/images/2020-04-07-Using-AWS-CloudFront-as-a-CDN/edge-locations.jpg)
 
 ## Using CloudFront with an S3 Site
 In the previous blog post, I walked through the creation of my site, the uploading of it to S3 and the configuration of the static site hosting. Using the S3 endpoint URL I was able to get to the site and see it in all its basic glory. There was however, no CDN. So enough of the theory and throwbacks, let me walk you through how I created my site's CloudFront distribution.
 
 To start, I created a CloudFront “Web Distribution” and specified the S3 Endpoint as the “Origin Domain Name” and made sure that in the “Viewer Protocol Policy”, I selected “Redirect HTTP to HTTPS” just to make it more secure and to force insecure requests to become secure. I left the caching refresh to the default number (86400 seconds = 24 hours).
 
-![CloudFront config](/images/2020-04-07-Using-AWS-CloudFront-as-a-CDN/cloudfront-config.jpg){: .centered.medium-8 }
+![CloudFront config](/images/2020-04-07-Using-AWS-CloudFront-as-a-CDN/cloudfront-config.jpg)
 
 An additional comment is that CloudFront by default automatically provides us with an SSL certificate which allows for HTTPS - which is used for secure communication between the client and server. One last point is that I made sure to add `index.html` as my “Default Root Object” as this is my homepage and it is the page that I want users to see when they visit the default root URL.
 
-![CloudFront served website](/images/2020-04-07-Using-AWS-CloudFront-as-a-CDN/cloudfront-distribution.jpg){: .centered.medium-8 }
+![CloudFront served website](/images/2020-04-07-Using-AWS-CloudFront-as-a-CDN/cloudfront-distribution.jpg)
 
 Here is the SSL Certificate provided by CloudFront:
 
-![CloudFront default provided SSL Certificate](/images/2020-04-07-Using-AWS-CloudFront-as-a-CDN/cloudfront-default-certificate.jpg){: .centered.medium-8 }
+![CloudFront default provided SSL Certificate](/images/2020-04-07-Using-AWS-CloudFront-as-a-CDN/cloudfront-default-certificate.jpg)
 
 ## Closing Thoughts
 There we have it, after some simple steps I am now using CloudFront in order to effectively and securely serve my website to those around the world. Furthermore, I have now reduced the load on the origin S3 bucket due to the advantages of using CloudFront edge location caching. Not to mention the additional benefit of speeding up response times for my users.

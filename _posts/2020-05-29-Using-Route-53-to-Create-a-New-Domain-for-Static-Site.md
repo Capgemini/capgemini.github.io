@@ -17,7 +17,7 @@ For my site I use CloudFront for my CDN in order to deliver the content around t
 
 First, I needed to come up with a catchy domain name that people can remember. If you’ve been reading my previous blog posts, you can probably guess what I went with. That’s right: chrisjburns.com.
 
-![Route 53 registering of a new domain](/images/2020-05-29-Using-Route-53-to-Create-a-New-Domain-for-Static-Site/register-new-domain.jpg){: .centered.medium-8 }
+![Route 53 registering of a new domain](/images/2020-05-29-Using-Route-53-to-Create-a-New-Domain-for-Static-Site/register-new-domain.jpg)
 
 For an annual payment of $12.00 I was in possession of my own domain name that I’ll be sure to remember. I haven’t bought my first house yet – but I can imagine this is what it feels like when you finally take a step onto the ladder – only in this case it’s a step onto the ladder of acquiring my own “home” in the world of the internet.
 
@@ -30,24 +30,24 @@ As I had no Certificates with Amazon and have never applied for one before, I ha
 
 After some DNS validation, which was a slightly more convoluted and tricky task as [documented here](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html), I had finished the certificate application and all I had to do was wait. Within an hour I had the result and it had been approved and issued to me.
 
-![SSL certificate details](/images/2020-05-29-Using-Route-53-to-Create-a-New-Domain-for-Static-Site/ssl-certificate.jpg){: .centered.medium-8 }
+![SSL certificate details](/images/2020-05-29-Using-Route-53-to-Create-a-New-Domain-for-Static-Site/ssl-certificate.jpg)
 
 ## Connect new Domain Name with CloudFront
 Once all of the individual components were ready, it was time to connect them all together. All I had to do was hook my new certificate and domain name up to my CloudFront distribution.
 
 First things first, I modified the CloudFront distribution that I created as part of the previous blog. After going into the distribution's “Distribution Settings”, I edited the “General” page so that the distribution used my Custom SSL certificate and CNAMEs.
 
-![Editing CloudFront distribution](/images/2020-05-29-Using-Route-53-to-Create-a-New-Domain-for-Static-Site/cloudfront-editing.jpg){: .centered.medium-8 }
+![Editing CloudFront distribution](/images/2020-05-29-Using-Route-53-to-Create-a-New-Domain-for-Static-Site/cloudfront-editing.jpg)
 
 The last step was to route all inbound queries to “chrisjburns.com” to the CloudFront distribution. Again, in classic AWS style, this was simple.
 
 Going into the Route 53 Hosted Zone that I had for my new domain, I created a new record set with type "A – IPv4 Address" and an Alias with the target being the CloudFront distribution URL (this was also a drop-down list to choose from).
 
-![Creating new record set for CloudFront](/images/2020-05-29-Using-Route-53-to-Create-a-New-Domain-for-Static-Site/record-set.jpg){: .centered.medium-8 }
+![Creating new record set for CloudFront](/images/2020-05-29-Using-Route-53-to-Create-a-New-Domain-for-Static-Site/record-set.jpg)
 
 Once the new record set was created I hung around and waited for Route 53 to do its thing with regards to setting up the routings. After a few minutes I was able to see my new domain name point to the CloudFront distribution.
 
-![Site under new registered domain](/images/2020-05-29-Using-Route-53-to-Create-a-New-Domain-for-Static-Site/site-under-new-domain.jpg){: .centered.medium-8 }
+![Site under new registered domain](/images/2020-05-29-Using-Route-53-to-Create-a-New-Domain-for-Static-Site/site-under-new-domain.jpg)
 
 There you have it, a completely static site hosted on S3 and served by CloudFront with domain routings handled by Route 53.
 
@@ -59,6 +59,6 @@ To counter this, there is managed DDoS protection provided by [AWS Shield](https
 ## Closing Thoughts
 With the final solution architecture looking like the below, I have a fully available and scalable website that is accessible to the world via my new domain.
 
-![Solution overview of website](/images/2020-05-29-Using-Route-53-to-Create-a-New-Domain-for-Static-Site/solution-overview.jpg){: .centered.medium-8 }
+![Solution overview of website](/images/2020-05-29-Using-Route-53-to-Create-a-New-Domain-for-Static-Site/solution-overview.jpg)
 
 I can start adding new features to my site whenever I want as the underlying infrastructure is all in place. In the future, I won’t do any blog posts talking about minor changes to the site as it would essentially just consist of me amending/adding a few new pages and reuploading to S3. However, if I were to make any updates with the process or architecture to the site, then I’ll be sure to let you guys know in a new post. My next blog will probably be around creating an automated CI/CD pipeline so I can commit and push to a Git repository that in turn triggers a pipeline that automatically deploys my new site to S3. But for now, enjoy the content and if you have any questions, find me on the socials.

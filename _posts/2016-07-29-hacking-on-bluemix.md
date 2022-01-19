@@ -9,7 +9,7 @@ comments: true
 featured: true
 ---
 
-![Capgemini Bluemix Hackathon](/images/2016-07-29-hacking-on-bluemix/capgemini_hackathon.JPG){: .centered.medium-8 }
+![Capgemini Bluemix Hackathon](/images/2016-07-29-hacking-on-bluemix/capgemini_hackathon.JPG)
 
 I'm currently sitting at an airport in Paris awaiting my flight back to Cardiff and thought it would be a good time to share my experience of using [IBM Bluemix](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/).
 

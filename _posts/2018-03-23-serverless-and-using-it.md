@@ -46,7 +46,7 @@ For me, I was really limited as to what I could do for the unit testing and whil
 
 So, how does functional testing work with Serverless? [There is some documentation as to how a function can be tested](https://docs.microsoft.com/en-us/azure/azure-functions/functions-test-a-function). But when it comes to how you can do this in an automated way, there doesn't seem to be much in the form of guidance. So I set myself the following goals; I wanted to have a automated Dev Ops process to deliver my software and I wanted to have a continuous integration and continuous deployment process where functional tests could serve as a gate prior to promoting to other environments. I came up with:
 
-![serverless functional testing](/images/2018-02-21-serverless-and-using-it/serverless.png){: .centered.medium-8 }
+![serverless functional testing](/images/2018-02-21-serverless-and-using-it/serverless.png)
 
 This is a different model to conventional software testing because in that world everything probably exists on the build server. But here, I am putting my software out into a representative environment and then seeing how it behaves. In fact as a developer this proves to be quite useful because my feedback cycles are much tighter. I can identify and fix quicker than having to wait for a tester to feedback.
 
@@ -56,11 +56,11 @@ There is also the argument that if you can achieve good test coverage in a repre
 
 Serverless and DevOps are made for each other. Lets take a look at how the serverless function is deployed. Note that this was achieved using [Visual Studio Team Services Release Management](https://www.visualstudio.com/team-services/), but I have also heard that [Octopus deploy](https://octopus.com/) is very good although I haven't used it personally.
 
-![deploying the function to a resource group](/images/2018-02-21-serverless-and-using-it/deployment.png){: .centered.medium-8 }
+![deploying the function to a resource group](/images/2018-02-21-serverless-and-using-it/deployment.png)
 
 So the process removes what was there before (which is optional), creates a clean environment and then deploys the software to it. I have four environments; 
 
-![environments](/images/2018-02-21-serverless-and-using-it/env.png){: .centered.medium-8 }
+![environments](/images/2018-02-21-serverless-and-using-it/env.png)
 
 To expand on development:
 

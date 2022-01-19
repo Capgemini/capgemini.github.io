@@ -19,15 +19,15 @@ Rafael is a COVID-19 tracking application that has been created by Capgemini Bor
 
 The below image describes the context in a bit more detail alongside the final application's solution flow.
 
-![Rafael Context Overview](/images/2020-07-14-Rafael-Developers-Story/rafael-context-overview.jpg){: .centered.medium-8 }
+![Rafael Context Overview](/images/2020-07-14-Rafael-Developers-Story/rafael-context-overview.jpg)
 
 When a user opens Rafael, they are met with a screen where they fill with their information and symptoms for further evaluation. If the user is identified to have serious symptoms then they will be swiftly contacted by a physician.
 
-![Rafael Patient Questionnaire](/images/2020-07-14-Rafael-Developers-Story/rafael-patient-questionnaire.jpg){: .centered.medium-8 }
+![Rafael Patient Questionnaire](/images/2020-07-14-Rafael-Developers-Story/rafael-patient-questionnaire.jpg)
 
 For a physician, there will be many potential patients that will need care. The following Crisis Center Dashboard allows physicians to see patients’ states sorted by the seriousness of their symptoms. This allows for physicians to be aware of those with the most serious conditions and symptoms so they can act faster to care to them.
 
-![Rafael Crisis Dashboard](/images/2020-07-14-Rafael-Developers-Story/rafael-crisis-dashboard.jpg){: .centered.medium-8 }
+![Rafael Crisis Dashboard](/images/2020-07-14-Rafael-Developers-Story/rafael-crisis-dashboard.jpg)
 
 <div class="small-12 medium-8 large-4 small-centered columns">
   <div class="flex-video">

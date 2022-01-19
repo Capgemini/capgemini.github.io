@@ -181,7 +181,7 @@ Now we can start the application in development mode
 mvn compile quarkus:dev 
 {% endhighlight %}
 
-![Database](/images/2020-03-17-Quarkus-meets-Liquibase/database_init.png){: .centered.medium-8 }
+![Database](/images/2020-03-17-Quarkus-meets-Liquibase/database_init.png)
 
 From the logs we can see that Liquibase runs the database update. In the database we will have new table 
 and we can start to create objects. Let's create event in the database.
@@ -243,7 +243,7 @@ curl -s http://localhost:8080/event/1
   "info": null
 }
 {% endhighlight %}
-![Database](/images/2020-03-17-Quarkus-meets-Liquibase/database_update.png){: .centered.medium-8 }
+![Database](/images/2020-03-17-Quarkus-meets-Liquibase/database_update.png)
 
 From the output, we can see that the model has a new field and also the database table has been updated. Another useful configuration 
 are drop all tables before migration, disable Liquibase validation and changeLog file path. 

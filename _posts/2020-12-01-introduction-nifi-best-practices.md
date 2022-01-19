@@ -26,14 +26,14 @@ Apache NiFi can be set up by following the steps for your [operating system](htt
 
 After following a few steps and navigating your browser to the default port 8080, you should be presented with the NiFi User Interface, which looks like the following:
 
-![NiFi UI](/images/2020-11-02-introduction-nifi-best-practices/nifi1-1.png){: .centered.medium-8 }
+![NiFi UI](/images/2020-11-02-introduction-nifi-best-practices/nifi1-1.png)
 
 This is a canvas where processors can be dragged and dropped and can be connected via flows to other processors and endpoints.
  
 ## Processors, flows, funnels, ports and groups
 ### Processors
 
-![NiFi Processor ](/images/2020-11-02-introduction-nifi-best-practices/nifi1-17.png){: .centered.medium-8 }
+![NiFi Processor ](/images/2020-11-02-introduction-nifi-best-practices/nifi1-17.png)
 
 A processor in NiFi performs a discrete task and has one or more inputs or outputs. A freshly installed NiFi comes with a plethora of processors to choose from. We will use a few of these in the simple example flow later on in the post.
 
@@ -43,7 +43,7 @@ An example of a processor may be ```GetSQL``` or ```PostHTTP``` -  Processors ar
 
 ### Flows
 
-![NiFi Flow](/images/2020-11-02-introduction-nifi-best-practices/nifi1-10.png){: .centered.medium-8 }
+![NiFi Flow](/images/2020-11-02-introduction-nifi-best-practices/nifi1-10.png)
 
 A flow is what connects one processor to another processor, port or funnel, and works in one direction. A flow can be created by dragging a line on a canvas from one object to another.
 
@@ -54,7 +54,7 @@ Usually what happens when we are using a processor, is that each processor has b
 ### Funnels
 A funnel is a conduit aid that allows many flows to converge into a single flow, which helps to ensure a clear layout when lots of flows all have the same fate.
 
-![NiFi Funnel](/images/2020-11-02-introduction-nifi-best-practices/nifi1-15.png){: .centered.medium-8 }
+![NiFi Funnel](/images/2020-11-02-introduction-nifi-best-practices/nifi1-15.png)
 
 ### Groups
 Groups, or Processor Groups encapsulate a flow of processors into a single object on the canvas, to group any related bits of functionality to tidy away into a named processor group. This processor group can then connect to other processor groups, processors or funnels like a standard processor.
@@ -71,8 +71,8 @@ A Flow File consists of Flow File Content and Flow File Attributes. Flow File Co
 
 Each flow file can be visually traced on the NiFi UI through the displayed counts as it transits through the flow. We can even look at the content and attributes of a flow file itself when it resides in a flow queue. Right-clicking a flow queue and selecting a flow file presents the file attribute values and content. 
 
-![Flow File Attributes](/images/2020-11-02-introduction-nifi-best-practices/nifi1-16.png){: .centered.medium-8 }
-![Flow File Attributes](/images/2020-11-02-introduction-nifi-best-practices/nifi1-11.png){: .centered.medium-8 }
+![Flow File Attributes](/images/2020-11-02-introduction-nifi-best-practices/nifi1-16.png)
+![Flow File Attributes](/images/2020-11-02-introduction-nifi-best-practices/nifi1-11.png)
 
 ## An example flow
 Let’s have a go at creating a flow to solve a (very simple) problem. I have a dataset of files in a directory that is populated from some external system. I want these files sorted and placed into different folders based on their content.
@@ -151,19 +151,19 @@ I want these files to be placed into two different directories, current and savi
 The first thing we need to do is to add a processor which will read the files in a directory and turn them into flow files. I have used the ```GetFile``` processor to do this. Drag the processor symbol in NiFi to add this processor.
 Once added to the canvas, set the processor properties to similar values to scan an input directory for JSON files:
 
-![Adding a processor](/images/2020-11-02-introduction-nifi-best-practices/nifi1-9.png){: .centered.medium-8 }
-![GetFile Processor](/images/2020-11-02-introduction-nifi-best-practices/nifi1-13.png){: .centered.medium-8 }
+![Adding a processor](/images/2020-11-02-introduction-nifi-best-practices/nifi1-9.png)
+![GetFile Processor](/images/2020-11-02-introduction-nifi-best-practices/nifi1-13.png)
 
 
 Now that we have the input stage of our flow defined, we need to be able to read the flow file content to be able to decide which direct the files need to be written to. There are a few ways of doing this, but I am using an EvaluateJSONPath processor to read the file content and extract the ```accountType```.
 
-![EvaluateJSON Processor](/images/2020-11-02-introduction-nifi-best-practices/nifi1-12.png){: .centered.medium-8 }
+![EvaluateJSON Processor](/images/2020-11-02-introduction-nifi-best-practices/nifi1-12.png)
 
 This processor supports addition of custom properties to be able to read custom defined JSON parameters to extract. Add the property name and value above to extract the account Type JSON value from the file into a Flow File Attribute called ```accountType```. The “$.accountType” Is JSONPATH syntax for grabbing a key called ```accountType``` from the root JSON node.
 
 Next we need to be able to route our logic based on the _accountType_ flow attribute. To do this we need to use the _RouteOnAttributeProcessor_. Add this to the canvas and add the following properties:
 
-![RouteOnAttribute Processor](/images/2020-11-02-introduction-nifi-best-practices/nifi1-14.png){: .centered.medium-8 }
+![RouteOnAttribute Processor](/images/2020-11-02-introduction-nifi-best-practices/nifi1-14.png)
 
 The values for the additional properties make use of something called NiFi expression language, which we will touch upon later, but this is a way of routing to the two different routes based on the setting of _accountType_.
 
@@ -172,7 +172,7 @@ This routing logic is one of the common design patterns within NiFi. I’ll prob
 Now that the routing logic is present, we need to add a way of writing the flow files to a folder on the storage. To do this we use a _PutFile_ processor.
 
 Set the properties similar to the below. Note that we will need two of these, one for savings and one for the current account type.
-![PutFile Processor](/images/2020-11-02-introduction-nifi-best-practices/nifi1-8.png){: .centered.medium-8 }
+![PutFile Processor](/images/2020-11-02-introduction-nifi-best-practices/nifi1-8.png)
 
 All we need to do now is connect the processors up with flows. Simply drag a line from each processor to the next to create a flow for each success and failure state. 
 
@@ -180,14 +180,14 @@ It is good practice to use funnels as a way to extract out terminal flow queues 
 
 In the end, your flow should look something like this. If there are no errors a stop symbol will be displayed next to each processor (if you get a warning, hover over the symbol and remediate the issue that is stated).
 
-![Resultant Flow](/images/2020-11-02-introduction-nifi-best-practices/nifi1-7.png){: .centered.medium-8 }
+![Resultant Flow](/images/2020-11-02-introduction-nifi-best-practices/nifi1-7.png)
 
 
 That’s it! A routing system for files in about 10 minutes! To test your flow out you can start each individual processor by right-clicking and selecting start, or by use of a shortcut by right-clicking the canvas and selecting start, which will start all processors in the current canvas.
 
 The flow should route the files to the correct directories as seen in the UI:
 
-![Resultant Flow after running](/images/2020-11-02-introduction-nifi-best-practices/nifi1-6.png){: .centered.medium-8 }
+![Resultant Flow after running](/images/2020-11-02-introduction-nifi-best-practices/nifi1-6.png)
 
 Check the directories to see that the files have been sorted.
 
@@ -201,13 +201,13 @@ We can extract out the base path as it is the same for all of the processors.
 
 Right-click on the canvas and select variables. Add a new variable basePath and set it similar to the following:
 
-![NiFi Variables](/images/2020-11-02-introduction-nifi-best-practices/nifi1-22.png){: .centered.medium-8 }
+![NiFi Variables](/images/2020-11-02-introduction-nifi-best-practices/nifi1-22.png)
 
 Now go into the ```GetFile``` and ```PutFile``` processors and replace the preceding part of the ```filepath``` string with the new variable(note that you will need to stop the processor first before making any changes)
 
 All variables in NiFi are represented using the syntax ```${variableName}```. The processor properties should look like the following:
  
-![Variable substitution](/images/2020-11-02-introduction-nifi-best-practices/nifi1-5.png){: .centered.medium-8 }
+![Variable substitution](/images/2020-11-02-introduction-nifi-best-practices/nifi1-5.png)
 
  That’s it! Try playing your NiFi flow again and check it still works.
  
@@ -216,13 +216,13 @@ Previously we talked about processors automatically setting Flow File attributes
 
 Add an _UpdateAttribute_ processor and add a new filename property to the process as per below.
 
-![UpdateAttributes Processor](/images/2020-11-02-introduction-nifi-best-practices/nifi1-4.png){: .centered.medium-8 }
+![UpdateAttributes Processor](/images/2020-11-02-introduction-nifi-best-practices/nifi1-4.png)
  
 Now add this processor in between the ```RouteOnAttribute``` and ```Putfile``` processor for the current account.
 
 Change the output directory property of the ```PutFile``` processor to simply use ```${filename}```. The flow will look like the below diagram.
 
-![UpdateAttributes Flow](/images/2020-11-02-introduction-nifi-best-practices/nifi1-3.png){: .centered.medium-8 }
+![UpdateAttributes Flow](/images/2020-11-02-introduction-nifi-best-practices/nifi1-3.png)
 You have now demonstrated the use of setting flow attributes dynamically. 
 
 This can be very powerful with certain flow logic, particularly when determining where a flow file originates from and what should happen to it.
@@ -246,7 +246,7 @@ I will be adding to this section with more good practices and guidelines to foll
 
 * Error handling and failures should also be handled horizontally where possible, at the same level as the processor which produces the failure.
 
-![Example Good NiFi Layout](/images/2020-11-02-introduction-nifi-best-practices/nifi1-2.png){: .centered.medium-8 }
+![Example Good NiFi Layout](/images/2020-11-02-introduction-nifi-best-practices/nifi1-2.png)
 
 ### Naming
 * All processors should be renamed from their defaults to give a good description of what they are doing. E.g. ```RouteOnAttribute``` renamed to ```WhichAccount```, ```PutFile``` to ```PutSavingsAccount``` and be unique from any other processor. This doesn’t just help visually to distinguish the processor, but also when reading the log file to pinpoint an error when something goes wrong.

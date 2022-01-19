@@ -12,7 +12,7 @@ share: true
 
 
 
-![SAPUI5 logo](https://blog.leonhassan.co.uk/content/images/2017/06/n3Zue4Zj_400x400.jpg){: .centered.medium-8 }
+![SAPUI5 logo](https://blog.leonhassan.co.uk/content/images/2017/06/n3Zue4Zj_400x400.jpg)
 
 In this post we will be covering some basic set-up of our development environment (including the SAP Web IDE), going over MVC architecture with particular regard to SAP applications and finally building your first SAP application.
 

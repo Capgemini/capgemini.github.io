@@ -9,7 +9,7 @@ comments: true
 share: true
 ---
 
-![AWS Architecture](/images/2017-03-27-capgemini-dynamics-365-team-at-Extreme-365/Capgemini_Team.jpg){: .centered.medium-8 }
+![AWS Architecture](/images/2017-03-27-capgemini-dynamics-365-team-at-Extreme-365/Capgemini_Team.jpg)
 
 &quot;Invest in the future because that is where you are going to spend the rest of your life.&quot;  **Habeeb Akande**
 
@@ -45,7 +45,7 @@ Capgemini Microsoft Dynamics 365 team attended the first three days with the pla
 
 The format of the partner event is to have a full day training session from the sponsors. The [ClickDimensions](http://clickdimensions.com) advanced partner session was insightful and it was great to meet 11 time MVP [Matt Wittmann](https://mvp.microsoft.com/en-us/PublicProfile/33756?fullName=Matt%20Wittemann).
 
-![AWS Architecture](/images/2017-03-27-capgemini-dynamics-365-team-at-Extreme-365/Matt_W_Training.jpg){: .centered.medium-8 }
+![AWS Architecture](/images/2017-03-27-capgemini-dynamics-365-team-at-Extreme-365/Matt_W_Training.jpg)
 
 [Extreme 365 – Hosk notes on ClickDimension advanced partner training](https://crmbusiness.wordpress.com/2017/03/21/extreme-365-hosk-notes-on-clickdimension-advanced-partner-training/).
 
@@ -53,7 +53,7 @@ The format of the partner event is to have a full day training session from the 
 
 An exciting enhancement from ClickDimensions is the Enterprise Statistics warehouse
 
-![AWS Architecture](/images/2017-03-27-capgemini-dynamics-365-team-at-Extreme-365/ClickDimensions_Enterprise_statistics_warehouse.jpg){: .centered.medium-8 }
+![AWS Architecture](/images/2017-03-27-capgemini-dynamics-365-team-at-Extreme-365/ClickDimensions_Enterprise_statistics_warehouse.jpg)
 
 
 ### The Roadmap
@@ -85,7 +85,7 @@ The target market is companies who want out of the box of functionality with no 
 
 [Microsoft purchased LinkedIn](http://uk.businessinsider.com/microsoft-buys-linkedin-2016-6) last year and the Dynamics community has been waiting to see how Microsoft will integrate LinkedIn with Microsoft Dynamics 365.
 
-![AWS Architecture](/images/2017-03-27-capgemini-dynamics-365-team-at-Extreme-365/Sales_Intelligence_with_LinkedIn.jpg){: .centered.medium-8 }
+![AWS Architecture](/images/2017-03-27-capgemini-dynamics-365-team-at-Extreme-365/Sales_Intelligence_with_LinkedIn.jpg)
 
 LinkedIn will have embedded widgets and activities in Microsoft Dynamics 365 but there was no date when these enhancements will be available.
 
@@ -97,7 +97,7 @@ Microsoft continues to build functionality around Microsoft Dynamics 365, extend
 
 [Customer insights](https://www.microsoft.com/en-us/dynamics365/customer-insights) uses a powerful mix of Microsoft most successful and feature rich services.
 
-![AWS Architecture](/images/2017-03-27-capgemini-dynamics-365-team-at-Extreme-365/Customer_insights.jpg){: .centered.medium-8 }
+![AWS Architecture](/images/2017-03-27-capgemini-dynamics-365-team-at-Extreme-365/Customer_insights.jpg)
 
 ### Summary
 

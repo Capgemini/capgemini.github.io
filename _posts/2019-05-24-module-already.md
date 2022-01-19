@@ -27,7 +27,7 @@ In general, I'd prefer to avoid writing custom code, for the same [reasons that 
 ## How hard could it be?
 One area that sometimes causes friction between clients and vendors is around [estimates][estimates]. Unless you understand the underlying technology, it isn't always obvious why some things are easy and others are hard. 
 
-![tasks comic](/images/2019-05-24-modules/tasks.png){: .centered.medium-8 }
+![tasks comic](/images/2019-05-24-modules/tasks.png)
 [XKCD -tasks](https://xkcd.com/1425/){: .image-source }
 
 

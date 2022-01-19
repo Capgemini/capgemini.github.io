@@ -49,7 +49,7 @@ Without talking too much, let’s get into an example. Before I go any further, 
 
 For the purpose of this post, I have created a basic employee management system that allows for the creation and retrieval of employees and their details. The repository [is hosted on GitHub]( https://github.com/ChrisJBurns/jaeger-distributed-tracing-demo) and contains multiple different services and databases that each have their own simple function to perform. The below architecture diagram outlines the different components.
 
-![Employee Management System Architecture](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-management-system-architecture.png){: .centered.medium-8 }
+![Employee Management System Architecture](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-management-system-architecture.png)
 
 -	**Front-end service**: Simple front-end service written in VueJS
 -	**NodeJS API**: Simple NodeJS Express API that serves the data for the front-end and communicates with the three backend services
@@ -70,11 +70,11 @@ Once all of the services and databases are up and running, there should be two U
 ### Creating an Employee
 Navigating to `localhost:8080` takes us to the employee management service front-end where a few text boxes and buttons exist to allow us to create and get employees. 
 
-![Front-end UI Default](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/front-end-screen-default.png){: .centered.medium-8 }
+![Front-end UI Default](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/front-end-screen-default.png)
 
 Let’s create an employee called **Joe Bloggs** and let’s give him the title of **Senior Software Engineer**.
 
-![Employee Created Successfully](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-created-successfully.png){: .centered.medium-8 }
+![Employee Created Successfully](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-created-successfully.png)
 
 Now, in the background, the front-end service sent a `POST /create-employee` request to the NodeJS API which has in-turn sent a `GET /salary-grade/{title}` request to the `java-service` that gets the salary grade (in this case A3) for the title **Senior Software Engineer** and returns it to the NodeJS API which subsequently uses it in a `GET /salary-amount-for-grade` request to the Python service which gets the minimum and maximum salary amounts for the salary grade from the database which in this case is 40000-49999. When the Python API returns both the minimum and maximum salary amounts back to the NodeJS API, it will calculate a random number between the two and then sends all employee details to the `go-service` via a `POST /employee` request that inserts all data in the MongoDB employee database.
 
@@ -86,17 +86,17 @@ Enough of the what’s happening in the background, let’s see some request tra
 
 If I navigate to the `localhost:16686` URL, I get sent to the Jaeger front-end.
 
-![Jaeger UI Home Screen](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/jaeger-default-screen.png){: .centered.medium-8 }
+![Jaeger UI Home Screen](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/jaeger-default-screen.png)
 
 Now as you probably can see, there are some services already populated in the drop down at the top left. If there are traces exported to Jaeger, it will add the service to the list. Now, since it’s already got the `nodejs-service` already populated, let’s ignore the rest of the options and click **Find Traces**.
 
 Here, we’re shown two traces - the top one being what we're are interested in.
 
-![Employee Created Success Jaeger UI Home](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-success-jaeger-ui-home-screen.png){: .centered.medium-8 }
+![Employee Created Success Jaeger UI Home](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-success-jaeger-ui-home-screen.png)
 
 Once clicked, the entire trace is displayed on-screen.
 
-![Employee Created Success Jaeger Trace](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-success-trace.png){: .centered.medium-8 }
+![Employee Created Success Jaeger Trace](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-success-trace.png)
 
 If you are wondering why the front-end service is not on the trace as it was essentially where the trace should have started, the reason for this is because although VueJS is supported by OpenTelemetry via its [“web” package in the “opentelemetry-js” repository](https://github.com/open-telemetry/opentelemetry-js/tree/master/packages/opentelemetry-web), currently the JavaScript jaeger-export libraries (I am using it in the NodeJS API service) is not supported [in the browser](https://github.com/jaegertracing/jaeger-client-javascript/issues/1). This means that the VueJS front-end service, although it creates OpenTelemetry data, cannot export it to Jaeger - which is why we cannot see the front-end service in Jaeger.
 
@@ -104,11 +104,11 @@ If I was to use Golang for the front-end there would have been no problems, howe
 
 Now, let’s look at the trace, we can see that the request was sent to the NodeJS API and the subsequent calls to the other back-end services are also listed in the Gantt chart. We have a good idea of what requests and which services, took the longest to respond to their caller, additionally, we can see the details of the endpoints that were hit for each service.
 
-![Employee Created Success Trace Call Details](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-cretion-success-trace-calls.png){: .centered.medium-8 }
+![Employee Created Success Trace Call Details](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-cretion-success-trace-calls.png)
 
 Let’s expand the `go-service mongodb.query` and see what we get.
 
-![Employee Created Success Golang Mongo Insert](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-success-go-mongo-query.png){: .centered.medium-8 }
+![Employee Created Success Golang Mongo Insert](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-success-go-mongo-query.png)
 
 So, not only are we able to see the exact service endpoints that got hit during the request, we are now able to see the exact `db.statement` that was sent into the MongoDB. This functionality is offered to us out the box by the `otelmongo` auto-instrumentation library for the [Golang implementation of OpenTelemetry](https://github.com/open-telemetry/opentelemetry-go-contrib/tree/master/instrumentation). PROTIP: For secure sectors like Government systems, you may want to avoid displaying database queries via any front-end due for the obvious security reasons.
 
@@ -119,13 +119,13 @@ Now that we have created the employee **Joe**, let’s try retrieving him.
 
 On the front-end, when we created our employee, a message was displayed returning the employee ID. When we use it in the get employee section of the page, we will see the following details that were saved to the MongoDB Employee database.
 
-![Get Employee Success Front-end](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/get-employee-success.png){: .centered.medium-8 }
+![Get Employee Success Front-end](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/get-employee-success.png)
 
 There are some additional bits of information that we can see there that we did not enter into the original employee creation step, these details were what was returned by the java and python services, alongside some additional timestamps that are added to the record by default by MongoDB.
 
 Now let’s look at the trace in Jaeger. If we go to the screen and just click the **Jaeger UI** button at the top left we get sent back to the home screen. This time, let’s search for the `go-service` in the drop-down box and click **Find Traces**. 
 
-![Get Employee Success Front-end](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/get-employee-success-jaeger-ui-home.png){: .centered.medium-8 }
+![Get Employee Success Front-end](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/get-employee-success-jaeger-ui-home.png)
 
 Now, the `GET /get-employee` query is there as the first entry and it displays the `nodejs-service` service and the `go-service`. If you’re wondering why it shows all services, even though we chose a service that is lower down in the request call stack. This is because they are all registered under the same trace-id. In this case, the trace-id is **1bf3249** and if you were to enter that into the search bar at the top left, you would get given this same screen. 
 
@@ -133,7 +133,7 @@ How this works more specifically is the `trace-id` is the id of the overall trac
 
 So, in this case, because the `go-service` and the `nodejs-service` are essentially reporting Spans to the same trace, this is why we see both services when click the `go-service`. We aren’t saying, show me all of the `go-service` Spans, we are asking Jaeger to show us all traces that the `go-service` reported spans too.
 
-![Get Employee Jaeger Trace Details](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/get-employee-trace-details.png){: .centered.medium-8 }
+![Get Employee Jaeger Trace Details](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/get-employee-trace-details.png)
 
 Similar to the create employee trace, we have a Gantt chart displaying the timeline of the request trace. We can see that the request went from the `nodejs-service` to the `go-service` and we can also see the endpoints that it hit along the way - as well as the `mongodb.query` that was executed against the Mongo database.
 
@@ -145,27 +145,27 @@ So, let’s say, for example, the `go-service` was to be “down” due to some 
 
 So, on the front-end, when I clicked **Add Employee** nothing happened. As the user, I don’t know why, no error got returned through the screen. So, my natural instinct is to click it again. And again. And again. But still nothing.
 
-![Employee Creation Error with No Response](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-error-no-response.png){: .centered.medium-8 }
+![Employee Creation Error with No Response](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-error-no-response.png)
 
 Eventually, I get an error back.
 
-![Employee Creation Error - 500 Response](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-error-500.png){: .centered.medium-8 }
+![Employee Creation Error - 500 Response](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-error-500.png)
 
 Now sure, it took too long because of timeouts, an easy fix, just add it to the backlog. However, let’s say one of your services didn’t have retry logic or timeout handling. You would experience the same thing. The chances are, a user wouldn’t hang around long enough to wait for the error to be returned. They would either leave the website and never return or they may be kind enough to file a bug to let you know about the problem.
 
 This is where the power of distributed tracing comes into play. If we refresh the Jaeger UI and click `nodejs-service` in the drop down and click **Find Traces**, now we have the following.
 
-![Employee Creation Error - 500 Response Jaeger UI](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-error-500-jaeger-ui.png){: .centered.medium-8 }
+![Employee Creation Error - 500 Response Jaeger UI](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-error-500-jaeger-ui.png)
 
 Technically, when someone files a bug, you would normally have some information about the screen they were on which allows you to narrow things down to the specific service. For us, we know that the problem happened on the front-end, but since we haven’t got the VueJS Jaeger exporter functionality currently, we go to the next service down in the stack that has got the functionality - the `nodejs-service`. This is why we selected the `nodejs-service` in the drop down and not the `go-service` - although that’s where the problem is (which you wouldn’t actually know in a real scenario).
 
 Looking at the Jaeger UI we can see that there were 2 errors. Let’s click this trace to see more information.
 
-![Employee Creation Error - 500 Response Jaeger Trace Details](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-error-500-trace-details.png){: .centered.medium-8 }
+![Employee Creation Error - 500 Response Jaeger Trace Details](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-error-500-trace-details.png)
 
 We can see that at the bottom the `nodejs-service` `POST /employee` request failed. Let’s click this to see more information as we still don’t know why.
 
-![Employee Creation Error - 500 Response Jaeger Trace Connection Refused](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-error-500-error-detail.png){: .centered.medium-8 }
+![Employee Creation Error - 500 Response Jaeger Trace Connection Refused](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-error-500-error-detail.png)
 
 That’s more like it. We can see that the  POST request `http.url http://jaeger-tracing-go-service:8091/employee` failed with an error saying `ECONNREFUSED`. With this information we've narrowed the problem area down to a specific service. Is the service down? Or is the URL we are sending the request to wrong? Due to the tracing data we now have, we can investigate further. As Martin Chalfie [describes](https://www.9quotes.com/quote/martin-chalfie-472897) _"the more one can see, the more one can investigate"_. 
 
@@ -176,23 +176,23 @@ Now, building on top of the above. Let’s say there is a problem with the datab
 
 Well, when the error eventually gets thrown to the front-end, let’s refresh the Jaeger UI whilst clicking **Find Traces** on the `nodejs-service`. 
 
-![Employee Creation Error - Database Down Jaeger UI](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-db-down-jaeger-ui.png){: .centered.medium-8 }
+![Employee Creation Error - Database Down Jaeger UI](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-db-down-jaeger-ui.png)
 
 Oh wow! There are now 15 errors? Let’s click the trace to find out more. 
 
-![Employee Creation Error - Database Down Jaeger Trace Details](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-db-down-jaeger-trace-details.png){: .centered.medium-8 }
+![Employee Creation Error - Database Down Jaeger Trace Details](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-db-down-jaeger-trace-details.png)
 
 That’s a lot of errors coming from one service. But any experienced engineer could tell you that there is obviously some retry logic being used in the Java service (offered out of the box by Spring) and due to the problem still occurring after the 10th try, it eventually fails and reports back to the caller - which in this case is the `nodejs-service`. 
 
 Let’s click the first error entry for the `java-service`.
 
-![Employee Creation Error - Database Down Jaeger Span Detail](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-db-down-trace-span-1.png){: .centered.medium-8 }
+![Employee Creation Error - Database Down Jaeger Span Detail](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-db-down-trace-span-1.png)
 
 Interesting. We are getting a JDBC connection error. Any java engineers know that JDBC connection errors are database connection issues.
 
 Let’s investigate further by clicking lower down in the `java-service` errors.
 
-![Employee Creation Error - Database Down Jaeger Span Detail](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-db-down-trace-span-2.png){: .centered.medium-8 }
+![Employee Creation Error - Database Down Jaeger Span Detail](/images/2020-12-04-Distributed-Tracing-with-OpenTelemetry-And-Jaeger/employee-creation-db-down-trace-span-2.png)
 
 Bingo! Based on just the one panel being expanded, we can see from the java stack trace there was a connection issue whilst dealing with the PostgreSQL database. This now gives an engineer more information on where the problem area is and will swiftly lead to the discovery of the root cause.
 

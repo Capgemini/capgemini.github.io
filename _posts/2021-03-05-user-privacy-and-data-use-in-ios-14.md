@@ -36,7 +36,7 @@ Ad Exchanges are the actual digital marketplaces in between DSPs and SSPs where 
 
 Ad Networks are brokers of inventory and also generally placed between DSPs and SSPs.
 
-![AdTech stack high level](/images/2021-02-19-user-privacy-and-data-use-in-ios-14/adtechhighlevel.jpg){: .centered.medium-8 }
+![AdTech stack high level](/images/2021-02-19-user-privacy-and-data-use-in-ios-14/adtechhighlevel.jpg)
 
 The criteria governing the buying and selling of advertising space are not limited to price comparison: advertisers are interested in optimising their investment, which means spending the least for the maximum chance of converting a prospect into a customer.
 
@@ -181,19 +181,19 @@ In reality, prior to iOS 10, the IDFA was still passed, even if a user had enabl
 
 More recently Apple enabled the users to opt-out of Location-Based Apple Ads: with opt-out disabled, if a user granted the App Store or Apple News access to her/his device location, Apple’s advertising platform would use the current location of the device to provide with geographically targeted ads on the App Store and on Apple News apps.
 
-![iPhone Ad Targeting](/images/2021-02-19-user-privacy-and-data-use-in-ios-14/iPhone2.jpg){: .centered.medium-8 }
+![iPhone Ad Targeting](/images/2021-02-19-user-privacy-and-data-use-in-ios-14/iPhone2.jpg)
 
 iOS 13 brought with it an update to location data controls.
 
-![iPhone Location Services](/images/2021-02-19-user-privacy-and-data-use-in-ios-14/iPhone3.jpg){: .centered.medium-8 }
+![iPhone Location Services](/images/2021-02-19-user-privacy-and-data-use-in-ios-14/iPhone3.jpg)
 
 Firstly, users were periodically shown messages informing them of certain apps that were using their location data in the background (i.e., when not actually using the app in question).
 
-![iPhone Location tracking in background](/images/2021-02-19-user-privacy-and-data-use-in-ios-14/iPhone4.jpg){: .centered.medium-8 }
+![iPhone Location tracking in background](/images/2021-02-19-user-privacy-and-data-use-in-ios-14/iPhone4.jpg)
 
 Secondly, Apple changed the options available when users were presented with the popup to choose whether an app could use their location data: the original options were updated from “Always, Never, and While using” to “Allow While Using App, Allow Once, and Don’t Allow”.
 
-![iPhone Maps location access](/images/2021-02-19-user-privacy-and-data-use-in-ios-14/iPhone5.jpg){: .centered.medium-8 }
+![iPhone Maps location access](/images/2021-02-19-user-privacy-and-data-use-in-ios-14/iPhone5.jpg)
 
 Other privacy-related additions to iOS 13 were the permission to use Bluetooth and the permission to read Contacts’ notes: before, apps could access those functionalities freely, while with the new OS, the user was prompted to approve.
 
@@ -203,7 +203,7 @@ That leads us to the present day and to the controverted protagonist of the pres
 
 With iOS 14, Apple delivers a number of new [privacy-related features](https://www.apple.com/ios/ios-14/features):
 
-![iOS 14 Privacy-related features](/images/2021-02-19-user-privacy-and-data-use-in-ios-14/rel-notes-privacy.png){: .centered.medium-8 }
+![iOS 14 Privacy-related features](/images/2021-02-19-user-privacy-and-data-use-in-ios-14/rel-notes-privacy.png)
 
 The most debated ones are the two at the top of the list above: “Privacy information on the App Store” and “App tracking controls and transparency”.
 

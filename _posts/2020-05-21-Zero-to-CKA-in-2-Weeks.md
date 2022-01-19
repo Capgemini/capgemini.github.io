@@ -16,7 +16,7 @@ Fast forward 2 weeks and I actually understand most of these concepts. I also kn
 
 This article will contain some thoughts on the Certified Kubernetes Administrator exam and how I managed to pass it after 2 weeks with no prior knowledge of Kubernetes.
 
-![CKA Certification](/images/2020-05-13-Zero-to-CKA-in-2-Weeks.md/cka-certificate.jpg){: .centered.medium-8 }
+![CKA Certification](/images/2020-05-13-Zero-to-CKA-in-2-Weeks.md/cka-certificate.jpg)
 
 ---
 
@@ -33,7 +33,7 @@ Throughout the week I made notes of what I'd learnt using [Nuclino](https://www.
 
 For the 2nd week I had enrolled onto a CKA course hosted internally by Capgemini which was put on as part of getting more employees to learn about Kubernetes and get themselves certified with the CKA exam.
 
-![CKA Course Agenda](/images/2020-05-13-Zero-to-CKA-in-2-Weeks.md/2nd-week-agenda.jpg){: .centered.medium-8 }
+![CKA Course Agenda](/images/2020-05-13-Zero-to-CKA-in-2-Weeks.md/2nd-week-agenda.jpg)
 
 The agenda for the week was fairly straightforward, days 1–3 were spent covering core concepts, Kubernetes Objects, Services and carrying out labs (hands-on creation of these components). A lot of the areas covered in these first few days would feature heavily on the exam and become the majority of the marks that made up the exam. Day 3 also included a mock exam with a variety of exam-like questions which was used to gauge the classes' current confidence levels with the exam coming up in 2 days.
 

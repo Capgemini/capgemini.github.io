@@ -12,7 +12,7 @@ share: true
 ## Overview
 Cyprus is a nice sunny island and is the third most popular of the Mediterranean islands. However, as I can’t go to Cyprus right now due to COVID-19, I have had to settle for something that sounds similar instead, that is [Cypress](https://docs.cypress.io) 😉
 
-![Cypress not Cyprus](/images/2020-05-09-cypress-testing-framework/cypress-not-cyprus.jpg){: .centered.medium-8 }
+![Cypress not Cyprus](/images/2020-05-09-cypress-testing-framework/cypress-not-cyprus.jpg)
 
 Cypress is not a sunny island, but it is a relatively new end-to-end testing framework that is creating fireworks in the testing world. It has been dubbed a *[Selenium](https://www.selenium.dev) killer*, and given my experience of it I must agree with that statement. I’m sure most people have experienced flaky and unreliable UI tests, and if you haven’t then you have been very lucky! Cypress goes a long way towards solving the issues Selenium and other testing frameworks have.
 
@@ -21,13 +21,13 @@ Do you want easy-to-write, reliable and fast automated tests? If the answer is y
 ## How it Works
 Selenium is a well known testing tool that has typically been the go-to for automated UI testing. It interacts with the browser using a web driver which allows Selenium to interact with the browser like it was a user. See the diagram below:
 
-![Selenium Architecture](/images/2020-05-09-cypress-testing-framework/selenium-architecture.jpg){: .centered.medium-8 }
+![Selenium Architecture](/images/2020-05-09-cypress-testing-framework/selenium-architecture.jpg)
 
 This architecture allows Selenium to easily support multiple browsers, but it also creates a large amount of complexity. Due to the unpredictability of how browsers load a webpage Selenium tests end up being very unreliable. To counteract this, you have to add in the dreaded `wait`, to pause the test until you can be sure the browser has loaded all the webpage elements you need, eventually these waits end up everywhere! This leads to tests that are slow and unreliable.
 
 Cypress in comparison has none of the above complexity. Many other frameworks just use Selenium underneath, but Cypress has been written from scratch. All the tests are written in JavaScript, and these run directly in the browser, so say goodbye to the web drivers. As such Cypress can see exactly what is happening in the Browser, so it is more successful in knowing when a webpage has loaded. Additionally, this also makes it much faster. Cypress tests happen in a blur of activity, as it can interact with elements as soon as they have loaded. Cypress doesn’t have any of the restrictions that the Selenium architecture entails. Behind the scenes Cypress is designed like this:
 
-![Cypress Architecture](/images/2020-05-09-cypress-testing-framework/cypress-architecture.jpg){: .centered.medium-8 }
+![Cypress Architecture](/images/2020-05-09-cypress-testing-framework/cypress-architecture.jpg)
  
 There are lot more features over just reliable tests as well. It has a great UI for developing and running the tests, as well as a headless mode for use with continuous integration tools. By default it takes screenshots and videos of all your tests, so you can easily debug any issues. There are hundreds of plugins offering additional functionality, including support for REST/API integration testing and Cucumber/Gherkin integration. Cypress even bypasses CORS for you! All of this turns Cypress into a full end-to-end testing framework, not just a UI testing tool.
 
@@ -121,7 +121,7 @@ The above should be fairly self-explanatory due to Cypress’s simple syntax. Ho
 #### 5.	Run the test
 Click on the `test.spec.js` test at the bottom of your Cypress dashboard to run the test. This should something like the screenshot below, which a nice green bar on the left showing the test passed! 
 
-![Cypress Google Test Screenshot](/images/2020-05-09-cypress-testing-framework/cypress-google-test-screenshot.jpg){: .centered.medium-8 }
+![Cypress Google Test Screenshot](/images/2020-05-09-cypress-testing-framework/cypress-google-test-screenshot.jpg)
 
 You can click on each step that ran to see a screenshot of each step. Additionally, you can re-run the test by pressing the reload button, see if you can beat my fastest run of 2.22 seconds (as shown in the screenshot) 😉
 

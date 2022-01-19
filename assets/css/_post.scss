@@ -136,22 +136,23 @@
     font-size: 1.125rem;
   }
 
-  img.centered {
-    display: block;
-    margin: 0 auto 1em;
-  }
-
   img {
+    display: block;
+    margin: 1em auto 2em;
+
+    &.inline {
+      display: inline-block;
+    }
+
     &.medium-8 {
       width: auto;
       max-width: 66.666667%;
     }
-  }
 
-  img.half-width {
-    @extend .columns;
-    @extend .medium-6;
-    margin-bottom: 1em;
+    .half-width {
+      @extend .columns;
+      @extend .medium-6;
+    }
   }
 
   .image-source {

@@ -30,7 +30,7 @@ Press Ctrl+C to stop
 
 When I go to the URL: `http://localhost:1313/` I see the following…
 
-![Locally generated default Hugo site](/images/2020-02-28-Using-S3-and-Hugo-to-Create-Hosting-Static-Website/default-hugo-coder-page.png){: .centered.medium-8 }
+![Locally generated default Hugo site](/images/2020-02-28-Using-S3-and-Hugo-to-Create-Hosting-Static-Website/default-hugo-coder-page.png)
 
 Look at that, I’ve instantly got a site created. Thank the Universe for Hugo themes as this would have taken me hours to do from scratch.
 
@@ -38,7 +38,7 @@ However, in all its glory, there are some minor problems. One being that my name
 
 After some chopping and changing of the `config.toml` file, I have now got the following:
 
-![Locally generated Hugo site](/images/2020-02-28-Using-S3-and-Hugo-to-Create-Hosting-Static-Website/local-chrisjburns-page.png){: .centered.medium-8 }
+![Locally generated Hugo site](/images/2020-02-28-Using-S3-and-Hugo-to-Create-Hosting-Static-Website/local-chrisjburns-page.png)
 
 Nothing fancy, just something basic. For reference, in the `config.toml` file I have only really commented out the menu items at the bottom:
 
@@ -85,25 +85,25 @@ When creating a static website for S3, it already provides functionality to do t
 
 First, I created a public bucket that I aim to use for my site. It is always recommended to use the domain that you wish to use for your site. In my case it shall be `chrisjburns.com`.
 
-![Newly created site bucket](/images/2020-02-28-Using-S3-and-Hugo-to-Create-Hosting-Static-Website/bucket-picture.png){: .centered.medium-8 }
+![Newly created site bucket](/images/2020-02-28-Using-S3-and-Hugo-to-Create-Hosting-Static-Website/bucket-picture.png)
 
 Now I have the bucket, I can upload my site. I do this uploading the rendered `public/` directory. Next, I enable static hosting by going to to the `Properties` tab in the bucket settings and choosing `Static website hosting` whilst entering the following settings:
 
-![Enabled Static Hosting Settings](/images/2020-02-28-Using-S3-and-Hugo-to-Create-Hosting-Static-Website/static-hosting-settings.png){: .centered.medium-8 }
+![Enabled Static Hosting Settings](/images/2020-02-28-Using-S3-and-Hugo-to-Create-Hosting-Static-Website/static-hosting-settings.png)
 
  Make sure to make a note of the endpoint URL as I will refer back to it in a few moments. When I click `Save` the following is shown to state that the static hosting is enabled.
 
-![Proof of static hosting being enabled](/images/2020-02-28-Using-S3-and-Hugo-to-Create-Hosting-Static-Website/proof-static-hosting-enabled.png){: .centered.medium-8 }
+![Proof of static hosting being enabled](/images/2020-02-28-Using-S3-and-Hugo-to-Create-Hosting-Static-Website/proof-static-hosting-enabled.png)
 
 Now I have enabled the static hosting, I need to give the public read access in order for them to see the website.
 
 To do this I created a bucket policy that gives anyone read access to the content in the `chrisjburns.com/` bucket. The policy looks like the following:
 
-![Bucket Policy Editor](/images/2020-02-28-Using-S3-and-Hugo-to-Create-Hosting-Static-Website/bucket-policy.png){: .centered.medium-8 }
+![Bucket Policy Editor](/images/2020-02-28-Using-S3-and-Hugo-to-Create-Hosting-Static-Website/bucket-policy.png)
 
 Now when I go to the Endpoint URL that I mentioned a few moments ago we should see the site in all its basic glory.
 
-![Final result of S3 hosted site](/images/2020-02-28-Using-S3-and-Hugo-to-Create-Hosting-Static-Website/s3-signed-url-page.png){: .centered.medium-8 }
+![Final result of S3 hosted site](/images/2020-02-28-Using-S3-and-Hugo-to-Create-Hosting-Static-Website/s3-signed-url-page.png)
 
 This is the most basic way of setting up a static site in S3. Obviously, sites with programmed functionality behind them won’t really fit this model that well due to the restrictions on only static content being allowed - although [JAMStack](https://jamstack.org/) is pushing the boundaries on this very restriction. However, for a site that has just static content then it can work wonders and is amazingly cheap. If at any point you wanted to modify something on the site, just make the changes that you want and the regenerate the site by running `hugo` and re-upload the `public/` directory into the bucket.
 

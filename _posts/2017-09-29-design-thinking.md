@@ -38,7 +38,7 @@ The black dot is where we aim to get through Design Thinking, then we move into 
 
 These three phases form the double diamond design thinking methodology. There are many other methodologies, however they are all relatively similar.
 
-![Double Diamond diagram](https://blog.leonhassan.co.uk/content/images/2017/08/Double-Diamond-diagram.svg){: .centered.medium-8 }
+![Double Diamond diagram](https://blog.leonhassan.co.uk/content/images/2017/08/Double-Diamond-diagram.svg)
 
 A fundamental concept of design thinking is the "converge-diverge" thought process. Design thinking teams should by nature be a diverse group, with many different disciplines. This is because it will give a greater variety of perceived and observed problems, as well as possible solutions.
 
@@ -114,7 +114,7 @@ There is no baked solution in the insight and it is open-ended, allowing everyon
 ### Empathy maps
 Empathy maps are a fantastic tool to accurately represent a user's experience and help you to understand their needs.
 
-![Empathy Map template](https://blog.leonhassan.co.uk/content/images/2017/08/Empathy-Map-template.svg){: .centered.medium-8 }
+![Empathy Map template](https://blog.leonhassan.co.uk/content/images/2017/08/Empathy-Map-template.svg)
 
 You map out the information they're giving you against this map and it helps you to identify the user's values and true issues, articulated and hidden. It can also be helpful to notice if you haven't covered any areas when filling in the map.
 
