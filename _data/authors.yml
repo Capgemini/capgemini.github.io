@@ -578,6 +578,13 @@ lewis_vince:
     description: "Lewis is a senior full-stack engineer in Capgemini's Open Source Cloud Engineering team."
     avatar: https://avatars.githubusercontent.com/u/8005421?v=4
     team: java
+shemsedin_callaki:
+    name: Shemsedin Callaki
+    gitgub: Shemsedin
+    linkedin: https://www.linkedin.com/in/shemsedincallaki/
+    description: "Shemsedin is a senior JavaScript Engineer at Capgemini"
+    avatar: https://avatars.githubusercontent.com/u/4094373
+    team: web_platforms
 daniele_zurico:
     name: Daniele Zurico
     github: daniele-zurico
