@@ -16,10 +16,10 @@ From improving startup time to allow serverless Java apps, to enabling scale-to-
 ## Back to the Buzz
 After a nervous 2-day hybrid conference last year, Devoxx was back to its buzzing self this year with speakers delighted to be back in front of audiences and the sponsors' booths once again bursting with free gifts and chat. Capgemini were gold sponsors this year, with engineers [Kevin Rudland](https://capgemini.github.io/authors/#author-kevin-rudland) and [Chris Burns](https://capgemini.github.io/authors/#author-chris-burns) giving their talk "How to get Hacker Kids to Max Out your AWS account in 10 hours, and other reasons to focus on your Secure Software Supply Chain" (more on that later).
 
-![Capgemini's stall at Devoxx 2022](/images/2022-05-17-the-efficient-cloud-era/stand.jpg)
+![Capgemini's stall at Devoxx 2022](/images/2022-05-17-the-efficient-cloud-era/stand.jpg){: .medium-8 }
 
 Our T shirt and mug freebies flew off the shelf, and our vegan, palm-oil free pick 'n' mix was popular in the post-lunch lull. Fantastic Capgemini AIE artist [Jack Ambrose](https://uk.linkedin.com/in/jack-ambrose) was once again on hand to help people visualise "Getting the future they want".
-![Jack Ambrose art](/images/2022-05-17-the-efficient-cloud-era/art.jpg)
+![Jack Ambrose art](/images/2022-05-17-the-efficient-cloud-era/art.jpg){: .medium-8 }
 
 ## Efficiency at the Fore
 There isn't time to go to all the talks at Devoxx so this article is skewed by my choices, however there were many talks around similar themes: improving the efficiency and speed of Java applications, deploying to the cloud with Kubernetes and Knative being prevalent. I've listed here some strong themes and great facts from the talks that I attended over the three days.
@@ -33,7 +33,7 @@ There has been a real buzz around [GraalVM](https://www.graalvm.org) in recent y
 There is, of course, a downside to AOT. Creating your native image before startup means the application can't be as effectively profiled to identify "hot-spots" so overall performance is typically lower. According to the talk, applications started from an AOT image are about 0.6 times the speed of a JIT-compiled application; although you can raise this to about 0.8 times the speed with some extra performance evaluation during compilation.
 
 The answer suggested by this talk was to start an application with the JIT compiler, but then "freeze" it once it was running and save that frozen state. Future starts of the application could use the frozen state kind of like an AOT image, meaning you get all the benefits of JIT compliation and also instant start-up. The statistics shown in the talk were impressive to say the least. Java apps on CRaC start up 2 orders of magnitude faster.
-![CRaC 2 orders of magnitude faster to start](/images/2022-05-17-the-efficient-cloud-era/slide.jpg)
+![CRaC 2 orders of magnitude faster to start](/images/2022-05-17-the-efficient-cloud-era/slide.jpg){: .medium-8 }
 
 ### Shrinking your Apps
 
