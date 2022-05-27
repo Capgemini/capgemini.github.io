@@ -490,19 +490,21 @@ A file where un-styled stories of `ComponentName` can be added, these stories wi
 
 Within the project's GitHub [project board](https://github.com/Capgemini/dcx-react-library/projects/2) we have a number of enhancements that we want to implement for the upcoming 0.5 release with details of the desired changes, below is a snippet of a [previous enhancement](https://github.com/Capgemini/dcx-react-library/issues/242) made to the [FormSelect](https://main--6069a6f47f4b9f002171f8e1.chromatic.com/?path=/docs/dcxlibrary-form-select-documentation--page) component in the 0.4 release.
 
-1. Currently when you want to pass the `options` you need to specify the value and the label. 
-```tsx
+Currently when you want to pass the `options` you need to specify the value and the label. 
+
+```jsx
 {% raw %}
-options={[{
-  label: 'Recently published',
-  value: 'published'
-}]}
+  options={[{
+    label: 'Recently published',
+    value: 'published'
+  }]}
 {% endraw %}
 ```
- This is perfect in cases where it is not necessary to have a different label from the value. 
- ```tsx
+ This is perfect in cases where it is not necessary to have a different label from the value.
+
+ ```jsx
  {% raw %}
- options={['a', 'b', 'c'] }
+  options={['a', 'b', 'c']}
  {% endraw %}
 ```
 
