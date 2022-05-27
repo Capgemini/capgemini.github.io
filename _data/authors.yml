@@ -592,3 +592,11 @@ daniele_zurico:
     description: "Daniele is a senior Technical Architect at Capgemini"
     avatar: https://avatars.githubusercontent.com/u/3193095?v=4
     team: web_platforms
+isaac_babalola:
+    name: Isaac Babalola
+    twitter: ibabalola
+    github: Ibabalola
+    linkedin: https://www.linkedin.com/in/iobabalola/
+    description: "Isaac is a Senior Software Engineer at Capgemini, with an interest in web applications and cloud computing"
+    team: web_platforms
+    avatar: https://s.gravatar.com/avatar/48a3c06606d403685a5b06bdfeb5993c?s=200
