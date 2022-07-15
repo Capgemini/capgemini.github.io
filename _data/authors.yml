@@ -592,6 +592,12 @@ daniele_zurico:
     description: "Daniele is a senior Technical Architect at Capgemini"
     avatar: https://avatars.githubusercontent.com/u/3193095?v=4
     team: web_platforms
+ravi_vakalapudi:
+    name: Venkata Ravi Babu Vakalapudi
+    linkedin: https://www.linkedin.com/in/venkata-ravi-babu-vakalapudi/
+    description: "Software Engineer Lead at Capgemini"
+    team: dynamics365
+    avatar: /images/authors/ravi-vakalapudi.jpeg
 isaac_babalola:
     name: Isaac Babalola
     twitter: ibabalola
