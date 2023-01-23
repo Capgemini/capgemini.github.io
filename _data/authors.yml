@@ -453,14 +453,14 @@ james_heywood:
     team: microsoftnetazure
     avatar: /images/authors/james-heywood.jpeg
     ex: true
-liamgiles:
-    name: Liam Giles
-    github: liamgiles
-    twitter: mrliamgiles
-    linkedin: https://www.linkedin.com/in/liam-giles-8572735b/
-    description: "Liam Giles is a Software Engineer at Capgemini who has an interest in Web Applications, DevOps and Mobile Application Development."
+daiseygiles:
+    name: Daisey Giles
+    github: daiseybtw
+    twitter: daiseybtw
+    linkedin: https://www.linkedin.com/in/daisey-giles-8572735b/
+    description: "Daisey is a Software Engineer at Capgemini. She has an interest in Web Applications, DevOps, Mobile Application Development, and Innovation."
     team: web_platforms
-    avatar: https://avatars1.githubusercontent.com/u/2623412?s=400&u=6c45fd2832bd49a9cbe10fbf9e9149fecddb8894&v=4
+    avatar: https://avatars.githubusercontent.com/u/97960080?v=4
 nassaz:
     name: Tijani Nasser
     github: nassaz

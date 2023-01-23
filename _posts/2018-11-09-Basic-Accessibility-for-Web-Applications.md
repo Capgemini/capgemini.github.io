@@ -2,7 +2,7 @@
 layout: post
 title: Basic Accessibility for Web Applications
 description: Basic accessibility when developing web applications.
-author: [liamgiles]
+author: [daiseygiles]
 category: Accessibility
 tags: [Web, Frontend, Development, Accessibility]
 comments: true
