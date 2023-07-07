@@ -14,7 +14,7 @@ featured: false
 
 On the first day of my first professional job, an experienced colleague gave me a piece of advice which has served me well for many years:
 
-> Admit it when you don't know the answer
+    "Admit it when you don't know the answer"
 
 Simplistically, this works because it prevents you from getting in too deep when things get tough.  But it's not only that - there's more here than meets the eye. Below are three of the hidden benefits that careful application of this adage can deliver.
 
