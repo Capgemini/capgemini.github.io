@@ -13,8 +13,8 @@ pageclasses: page-search
   var searchIndex = [
       {% for post in site.posts %}
   {
-      "title"      : "{{ post.title | escape }}",
-      "category"   : "{{ post.category }}",
+      "title"      : {{ post.title | markdownify | strip_html | jsonify }},
+      "category"   : {{ post.category | markdownify | strip_html | jsonify }},
       "description": {{ post.description | markdownify | strip_html | jsonify }},
       "content"    : {{ post.content | markdownify | strip_html | jsonify }},
       "url"        : "{{ post.url }}",
