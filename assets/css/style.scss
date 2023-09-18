@@ -477,3 +477,13 @@ figcaption {
 @import "components/presentations";
 
 @import "print";
+
+.article-gallery {
+  display: inline-block;
+
+  &:focus,
+  &:active {
+    background: none;
+    outline: 1px solid $yellow;
+  }
+}
