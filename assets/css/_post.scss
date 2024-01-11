@@ -139,14 +139,14 @@
   img {
     display: block;
     margin: 1em auto 2em;
+    width: auto;
+    
+    @include breakpoint(laptop) {
+      max-width: 66.666667%;
+    }
 
     &.inline {
       display: inline-block;
-    }
-
-    &.medium-8 {
-      width: auto;
-      max-width: 66.666667%;
     }
 
     .half-width {

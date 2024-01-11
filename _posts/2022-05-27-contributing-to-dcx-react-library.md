@@ -362,7 +362,7 @@ finally
 
 this will also open http://localhost:3000 in your default browser
 
-![Example Demo Page](/images/2022-05-27-contributing-to-dcx-library/contributing-to-dcx-library-example-demo.jpeg){: .medium-8 }
+![Example Demo Page](/images/2022-05-27-contributing-to-dcx-library/contributing-to-dcx-library-example-demo.jpeg)
 
 ### Updating storybook documentation
 

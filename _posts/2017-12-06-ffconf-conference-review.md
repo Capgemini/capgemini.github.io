@@ -8,13 +8,13 @@ tags: [Conferences, Learning, Skills, Frontend, JavaScript]
 share: false
 
 ---
-![ffconf logo](/images/2017-12-06-ffconf/ffconf-logo.png){: .centered.medium-8}
+![ffconf logo](/images/2017-12-06-ffconf/ffconf-logo.png)
 
 [ffconf](https://ffconf.org/) is a JavaScript conference which is held in Brighton each year. This post provides a brief summary of ffconf 2017 (held on 9 and 10 November) and links to the talks posted by the organisers.
 
 The day offered a good balance of future-of-the-web philosophy and technical detail. ffconf is fairly small - the 8 sessions are run back to back in a single cinema auditorium - which gives the event an intimate and friendly vibe. The event is held in [The Duke of York’s Picturehouse](https://www.picturehouses.com/cinema/Duke_Of_Yorks/), a quirky cinema which lays claim to being the oldest in Britain and, in 2012, was also voted the best.
 
-![Duke of York's Picturehouse](/images/2017-12-06-ffconf/512px-Duke_of_York_Cinema.jpg){: .centered.medium-8}
+![Duke of York's Picturehouse](/images/2017-12-06-ffconf/512px-Duke_of_York_Cinema.jpg)
 [Image By Hassocks5489 at en.wikipedia (Transferred from en.wikipedia) [Public domain], via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Duke_of_York_Cinema.jpg){: .image-source }
 
 The organisation of the event was excellent... we were treated to coffees, pastries, cakes and ice cream during the day. Signing in at the start was a breeze. Staff were friendly and happy to help. There was plenty of opportunity to talk to the speakers who were hanging around the event all day and were happy to share their views.

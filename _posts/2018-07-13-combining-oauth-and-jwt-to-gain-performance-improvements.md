@@ -17,7 +17,7 @@ How do we then authorise access to protected REST APIs? Say hello to [OAuth](htt
 OAuth enables an application to obtain limited access to an HTTP service. While JWT is a compact, URL-safe means of representing claims to be transferred between two parties. OAuth has a number of grant types. So whenever I refer to OAuth in this blog post, I am referring to the [OAuth 2.0 Resource Owner Password Credentials Grant type](https://tools.ietf.org/html/rfc6749#page-37). 
 A user is required to authenticate or login to obtain a token. A typical authentication flow is shown in the sequence diagram below.
  
-![Authentication flow](/images/2018-07-13-combining-oauth-and-jwt-to-gain-performance-improvements/authentication-flow.jpg){: .centered.medium-8}
+![Authentication flow](/images/2018-07-13-combining-oauth-and-jwt-to-gain-performance-improvements/authentication-flow.jpg)
 
 A user will enter their username and password via a client (which could be a mobile device or PC), and at the end of the authentication process the user will be supplied with a token. The client will then include the token with every subsequent API request to a resource server (like the User server). 
 To compare what the authorisation flow for both OAuth and JWT will look like, let's consider an example where we make an API request to *GET the authenticated user*. 
@@ -28,7 +28,7 @@ The OAuth flow to *GET the authenticated user whose ID is 123* will typically lo
 
 While, the JWT flow to *GET the authenticated user whose ID is 123* will typically look like the sequence diagram below.
 
-![Get user JWT flow](/images/2018-07-13-combining-oauth-and-jwt-to-gain-performance-improvements/get-user-jwt-flow.jpg){: .centered.medium-8}
+![Get user JWT flow](/images/2018-07-13-combining-oauth-and-jwt-to-gain-performance-improvements/get-user-jwt-flow.jpg)
 
 The JWT implementation is less chatty and more performant compared to OAuth. This is because JWT enables a resource server to verify the token locally. In its compact form, JWT consist of three parts: the header, payload and signature. 
 The signature is the result of signing the base64Url encoded header and the base64Url encoded payload with a key. The resource server uses the signature to verify that the token has not been tampered with.

@@ -82,7 +82,7 @@ The second watcher is for the css directory, watching for changes in the `style.
 
 Run the Gulpfile by navigating to the root directory of your project and running the command `gulp`. This will run `gulp default`, which in our example is a task that runs `gulp watch`.
 
-![Screenshot of the Gulp running watchers for SCSS and CSS](https://blog.leonhassan.co.uk/content/images/2017/10/gulp-for-scss-and-css-1.png){: .medium-8 .centered}
+![Screenshot of the Gulp running watchers for SCSS and CSS](https://blog.leonhassan.co.uk/content/images/2017/10/gulp-for-scss-and-css-1.png)
 
 Now you have a minified CSS file built from all your SCSS files!
 
@@ -147,7 +147,7 @@ gulp.task('css', function(){
 
 Now when we run `gulp`, not only do we get a local server running the site (and an external link!). We also get live reloads/updates when we change our SCSS files.
 
-![Screenshot of Gulp running with BrowserSync](https://blog.leonhassan.co.uk/content/images/2017/10/gulp-with-browsersync-1.png){: .medium-8 .centered}
+![Screenshot of Gulp running with BrowserSync](https://blog.leonhassan.co.uk/content/images/2017/10/gulp-with-browsersync-1.png)
 
 ---
 

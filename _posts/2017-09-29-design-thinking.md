@@ -22,7 +22,7 @@ The following post is a collection of my thoughts following a Capgemini design t
 
 Design thinking always aims to find the most desirable solution, questions about feasibility and viability are left until the end of the process.
 
-![Design thinking Venn diagram](https://blog.leonhassan.co.uk/content/images/2017/09/DT-venn-diagram-3.svg){: .medium-8 .centered}
+![Design thinking Venn diagram](https://blog.leonhassan.co.uk/content/images/2017/09/DT-venn-diagram-3.svg)
 
 <div class="caption">
 The black dot is where we aim to get through Design Thinking, then we move into the realm of desirable, feasible and viable.
