@@ -59,7 +59,7 @@ Overall, it was a great conference - well organised, with helpful friendly staff
 [sponsor]: https://twitter.com/al94781/status/872528028924084225 
 [shoptalk]: https://twitter.com/malcomio/status/856504285156265984 
 [queue]: https://twitter.com/natwallbank/status/872729353712480256 
-[patrick]: https://www.slideshare.net/thekua/constant-life-of-a-tech-lead 
+[patrick]: https://www.youtube.com/watch?v=9jd_vpcLK50 
 [eisenhower]: http://www.eisenhower.me/eisenhower-matrix/ 
 [hofstede]: https://en.wikipedia.org/wiki/Hofstede%27s_cultural_dimensions_theory 
 [kwu]: https://speakerdeck.com/kwugirl/ask-vs-guess-culture-communication-the-lead-developer-uk 
