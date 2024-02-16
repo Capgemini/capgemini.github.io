@@ -167,6 +167,7 @@ broomyocymru:
     avatar: https://www.gravatar.com/avatar/798d01f41999b0172ba3ab4d589512d1.jpg?s=200
     github: broomyocymru
     description: "Ant is a Software Engineer at Capgemini, passionate about DevOps and Continuous Delivery."
+    ex: true
 craig_williams:
     name: Craig Williams
     twitter: craig_williams1
@@ -304,6 +305,7 @@ luis_rodriguez:
     description: "Software Engineer at Capgemini in the Drupal team"
     team: web_platforms
     avatar: https://avatars0.githubusercontent.com/u/1894255?v=3&s=200
+    ex: true
 james_relph:
     name: James Relph
     twitter: jprelph
@@ -328,6 +330,7 @@ rune_offerdal:
     description: "Rune is an experienced Tech Lead, Lead Java Systems Engineer and Managing Consultant at Capgemini. He loves the symbiosis between Team and Technology."
     team: norway
     avatar: https://avatars0.githubusercontent.com/u/26794799?v=3&s=460
+    ex: true
 kevin_rudland:
     name: Kevin Rudland
     twitter: kevinrudland
@@ -348,6 +351,7 @@ henry_white:
     description: "Henry White is a Software Engineer at Capgemini. He has experience in PHP, JavaScript, React and Drupal. Henry has a strong interest for learning new web technologies."
     avatar: /images/authors/henry-white.png
     team: web_platforms
+    ex: true
 tosin_ogunrinde:
     name: Tosin Ogunrinde
     twitter: tosin_ogunrinde
@@ -400,6 +404,7 @@ paul_monk:
     team: java
     github: nighk
     avatar: https://avatars2.githubusercontent.com/u/6906413?v=4&s=400&u=48cf11af97384d4434eba7b9cf6fa380ac210985
+    ex: true
 jatwal:
     name: Jastinder Singh Atwal
     twitter: jascapdev
@@ -478,6 +483,7 @@ nhamer:
     description: "Nigel builds software using as much common sense as possible."
     team: microsoftnetazure
     avatar: /images/authors/nigel-hamer.jpeg
+    ex: true
 cburns:
     name: Chris Burns
     github: ChrisJBurns
@@ -509,6 +515,7 @@ dan_harrison:
     description: "Dan is a cyber security consultant in Capgemini Invent. He is interested in how DevSecOps can be applied to build digital products and services in a fast, frequent and secure way."
     avatar: https://avatars2.githubusercontent.com/u/45598743?s=400&u=173d8fac0a29d9fab40ef9992a9f10ea07dedfeb&v=4
     team: Digital_Security_and_Trust
+    ex: true
 pip_turner:
     name: Pip Turner
     github: PipTurner
@@ -516,6 +523,7 @@ pip_turner:
     description: "Pip is a Software Engineer in the OSCE team at Capgemini. He specialises in application and api development using various tech stacks"
     avatar: /images/authors/pip-turner.jpeg
     team: java
+    ex: true
 nikkialgar:
     name: Nikki Algar
     github: nikkialgar
@@ -558,6 +566,7 @@ jon_smith:
     team: java
     github: jrsmith873
     avatar: https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=BrownDark&facialHairType=BeardLight&facialHairColor=Brown&clotheType=ShirtCrewNeck&clotheColor=Black&eyeType=Default&eyebrowType=FlatNatural&mouthType=Default&skinColor=Light
+    ex: true
 jedd_hopkins:
     name: Jedd Hopkins
     github: jeddhopkins
@@ -571,6 +580,7 @@ riccardo_freschi:
     description: "Senior Enterprise Architect at Capgemini"
     team: web_platforms
     avatar: /images/authors/riccardo-freschi.jpeg
+    ex: true
 lewis_vince:
     name: Lewis Vince
     github: lewis-vince
