@@ -29,7 +29,7 @@ And if we made you curious to understand how it work we created a quick video th
 
 <div class="small-12 medium-8 large-4 small-centered columns">
    <div class="flex-video">
-      <iframe width="640" height="360" src="https://capgemini.sharepoint.com/:v:/r/sites/SoftwareEngineeringBlog/Shared%20Documents/General/dcx-react-library-design-system.mp4?csf=1&web=1&e=snkrTv" frameborder="0" allowfullscreen></iframe>
+      <iframe width="640" height="360" src="https://capgemini.sharepoint.com/:v:/r/sites/SoftwareEngineeringBlog/Shared%20Documents/General/dcx-react-library-design-system.mp4?csf=1&web=1&e=snkrTv" title="dcx-react-library-design-system.mp4" frameborder="0" allowfullscreen></iframe>
    </div>
 </div>
 
