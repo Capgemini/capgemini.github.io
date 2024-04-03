@@ -15,7 +15,7 @@ In 2022 we announced a new style agnostic react library called [dcx-react-librar
 
 We've built more than 35 components organised in 3 different categories: forms, utilities and typography, keeping in mind our main principles:
 
-- few dependencies
+- fewer dependencies
 - small bundles
 - fully tested
 - AA accessible
