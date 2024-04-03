@@ -22,7 +22,7 @@ We've built more than 35 components organised in 3 different categories: forms, 
 
 I'm pretty sure the main question you'll be asking yourself is: “why did you decide to make a [major release version](https://semver.org/)?”
 After using the library on our projects, we realised that we sped up the development process as we promised but being style agnostic by nature our development team was spending too much time making our components look pixel perfect and as exactly how our UX/UI team designed. We asked ourselves: “now that we have got the foundations can we do better?” Yes we can! so we decided to implement a design system for most of our components.
-Most of our components has been redesigned without introducing any breaking change adding the usage of tokens. We improved our documentation adding a new section called design system:
+Most of our components have been redesigned without introducing any breaking change adding the usage of tokens. We improved our documentation adding a new section called design system:
 ![Documentation](/images/2024-04-03-dcx-react-library-v1-is-here/dcx-react-library-v1-storybook.jpg)
 
 If the use of tokens has peeked your interest and you are curious to understand how it works we have created a quick video that illustrates how to start using it:
