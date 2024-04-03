@@ -9,7 +9,7 @@ comments: true
 share: true
 ---
 
-In 2022 we announced a new style agnostic react library called [dcx-react-library](https://capgemini.github.io/development/dcx-react-library/) and today, after almost 3 years of hard work and 14th releases, we happy to share that version [1.0.0](https://www.npmjs.com/package/@capgeminiuk/dcx-react-library) is finally available.
+In 2022 we announced a new style agnostic react library called [dcx-react-library](https://capgemini.github.io/development/dcx-react-library/) and today, after almost 3 years of hard work and 14 releases, we happy to share that version [1.0.0](https://www.npmjs.com/package/@capgeminiuk/dcx-react-library) is finally available.
 
 ## What’s new
 
@@ -35,7 +35,7 @@ If the use of tokens has peeked your interest and you are curious to understand 
 
 ## What’s next?
 
-Now that version 1.0.0 is finally available we will focus on implementing the design system for our remaining components, we’ll continue to implement new component (if your project needs components that we don’t have yet, please don’t be shy, create a request on our [github repository](https://github.com/Capgemini/dcx-react-library) and stay tuned… something else is cooking in the Capgmemini labs.
+Now that version 1.0.0 is finally available we will focus on implementing the design system for our remaining components, we’ll continue to implement new component (if your project needs components that we don’t have yet, please don’t be shy, create a request on our [github repository](https://github.com/Capgemini/dcx-react-library) and stay tuned… something else is cooking in the Capgemini labs.
 
 ## You want to know more?
 
