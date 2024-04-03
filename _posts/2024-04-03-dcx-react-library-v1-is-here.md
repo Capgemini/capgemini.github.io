@@ -35,7 +35,7 @@ And if we made you curious to understand how it work, we created a quick video t
 
 ## What’s next?
 
-Now that version 1.0.0 is finally available we will focus to implement the design system for our remaining components, we’ll continue to implement new component (if your project need some that we don’t have yet, please don’t be shy, create a request on our [github repository](https://github.com/Capgemini/dcx-react-library) and stay tuned… something else is cooking in the Capgmemini labs.
+Now that version 1.0.0 is finally available we will focus on implementing the design system for our remaining components, we’ll continue to implement new component (if your project needs components that we don’t have yet, please don’t be shy, create a request on our [github repository](https://github.com/Capgemini/dcx-react-library) and stay tuned… something else is cooking in the Capgmemini labs.
 
 ## You want to know more?
 
