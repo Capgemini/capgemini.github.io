@@ -26,7 +26,12 @@ Most of our components has been redesigned without introducing any breaking chan
 ![Documentation](/images/2024-04-03-dcx-react-library-v1-is-here/dcx-react-library-v1-storybook.jpg)
 
 And if we made you curious to understand how it work we created a quick video that will explain how to start using it:
-[how to use design system](https://capgemini.sharepoint.com/:v:/r/sites/SoftwareEngineeringBlog/Shared%20Documents/General/dcx-react-library-design-system.mp4?csf=1&web=1&e=snkrTv)
+
+<div class="small-12 medium-8 large-4 small-centered columns">
+   <div class="flex-video">
+      <iframe width="640" height="360" src="https://capgemini.sharepoint.com/:v:/r/sites/SoftwareEngineeringBlog/Shared%20Documents/General/dcx-react-library-design-system.mp4?csf=1&web=1&e=snkrTv" frameborder="0" allowfullscreen></iframe>
+   </div>
+</div>
 
 ## What’s next?
 
