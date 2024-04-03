@@ -25,7 +25,7 @@ After using the library on our projects, we realised that we sped up the develop
 Most of our components has been redesigned without introducing any breaking change adding the usage of tokens. We improved our documentation adding a new section called design system:
 ![Documentation](/images/2024-04-03-dcx-react-library-v1-is-here/dcx-react-library-v1-storybook.jpg)
 
-And if we made you curious to understand how it work, we created a quick video that will explain how to start using it:
+If the use of tokens has peeked your interest and you are curious to understand how it works we have created a quick video that illustrates how to start using it:
 
 <div class="small-12 medium-8 large-4 small-centered columns">
    <div class="flex-video">
