@@ -9,11 +9,11 @@ comments: true
 share: true
 ---
 
-In 2022 we announced a new style agnostic react library called (dcx-react-library)[https://capgemini.github.io/development/dcx-react-library/] and today, after almost 3 years of hard work and 14th releases, we happy to share that version (1.0.0)[https://www.npmjs.com/package/@capgeminiuk/dcx-react-library] is finally available.
+In 2022 we announced a new style agnostic react library called [dcx-react-library](https://capgemini.github.io/development/dcx-react-library/) and today, after almost 3 years of hard work and 14th releases, we happy to share that version [1.0.0](https://www.npmjs.com/package/@capgeminiuk/dcx-react-library) is finally available.
 
 ## What’s new
 
-We've built more then 35 components organised in 3 different categories: forms, utilities and typography, keeping in mind our main principles:
+We've built more than 35 components organised in 3 different categories: forms, utilities and typography, keeping in mind our main principles:
 
 - few dependencies
 - small bundles
@@ -39,7 +39,7 @@ Now that version 1.0.0 is finally available we will focus to implement the desig
 
 ## You want to know more?
 
-- If you’d like to know more about the library, feel free to contact (Daniele Zurico)[https://capgemini.github.io/authors/#author-daniele-zurico].
-- If you curious to give it a try, it’s publicly available on (npm)[https://www.npmjs.com/package/@capgeminiuk/dcx-react-library] .
-- If you’d like to contribute, you will need to request access from our (public repository)[https://github.com/Capgemini/dcx-react-library].
-- If you want to familiarise with all the components we built, take a look at our (storybook documentation)[https://main--6069a6f47f4b9f002171f8e1.chromatic.com/].
+- If you’d like to know more about the library, feel free to contact [Daniele Zurico](https://capgemini.github.io/authors/#author-daniele-zurico).
+- If you curious to give it a try, it’s publicly available on [npm](https://www.npmjs.com/package/@capgeminiuk/dcx-react-library).
+- If you’d like to contribute, you will need to request access from our [public repository](https://github.com/Capgemini/dcx-react-library).
+- If you want to familiarise with all the components we built, take a look at our [storybook documentation](https://main--6069a6f47f4b9f002171f8e1.chromatic.com/).
