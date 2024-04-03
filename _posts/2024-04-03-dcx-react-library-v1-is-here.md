@@ -20,7 +20,7 @@ In these years we built more then 35 components organised in 3 different categor
 - fully tested
 - AA accessible
 
-I'm pretty sure the main question you'll be asking yourself is: “why you decided to make a (major release version)[https://semver.org/]?”
+I'm pretty sure the main question you'll be asking yourself is: “why did you decide to make a [major release version](https://semver.org/)?”
 After using the library on our projects, we realised that we speedup the development as we promised but being style agnostic by nature our developer team was spending an incredible amount of time on making our component good looking and pixel perfect exactly how our UX/UI team designed. We asked ourselves: “now we got the foundations can we do better?” Yes we can! so we decided to implement a design system for most of our components.
 Most of our components has been redesigned without introducing any breaking change adding the usage of tokens. We improved our documentation adding a new section called design system:
 ![Documentation](/images/2024-04-03-dcx-react-library-v1-is-here/dcx-react-library-v1-storybook.jpg)
