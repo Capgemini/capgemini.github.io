@@ -29,7 +29,7 @@ If the use of tokens has peeked your interest and you are curious to understand 
 
 <div class="small-12 medium-8 large-4 small-centered columns">
    <div class="flex-video">
-      <iframe width="640" height="360" src="https://capgemini.sharepoint.com/:v:/r/sites/SoftwareEngineeringBlog/Shared%20Documents/General/dcx-react-library-design-system.mp4?csf=1&web=1&e=snkrTv" title="dcx-react-library-design-system.mp4" frameborder="0" allowfullscreen></iframe>
+      <iframe width="640" height="360" src="https://capgemini.sharepoint.com/sites/SoftwareEngineeringBlog/_layouts/15/embed.aspx?UniqueId=08053202-ac08-4845-9d9a-e0e6e8d7b73b&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" title="dcx-react-library-design-system.mp4" frameborder="0" allowfullscreen></iframe>
    </div>
 </div>
 
