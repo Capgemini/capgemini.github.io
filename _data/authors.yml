@@ -631,3 +631,10 @@ papa_anthony:
     description: "Papa is a Software Engineer at Capgemini."
     avatar: /images/authors/papa-anthony.jpeg
     team: java
+enamul_ali:
+    name: Enamul Ali
+    github: Enamulali
+    linkedin: https://www.linkedin.com/in/enamul97/
+    description: "Enamul Ali is a Software Engineer at Capgemini, currently working in Custom Cloud Applications."
+    avatar: /images/authors/enamul-ali.jpg
+    team: java
