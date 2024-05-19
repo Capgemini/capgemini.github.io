@@ -42,7 +42,7 @@ Again, there's some work in the community that we could borrow for a Meteor + Re
 
 The entire application used the following -
 
-- Ethereum as the underlying Blockchain platform / infrasturcture
+- Ethereum as the underlying Blockchain platform / infrastructure
 - Meteor for frontend/backend code as the main development framework
 - ReactJS + Redux for the view layer and actions
 - [React Bootstrap](https://react-bootstrap.github.io/) for theming
