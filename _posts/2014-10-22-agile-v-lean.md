@@ -28,7 +28,7 @@ Lean can also help by bringing a meeting structure to all levels and promote the
 
 A conflict, or perhaps even a paradox, is that the customer is often the supplier too! Maybe we need to redefine this: the customer must set clear parameters for performance (the goal), then the project need to convert these into requirements themselves by consulting the stakeholders on the changes that will bring about positive impacts.
 
-For example, an analysis I performed a while ago on a series of project releases is shown in the the charts in the image.
+For example, an analysis I performed a while ago on a series of project releases is shown in the charts in the image.
 
 ![Example of a Cumulative Flow Diagram](/images/2014-10-22-agile-v-lean/CFD.png)
 

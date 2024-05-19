@@ -223,7 +223,7 @@ It should have also stored your credentials in the database so you should be abl
 
 You could try and expand on the web application and then upload the new version to AWS. This is very easy to do in AWS. Simply go back to the environment dashboard and select the "Upload and Deploy" button in the middle of the page. Find your new `.war`, give it a version name and click "Deploy".  
 
-You can also tear down the entire entire environment. To do this go back to the environment dashboard and click on the "Actions" button  and click on "Terminate Environment".  
+You can also tear down the entire environment. To do this go back to the environment dashboard and click on the "Actions" button  and click on "Terminate Environment".  
 
 Alternatively you could try and deploy the same application using Microsoft Azure and make a blog post about it.
 

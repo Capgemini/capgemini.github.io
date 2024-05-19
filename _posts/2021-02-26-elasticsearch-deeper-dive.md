@@ -107,6 +107,7 @@ curl -X GET "localhost:9200/_search?q=blue"
 ```
 
 And the result of the query is as follows:
+
 ```
 {
     "took": 11,

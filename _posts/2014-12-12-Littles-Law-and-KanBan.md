@@ -102,7 +102,7 @@ Since L is proportional to W, increasing the number in the system is a trade-off
 
 Given that the demand is fluctuating, estimates are inaccurate at best and problems can occur any time, it is difficult to maintain a steady state. There are two ways to achieve this:
 - Reduce the demand to a throughput level that will never breach _any_ step in the process.
-- Increase the throughput level of _every_ step in the the system to match the maximum demand.
+- Increase the throughput level of _every_ step in the system to match the maximum demand.
 
 The first option gives the ultimate control. The process is streamlined, there is little waste in the system. The cost is that throughput is decreased.
 

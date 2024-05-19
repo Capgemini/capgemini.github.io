@@ -18,7 +18,7 @@ request, then you can pretty much find a way to do it in Drupal.
 
 > "Just because you can, doesn't mean you should."
 
-However, the old adage is true. Just because you can use use a sledgehammer to
+However, the old adage is true. Just because you can use a sledgehammer to
 crack a nut, that doesn't mean you're going to get the optimal nut-consumption-experience
 at the end of it.
 

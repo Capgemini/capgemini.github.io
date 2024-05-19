@@ -29,7 +29,7 @@ However, I promptly realised this was deprecated because of IntelliJ's strikethr
 
     MultipartEntityBuilder multipartEntityBuilder = new MultipartEntityBuilder();
     
-A compile error and a check of the source for `MultipartEntityBuilder` informs me that that constructor is private, however, I can also see a static create method. So I use that and everything compiles nicely. Then I wonder if I need to add the Content-Type header and how can I get a hold of the boundary it generates randomly? Again, I go to the source of `MultipartEntityBuilder` and see that it builds the entity with a boundary and the correct Content-Type as part of the object so I can assume Camel uses that and sure enough it all works fine.
+A compile error and a check of the source for `MultipartEntityBuilder` informs me that the constructor is private, however, I can also see a static create method. So I use that and everything compiles nicely. Then I wonder if I need to add the Content-Type header and how can I get a hold of the boundary it generates randomly? Again, I go to the source of `MultipartEntityBuilder` and see that it builds the entity with a boundary and the correct Content-Type as part of the object so I can assume Camel uses that and sure enough it all works fine.
 
 Looking at the source saved me looking for the documentation and how to use it. It also prevented me from writing unnecessary code like adding the Content-Type with my own hand-generated boundary and setting that on both the MultipartEntityBuilder and the Camel exchange.
  

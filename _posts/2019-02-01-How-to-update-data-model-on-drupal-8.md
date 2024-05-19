@@ -25,7 +25,7 @@ The Field module allows us to add fields to bundles, we must make difference bet
 Configurable fields are the fields that can be added via the UI and attached to a bundle, which can be exported and deployed. Base fields are not managed by the `field_storage_config` configuration entities and `field_config`.
 
 
-To update the entity definition or its components definitions (field defintions for example if the entity is fieldable) we can implement `hook_update_N()`. In this hook don't use the APIs that require a full Drupal bootstrap (e.g. database with CRUD actions, services, ...), to do this type of update safely we can use the methods proposed by the contract `EntityDefinitionUpdateManagerInterface` (e.g. updating the entity keys, updating a basic field definition common to all bundles, ...)
+To update the entity definition or its components definitions (field definitions for example if the entity is fieldable) we can implement `hook_update_N()`. In this hook don't use the APIs that require a full Drupal bootstrap (e.g. database with CRUD actions, services, ...), to do this type of update safely we can use the methods proposed by the contract `EntityDefinitionUpdateManagerInterface` (e.g. updating the entity keys, updating a basic field definition common to all bundles, ...)
 
 To be able to update existing data entities or data fields in the case of a fieldable entity following a modification of a definition we can implement `hook_post_update_NAME()`. In this hook you can use all the APIs you need to update your entities.
 

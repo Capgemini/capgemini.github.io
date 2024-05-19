@@ -31,7 +31,7 @@ The projects we work on are large and complex, with a long lifecycle, and as dev
 
 The other interesting aspect was splitting up SASS files into components, and using [KSS](https://github.com/kss-node/kss-node/) to create the style guide - this is something I definitely intend to do on my next project.
 
-Modularity makes sense - it's how the back-end is going, it's how Javascript is going, so why shouldn't design and CSS go the same way?
+Modularity makes sense - it's how the back-end is going, it's how JavaScript is going, so why shouldn't design and CSS go the same way?
 
 
 *UPDATED 3rd December 2014: Unfortunately we got Chris Ruppel's name wrong in the original version of this post, calling him "Dave Rupl". Sorry Chris.*

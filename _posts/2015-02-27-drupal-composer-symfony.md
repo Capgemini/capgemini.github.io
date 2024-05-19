@@ -16,7 +16,7 @@ Let’s say for example, that you have a url that you want to convert from relat
 What's more, if you **reuse libraries and open source** code, you'll probably find yourself in the situation in which you could need an small improvement in that nice library you are using. **Contributing your changes 
 back** you are closing the circle of the **open source**, the reason why the open source is here to stay and conquer the world (diabolical laugh here).
 
-That's another one of the main reasons why lot's of projects are moving to the Composer/Symfony binomium, stop working as isolated projects and start working as global projects that can share code and knowledge between many other projects. It's a pattern followed by Drupal, to name but one, and also by projects like like [phpBB](https://www.phpbb.com/), [ezPublish](http://ez.no/), [Laravel](http://symfony.com/projects/laravel), [Magento](http://magento.com/),[Piwik](http://piwik.org/), ...
+That's another one of the main reasons why lot's of projects are moving to the Composer/Symfony binomium, stop working as isolated projects and start working as global projects that can share code and knowledge between many other projects. It's a pattern followed by Drupal, to name but one, and also by projects like [phpBB](https://www.phpbb.com/), [ezPublish](http://ez.no/), [Laravel](http://symfony.com/projects/laravel), [Magento](http://magento.com/),[Piwik](http://piwik.org/), ...
 
 ## Composer and friends
 
