@@ -113,7 +113,7 @@ alternative front ends.
 
 [Headless Drupal](https://github.com/davidhwang/horseman) is a phrase that has gained a lot of momentum in the Drupal
 community - the basic concept being that Drupal purely responds with RESTful
-endpoints, and completely independant front-end code using frameworks such as Angular.js
+endpoints, and completely independent front-end code using frameworks such as Angular.js
 is used to render the data and completely separate content from presentation.
 
 Personally, I prefer to think of a "nearly headless" approach - where Drupal is
