@@ -84,7 +84,7 @@ roles_path = roles
 
 Just run ```ansible-galaxy install -r requirements.yml```
 
-## Boostrapping ansible dependencies for CoreOS. The Inventory and the Playbook.
+## Bootstrapping ansible dependencies for CoreOS. The Inventory and the Playbook.
 
 **[Source code](https://github.com/enxebre/ansible-pragmatic-guide/tree/step-2):** ```git checkout step-2```
 

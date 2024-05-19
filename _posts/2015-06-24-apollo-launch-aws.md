@@ -13,7 +13,7 @@ share: true
 This post aims to show how you can get up and running with an [Apollo](https://github.com/Capgemini/Apollo)
 cluster on AWS inside 5 minutes.
 
-For more background information on Apollo see [our Github repo](https://github.com/Capgemini/Apollo)
+For more background information on Apollo see [our GitHub repo](https://github.com/Capgemini/Apollo)
 or the [original post](https://capgemini.github.io/devops/apollo/) which gives an insight into the various
 components.
 
@@ -126,7 +126,7 @@ You should now have a fully working [Apollo](https://github.com/Capgemini/Apollo
 
 In a more real world scenario you might want to look at using [the VPC set up we have](https://github.com/Capgemini/Apollo/blob/master/docs/getting-started-guides/aws.md)
 to provide a bit more security around the cluster. We are aiming to add more features around
-security and cloud provisioning/providers to the platform soon, so stay tuned to [our Github repo](https://github.com/Capgemini/Apollo) for more info.
+security and cloud provisioning/providers to the platform soon, so stay tuned to [our GitHub repo](https://github.com/Capgemini/Apollo) for more info.
 
 If you want to try this out for yourself, head on over to [https://github.com/Capgemini/Apollo](https://github.com/Capgemini/Apollo) and get cloning!
 

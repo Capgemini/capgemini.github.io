@@ -46,7 +46,7 @@ Suppose you have an NFR which states that your application should handle very hi
 
 Say another NFR states that the system should not be overloaded in case of failure in any one components of the system. Again, if you test this NFR from the beginning you can find whether your system can cope with this requirement or not. You may decide to build your application to fail fast in case of any error using the [hystrix](https://github.com/Netflix/Hystrix) circuit breaker from Netflix.
 
-The above example clearly show that if we are Agile (and early) with our NFR testing then it can assist in verifing the coding approach / architecture of our application and help us to change if required early in the development cycle; thereby saving us a lot of time and money later.
+The above example clearly show that if we are Agile (and early) with our NFR testing then it can assist in verifying the coding approach / architecture of our application and help us to change if required early in the development cycle; thereby saving us a lot of time and money later.
 
 ### 1) Plan
 
@@ -148,7 +148,7 @@ Percentiles are important too (especially in a microservice based system) so its
 
 #### b) Write up using templates - Recording the same thing, in the same way, every time
 
-The best way to record test results is to use templates. Create a generic template which covers what what you want to capture and use it whenever recording the results.
+The best way to record test results is to use templates. Create a generic template which covers what you want to capture and use it whenever recording the results.
 Templates gives many benefits, a few of them are:
 * create once, use many times
 * they help to easily compare the results
@@ -165,7 +165,7 @@ So remember to capture the same set of data every time and have a fixed template
 
 #### c) Save Evidence - logs, Graphs etc.
 
-It is also important to capture the NFR test results in the raw, as this is the data used to validate your findings. There is no point in just writing on a wiki page saying that you ran the test and achieved the throughput of 100tps with response time being less then 1 sec with no errors, until you can back it up with some sort of data (logs, graphs, etc.).
+It is also important to capture the NFR test results in the raw, as this is the data used to validate your findings. There is no point in just writing on a wiki page saying that you ran the test and achieved the throughput of 100tps with response time being less than 1 sec with no errors, until you can back it up with some sort of data (logs, graphs, etc.).
 
 If you can capture logs and graphs from a test tool such as JMeter, this is strong evidence that can be very helpful in supporting your conclusions.
 

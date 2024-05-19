@@ -105,7 +105,7 @@ Again you can see how much non-technical thinking goes in to just one of the 50 
 
 ### State
 
-Finally we move on to the back end, and the Lambda function which will receive the information from my skill. Again, there are lots of [well-documented code samples](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html) on [Github](https://github.com/alexa) to get you started developing the skill service and linking it to your interaction model. The one area that I found difficult to understand was how the concept of state could be used in between voice interactions to create a conversation flow.
+Finally we move on to the back end, and the Lambda function which will receive the information from my skill. Again, there are lots of [well-documented code samples](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html) on [GitHub](https://github.com/alexa) to get you started developing the skill service and linking it to your interaction model. The one area that I found difficult to understand was how the concept of state could be used in between voice interactions to create a conversation flow.
 
 For my psychometric test skill, I wanted to generate a value from 0 to 5 for each answer. To turn from a boolean (A or B) to this 1 to 5 scale, I decided to have Alexa ask the user how sure they were of their answer after each question, and then judge the positivity of their response. For instance, the flow might go like this:
 

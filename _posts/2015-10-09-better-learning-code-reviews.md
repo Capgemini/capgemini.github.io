@@ -54,7 +54,7 @@ Hopefully you see the value of doing code reviews, and either they're part of yo
 ### The right tool for the job
 When we moved from SVN to Git a couple of years ago, we had the opportunity to put a system in place. By using a feature branch workflow, pull requests become part of the process, and in theory no piece of code should go live unless it's been reviewed. So it's important that your tools support you.
 
-Github pull requests are good as far as they go, but code review tools like [Bitbucket](https://www.atlassian.com/software/bitbucket) provide more advanced features, which we've found to be really useful. For example:
+GitHub pull requests are good as far as they go, but code review tools like [Bitbucket](https://www.atlassian.com/software/bitbucket) provide more advanced features, which we've found to be really useful. For example:
 
 #### Approvals
 Reviewing isn't just a case of looking at code, but of signing off that you're happy for it to go live. Bitbucket includes the notion of approvals, and allows you to require a certain number of approvals before the pull request can be merged.
@@ -67,7 +67,7 @@ Per-branch permissions can be set up so that only certain members of the team ca
 Another nice feature of Bitbucket is tasks - you can add a checkbox to a comment, and set your repo up so that pull requests can't be merged while they have tasks outstanding. For instance, you can approve the pull request with the caveat that something needs to be fixed before it gets merged.
 
 #### Comments
-One of the drawbacks of Github pull requests is that when someone pushes changes, the diff view will no longer show comments from previous versions, whereas Bitbucket will still show comments on lines that haven't changed since the comment was made. The other nice thing is that you can easily see which changes you've already viewed - especially useful in pull requests that go through a lot of iterations. A useful feature that was in Crucible (Atlassian's SVN code review tool) but not in Bitbucket, is an indicator of what percentage of the review each reviewer has viewed, so you could get an idea of whether you need to chase up the reviewers. Nice, but not enough to make me want to go back to SVN.
+One of the drawbacks of GitHub pull requests is that when someone pushes changes, the diff view will no longer show comments from previous versions, whereas Bitbucket will still show comments on lines that haven't changed since the comment was made. The other nice thing is that you can easily see which changes you've already viewed - especially useful in pull requests that go through a lot of iterations. A useful feature that was in Crucible (Atlassian's SVN code review tool) but not in Bitbucket, is an indicator of what percentage of the review each reviewer has viewed, so you could get an idea of whether you need to chase up the reviewers. Nice, but not enough to make me want to go back to SVN.
 
 #### Integration and automation
 The other good thing about Bitbucket is that it plays nicely with our issue tracker. We have quite a granular workflow set up in Jira, and a lot of the transitions are automated. For example, when a pull request is created, the relevant ticket goes into "Code Review" status, and when the pull request is merged or declined, the status is updated again. We also have integration between Jenkins and Jira so that when the test environments are built, it updates the status of tickets pending build, and the QA team can see which tickets are ready for testing.

@@ -102,6 +102,6 @@ docker-compose scale eth=3
 
 There you go, you have a private Ethereum cluster you can scale up, down and test your applications with.
 
-This provides basic support at the moment for Docker and Docker compose, as always there are [a bunch of open tickets](https://github.com/Capgemini-AIE/ethereum-docker/issues) on Github for improvements. We would like to add things like support for deploying on top of [Kubernetes](https://kubernetes.io) and [Marathon](https://mesosphere.github.io/marathon), support for deploying a cluster with IPFS enabled and ability to interact with the cluster nodes and APIs in an easier way.
+This provides basic support at the moment for Docker and Docker compose, as always there are [a bunch of open tickets](https://github.com/Capgemini-AIE/ethereum-docker/issues) on GitHub for improvements. We would like to add things like support for deploying on top of [Kubernetes](https://kubernetes.io) and [Marathon](https://mesosphere.github.io/marathon), support for deploying a cluster with IPFS enabled and ability to interact with the cluster nodes and APIs in an easier way.
 
-If you want to give it a try or help out [head on over to the Github repository](https://github.com/Capgemini-AIE/ethereum-docker).
+If you want to give it a try or help out [head on over to the GitHub repository](https://github.com/Capgemini-AIE/ethereum-docker).

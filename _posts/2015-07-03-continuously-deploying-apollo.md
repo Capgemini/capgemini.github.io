@@ -215,6 +215,6 @@ and below is a video showing the whole cycle:
 
 ## What's next
 
-If for your use case you need to keep track of the state of Terraform you might find this [Atlas and Github integration](https://hashicorp.com/blog/atlas-terraform-github.html) useful.
+If for your use case you need to keep track of the state of Terraform you might find this [Atlas and GitHub integration](https://hashicorp.com/blog/atlas-terraform-github.html) useful.
 
 Check out our upcoming posts if you want to hear more about CI, CD and our Continuous Delivery approach for services running inside docker containers deployed by Apollo, running Serverspecs into ephemeral containers via "docker exec" across multiple environments.

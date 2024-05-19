@@ -30,7 +30,7 @@ I struggled when I got stuck with things - this wasn't like my day job, I couldn
 
 As previously mentioned, being new to Spring and Spring Boot I expected to struggle - but there were far more hurdles in the way than I expected.
 
-Gradle? Where's Maven?  Github? Where's SVN? Jenkins....where are you?
+Gradle? Where's Maven?  GitHub? Where's SVN? Jenkins....where are you?
 
 I see this as a plus - being dragged out of your comfort zone and learning new technologies because you need to.  You have some context and specific goals, so you are more driven and focused to get past specific and relevant hurdles, rather than picking up something new, getting "Hello World!" out of the way and then wondering where to go now.
 

@@ -57,7 +57,7 @@ Nothing fancy, just something basic. For reference, in the `config.toml` file I 
 As well as only including my specific social URLs for the icons:
 ```toml
 [[params.social]]
-    name = "Github"
+    name = "GitHub"
     icon = "fab fa-github"
     weight = 1
     url = "https://github.com/ChrisJBurns/"
