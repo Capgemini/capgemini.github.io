@@ -91,7 +91,7 @@ However overall for me the benefits have outweighed the minor disadvantages. The
 Being a NodeJS library Cypress is super easy to get started with. The JavaScript syntax is based off [Mocha](https://mochajs.org) so it is easy to read and already familiar to a lot of developers.
 
 #### 1.	Install with npm
-{% highlight Javascript %}
+{% highlight javascript %}
 npm install cypress --save-dev
 {% endhighlight %}
 
@@ -106,7 +106,7 @@ Launching the test runner has conveniently created the directory structure Cypre
 #### 4.	Write your first test
 In your `test.spec.js` file enter the following:
 
-{% highlight Javascript %}
+{% highlight javascript %}
 describe('My First Test', () => {
   it('Runs a Google search', () => {
     cy.visit('https://google.com');

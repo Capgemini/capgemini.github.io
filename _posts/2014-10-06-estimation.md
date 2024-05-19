@@ -100,7 +100,7 @@ giving the estimate to have the same definition of done and therefore share the 
 
 We've covered this a little bit when saying not to estimate any sub-task at less than half a day, in order to factor in
 all the things we forget about when estimating. However, even when you add up all your sub-tasks (or put them into groups for
-adding up) we should pad our larger estimates to reflect the inherant uncertainty in the longer term estimate.
+adding up) we should pad our larger estimates to reflect the inherent uncertainty in the longer term estimate.
 
 For example, if your estimate is around 3-4 days, call it a week. If it's 3 weeks, then its a month, and so on. Using
 larger values of time helps set expectations with your stakeholders and also lets you have contingency for the

@@ -92,7 +92,7 @@ Each Kubernetes auth method can have any number of roles created against it. The
 
 #### Policies
 
-Vault policies define the fine grained, path based access to specific secrets held within Vault itself. The policy we're using for this example looks like this:
+Vault policies define the fine-grained, path-based access to specific secrets held within Vault itself. The policy we're using for this example looks like this:
 
 ```
 path "kv/spring-boot-demo" {

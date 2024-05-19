@@ -79,7 +79,7 @@ class PlayerContractListenerTest {
         PactDslJsonBody jsonBody = new PactDslJsonBody();
 
         jsonBody.stringType("documentType", "contract")
-                .stringType("firstName", "Lebron")
+                .stringType("firstName", "LeBron")
                 .stringType("lastName", "James")
                 .stringType("team", "LA Lakers")
                 .stringType("duration", "5 years")
@@ -96,7 +96,7 @@ class PlayerContractListenerTest {
     void successfullyGenerateHeadlineGivenValidMessage(List<Message> messages) {
         ContractDetails contractDetails = ContractDetails.builder()
                 .documentType("contract")
-                .firstName("Lebron")
+                .firstName("LeBron")
                 .lastName("James")
                 .team("LA Lakers")
                 .duration("5 years")
@@ -135,7 +135,7 @@ Once the test is run and the message was successfully processed by our consumer,
       "contents": {
         "documentType": "contract",
         "duration": "5 years",
-        "firstName": "Lebron",
+        "firstName": "LeBron",
         "lastName": "James",
         "salary": "158 million USD",
         "team": "LA Lakers"
@@ -277,7 +277,7 @@ class PlayerContractMapperTest {
                 .age(37)
                 .dateSigned(LocalDate.of(2022, 4, 3))
                 .documentType("contract")
-                .firstName("Lebron")
+                .firstName("LeBron")
                 .lastName("James")
                 .team("LA Lakers")
                 .position("Power Forward")
@@ -325,7 +325,7 @@ As a result the test run failed with the following error:
         {
           "documentType": "contract",
           "duration": "5 years",
-          "firstName": "Lebron",
+          "firstName": "LeBron",
         -  "lastName": "James",
         -  "salary": "158 million USD",
         -  "team": "LA Lakers"
