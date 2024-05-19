@@ -125,7 +125,7 @@ in order to adjust your estimates (up or down!) based on what you've learnt. It 
 that you are mindful of trying to reign in estimates to as much accuracy as possible, but also gives an opportunity to
 flag areas which turn out more complex that first thought.
 
-Even better would be regular backlog grooming of as much of the backlog as is practical, re-visting estimates and updating
+Even better would be regular backlog grooming of as much of the backlog as is practical, re-visiting estimates and updating
 them as you progress through your project and factor in lessons learnt as you go along.
 
 #### Look back
@@ -145,7 +145,7 @@ Estimates are unfortunately a necessary part of being a developer, and being abl
 estimates breeds confidence from the rest of your project team.
 
 If at all possible, never estimate alone - make it part of a team activity. If you're following good agile
-practices then you should be doing team planning at the start of each iteration. This can be a great opportuntity to
+practices then you should be doing team planning at the start of each iteration. This can be a great opportunity to
 try out the principles in this post, and learn from the things other people in your team consider for their
 estimates.
 
