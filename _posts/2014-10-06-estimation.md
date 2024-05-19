@@ -93,7 +93,7 @@ My estimate is accurate as long as ...
 
 Also, make sure you define "done". Will done mean that you've committed the code and run some tests locally, or that
 you'll have followed the change through various environments and its ready to be pushed into the next Production release?
-Regardless of how you define "done", this is one of your key assumptions, so make sure you and and the person you're
+Regardless of how you define "done", this is one of your key assumptions, so make sure you and the person you're
 giving the estimate to have the same definition of done and therefore share the assumptions.
 
 #### Add inflation

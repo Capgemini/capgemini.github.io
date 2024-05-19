@@ -149,7 +149,7 @@ approaches to keeping your Drupal installation secure:
 * [Securing your Site](https://www.drupal.org/security/secure-configuration) - Drupal.org
 Handbook entries providing security configuration advice
 * [Writing Secure Code](https://www.drupal.org/writing-secure-code) - Drupal.org
-Hanbook entries providing guidance on keeping your custom code secure
+Handbook entries providing guidance on keeping your custom code secure
 * [Cracking Drupal: A Drop in the Bucket](http://crackingdrupal.com/) - written by Greg Knaddison ([greggles](https://www.drupal.org/user/36762)), first published in 2009 but still very relevant
 * [OWASP Top 10](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project) -
 A list of the 10 Most Critical Web Application Security Risks
