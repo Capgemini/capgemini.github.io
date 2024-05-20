@@ -59,7 +59,7 @@ in the middle of the Drupal 7 lifecycle, many of us still supporting or evolving
 Drupal 6 sites, and most of us looking forward to Drupal 8 and the changes that it
 will bring to the Drupal ecosystem. It's therefore not unreasonable that a large number
 of Drupal developers are building functionality which may be in use on three versions of Drupal,
-or maybe more, not to mention the liklihood of Drupal developers looking at
+or maybe more, not to mention the likelihood of Drupal developers looking at
 other solutions for some sites, whether it be Symfony, Laravel or something different.
 
 ### The Naked Module?
