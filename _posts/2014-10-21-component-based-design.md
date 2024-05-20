@@ -17,7 +17,7 @@ Whenever I go to an event, I come back with a to-do list, and this was no except
 
 The other talk that stood out for me was John Albin Wilkins on [Styleguide-Driven Development](https://amsterdam2014.drupal.org/session/styleguide-driven-development-new-web-development.html). For a long time, I've had a bee in my bonnet about the value of component libraries over Photoshop comps, and it was good to be reminded that I'm not alone. In an interesting session, John outlined an approach to integrating component-based design and automated style guides to agile development projects.
 
-It's been said many times before, but it's worth remembering that all too often, people are still [thinking in terms of pages, rather than systems](http://bradfrostweb.com/blog/post/atomic-web-design/).
+It's been said many times before, but it's worth remembering that all too often, people are still [thinking in terms of pages, rather than systems](http://bradfrost.com/blog/post/atomic-web-design/).
 
 In the context of the work that we do, this is even more important. We're a large development team, building CMS-driven sites for large corporate clients, where the design is done by a team working for another company. We've made some inroads into building a more collaborative process, but it's still too easy to end up with the designers throwing things over the wall to the developers. Very often the designer isn't closely involved during the build phase, and design tweaks are agreed between the client and the developer without the opportunity to go back to get the designer's opinion.
 
