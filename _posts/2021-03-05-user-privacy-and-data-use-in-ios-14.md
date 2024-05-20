@@ -262,4 +262,4 @@ I believe that complications for those willing to keep pursuing tracking behind 
 
 As for those willing to operate in the clear, my recommendation is to apply the updates described in the previous sections.
 
-In summary: **treat users with consent, if tracking is needed ask for permission, disclose transparently what will happen to the consumers’ data and why consumers should agree on making it available, give users easy ways to update and change their preferences, keep control of where the acquired data flows, go even further and adopt anonymization where possible and delete data when not needed anymore**.
+In summary: **treat users with consent, if tracking is needed ask for permission, disclose transparently what will happen to the consumers’ data and why consumers should agree on making it available, give users easy ways to update and change their preferences, keep control of where the acquired data flows, go even further and adopt anonymisation where possible and delete data when not needed anymore**.

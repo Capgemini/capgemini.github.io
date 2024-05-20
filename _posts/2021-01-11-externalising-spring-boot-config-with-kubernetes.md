@@ -282,7 +282,7 @@ DB Username: dev-root
 DB Password: dev-pass
 ```
 
-Ta-daaa! It's all working as expected, our application has picked up the `dev-config.json` entry from our ConfigMap and injected it into our running Spring Boot application!
+Ta-daa! It's all working as expected, our application has picked up the `dev-config.json` entry from our ConfigMap and injected it into our running Spring Boot application!
 
 ## Every Good Story Needs a Sequel
 
