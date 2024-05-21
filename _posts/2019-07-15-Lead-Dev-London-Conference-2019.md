@@ -30,7 +30,7 @@ Some common themes that ran through many of the talks were:
 * Building and developing effectively performing teams at speed and at scale
 * The importance of team health and personal wellbeing.
 
-In my opinion, the vast majority of the talks and supporting slides were excellent and certainly measured up to my high expectations of this event. I would find it too hard to pick an absolute favourite and will watch most of them again to soak up the incredible insights and advice they offer. If you’d like to do the same, the full line up is available to view on this [Youtube Playlist of all the Lead Developer 2019 Talks.][videos]
+In my opinion, the vast majority of the talks and supporting slides were excellent and certainly measured up to my high expectations of this event. I would find it too hard to pick an absolute favourite and will watch most of them again to soak up the incredible insights and advice they offer. If you’d like to do the same, the full line up is available to view on this [YouTube Playlist of all the Lead Developer 2019 Talks.][videos]
 
 And finally, some of the book recommendations I noted were:
  

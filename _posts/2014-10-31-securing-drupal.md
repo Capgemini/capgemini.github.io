@@ -118,7 +118,7 @@ advantage of than there are people trying to fix them.
 This means keeping your entire platform secure becomes a constant activity, so a reliable
 and repeatable test and release cycle becomes essential - if pulling down the
 latest updates and deploying them takes a significant amount of time, the odds
-are that you'll get lazy and skip an udpate or two. This soon becomes the security
+are that you'll get lazy and skip an update or two. This soon becomes the security
 guys nightmare as sites, services and platforms become more out of date and more
 vulnerable to attack.
 

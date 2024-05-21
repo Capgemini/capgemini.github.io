@@ -21,7 +21,7 @@ Consequently we, the Capgemini JVM team will be running a trade stand, manned wi
 
 In addition to the stall, a number of our team members are also taking part as speakers. [Gayathri Thiyagarajan](https://twitter.com/gaythu_rajan) and [Andrew Harmel-Law](http://twitter.com/al94781) will be presenting [“Harnessing Domain Driven Design for Distributed Systems"](http://cfp.devoxx.co.uk/2016/talk/JTS-9279/Harnessing_Domain_Driven_Design_for_Distributed_Systems). [Kevin Rudland](https://twitter.com/kevinrudland) and Andrew (again) will be sharing their experiences on ["Performance Testing Distributed Systems for the Masses – A Scientific Approach"](http://cfp.devoxx.co.uk/2016/talk/LSP-1318/Performance_Testing_Distributed_Systems_for_the_Masses_-_Two_Years_Worth_of_Lessons_Learned). I think I'm beginning to spot a trend...
 
-Personally, this is my first major UK conference. I'm really looking forward to catching some of the keynotes in person, rather than on Youtube. I'm also relishing the chance to catch up with friends and colleagues. In Capgemini, we work in distributed teams (mostly) throughout the UK, I'm looking forward to putting names to slack aliases, but also meeting loads of new people throughout the three days.
+Personally, this is my first major UK conference. I'm really looking forward to catching some of the keynotes in person, rather than on YouTube. I'm also relishing the chance to catch up with friends and colleagues. In Capgemini, we work in distributed teams (mostly) throughout the UK, I'm looking forward to putting names to slack aliases, but also meeting loads of new people throughout the three days.
 
 Don't forget we're hiring (see the ad below this post). Here are just a few of the perks:
 
