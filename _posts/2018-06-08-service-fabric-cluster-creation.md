@@ -77,7 +77,7 @@ The *Application Insights key* is more interesting; it not only allows you to sp
 
 I have entered my Application Insights key and clicked *Create*. After 1-2 seconds (where Visual Studio performs a series of validation checks), a confirmation screen will be displayed:
 
-![Confirmtion Screen](/images/2018-05-31-service-fabric-cluster-creation/7-confirmation.PNG){: .centered }
+![Confirmation Screen](/images/2018-05-31-service-fabric-cluster-creation/7-confirmation.PNG){: .centered }
 
 Clicking *OK* will return you to Visual Studio and how the output window with the status messages:
 

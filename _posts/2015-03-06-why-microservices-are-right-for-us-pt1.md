@@ -45,7 +45,7 @@ Still on the sizing, here's our penultimate benefit of this post: Teams of 3-5 f
 
 One thing we've not tried, but which appeals to us, would be to take this approach one step further and let developers outside of the service-team make changes to a Microservice's code via an OSS-like pull request model.  Of course this is predicated on each service having its own git repository - but we have that - and a PR / code review model approach to working - but we have that too.
 
-## Micoservices are Truly "Agile"
+## Microservices are Truly "Agile"
 Last benefit time. For this one, let's push beyond the "size" theme. I know I'm walking into a minefield here (hence the inverted commas) but I mean Microservices are "agile" in the true sense in that they:
 
 - keep the humans at the centre (see everything in this post up to now)
