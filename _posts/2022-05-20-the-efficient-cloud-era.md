@@ -64,14 +64,14 @@ Capgemini Software Engineering have done it all for you with our cloud accelerat
 Another talk I really enjoyed was [Functional Programming in Kotlin - exploring Arrow](https://www.youtube.com/watch?v=eFheAErqJzA). I'd seen a little of Kotlin before but this talk came in from the angle of problem-solving: Have you been bitten before by support issues involving NullPointerExceptions or ArrayIndexOutOfBoundExceptions? Of course you have! Speaker Ties van de Ven had, too. It was in search of a solution to this pain that he discovered Kotlin's Arrow library and how it can find these exceptions - at compile time! Yes, really. Using monads (Quote: "If you know what a monad is, you can't describe it"...) to define a return type that is EITHER an exception OR the value you were looking for as a starting point, you are then forced to deal with the two circumstances. Or you can go a step further and use [Arrow Analysis](https://arrow-kt.io/docs/analysis/) library to run pre/post condition checks at compile time. 
 
 So, if you built precondition checks that n>0 into your divide(n) function, this code will compile:
-{% highlight java %}
+```java 
 if(a>0) {
  divide(a);
 }
-{% endhighlight %}
+```
 But, this code won't:
-{% highlight java %}
+```java 
 divide(a);
-{% endhighlight %}
+```
 Wow! And there was me thinking Kotlin was all syntactic sugar and writing less code. I'm a convert.
 

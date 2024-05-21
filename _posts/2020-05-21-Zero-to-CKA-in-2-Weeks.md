@@ -58,14 +58,14 @@ Despite spending 8 hours a day in the 2nd week on the CKA course I still put in 
 Using the imperative way of creating resources (kubectl) but adding a few extra parameters to have the command generate the YAML for you to go the declarative route is extremely beneficial. It allows you to double check what you're doing against what the question is asking for as well as giving you a good base if you do need to edit anything. It's a win-win. 
 
 The arguments you need for this are:
-{% highlight bash %}
+```bash 
 --dry-run -o yaml | tee myyaml.yaml
-{% endhighlight %}
+```
 
 For example:
-{% highlight bash %}
+```bash 
 kubectl create deployment nginx --image=nginx --dry-run -o yaml | tee nginx.yaml
-{% endhighlight %}
+```
 
 This will create a file called `nginx.yaml` containing the YAML needed to create a Deployment called nginx with the nginx image. From there you can edit the YAML and simply apply it!
 

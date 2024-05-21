@@ -16,28 +16,28 @@ share: true
 
 - Lists, e.g.:
 
-{% highlight python %}
+```python 
 key = "shapes"
 value = ["square", "triangle", "triangle"] # duplicates allowed
-{% endhighlight %}
+```
 
 - Sets, e.g.:
 
-{% highlight python %}
+```python 
 key =  "shapes"
 value = ["square", "triangle"]
-{% endhighlight %}
+```
 
 - Hashes, e.g.:
 
-{% highlight python %}
+```python 
 key =  "shapes"
 value =
 {
   "name": "square",
   "sides": 4
 }
-{% endhighlight %}
+```
 
 - Bit arrays/bitmaps, e.g.:
 
@@ -68,18 +68,18 @@ The basic Azure Mobile Apps table controller is as per the [samples on GitHub](h
 To support Redis, the relevant [npm package](https://www.npmjs.com/package/redis) was added and the following changes were applied to the table controllers:
 
 ### _cache-service.js_
-{% highlight javascript %}
+```javascript 
 
 var redis = require("redis");
 
 var cacheConnection = module.exports = redis.createClient(process.env.REDISPORT, process.env.REDISCACHEHOSTNAME, 
 	{auth_pass: process.env.REDISCACHEKEY, tls: {servername: process.env.REDISCACHEHOSTNAME}});
 
-{% endhighlight %}
+```
 
 
 ### _table.js_
-{% highlight javascript %}
+```javascript 
 
 const cacheConnection = require('../cache-service.js');
 var table = module.exports = require('azure-mobile-apps').table();
@@ -108,7 +108,7 @@ table.read(function (context) {
   })
 })
 
-{% endhighlight %}
+```
 
 Upon request reception, the related path is serialised into a string, which is used as a key in Redis: the key is checked for existence in the cache and, in case of a _hit_, returned to the client. Otherwise, in case of a _miss_, the database is queried, the result returned to the client and the key-value pair inserted into the cache.
 
@@ -122,14 +122,14 @@ To benchmark the solution including Redis vs. the original one, the keys/request
 
 The tool used to extract the keys is the [redis-cli](https://redis.io/topics/rediscli). Given the limited support from the Azure Console, to run commands against the Redis service, a [Redis Docker image](https://hub.docker.com/_/redis) was started locally and the relevant redis-cli commands were executed to connect to the remote cache and download the keys:
 
-{% highlight bash %}
+```bash 
 $ docker pull redis
 $ docker run -d -p 6379:6379 --name redis1 redis
 $ docker ps
 CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS              PORTS                    NAMES
 fabee04737a9   redis     "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:6379->6379/tcp   redis1
 $ echo "keys *" | redis-cli -h {server name}.redis.cache.windows.net -p 6379 -a {access key} > {file name}
-{% endhighlight %}
+```
 
 ### Apache Benchmark
 
@@ -185,7 +185,7 @@ Leveraging AB, for both the with/without Redis scenarios, a bash script was impl
 - store the output in a file
 - parse the output to extract the mean and standard deviation of the latency
 
-{% highlight bash %}
+```bash 
 
 #!/bin/bash
 
@@ -243,7 +243,7 @@ printf "%s %s %s\n" ${figures_array[2]} ${figures_array[3]} $i >> ${output_files
 done <<< "$output_figures"
 done
 
-{% endhighlight %}
+```
 
 ## Test Results
 
@@ -264,7 +264,7 @@ mean sd url
 
 Last, a small script in R plots, in the same graph, the data sourced from the two files: 
 
-{% highlight R %}
+```R 
 library(ggplot2)
 library(RColorBrewer)
  
@@ -283,7 +283,7 @@ ggplot(data=A, aes(x=url, y=mean, ymin=pmax(mean-sd, 0), ymax=mean+sd, fill=type
  ylab("Time (ms)") +
  theme(legend.title=element_blank()) +
  scale_fill_brewer(palette = "Set1")
-{% endhighlight %}
+```
 
 Here are the charts, produced by running the bash script with different values of _total\_ab\_requests_ and _parallel\_ab\_requests_ (assigned to AB's _n_ and _c_ parameters respectively):
 

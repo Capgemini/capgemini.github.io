@@ -32,7 +32,7 @@ building the application in Docker. I pulled the following image from Docker hub
 
 ### Dockerfile
 
-{% highlight yaml %}
+```yaml 
 FROM alpine:3.1
 
 # Update
@@ -48,14 +48,14 @@ COPY . /src
 # Expose port and define cmd
 EXPOSE  8080
 CMD ["node", "/src/index.js"]
-{% endhighlight %}
+```
 
 I built the image and tested it runs as expected with the following Docker commands:
 
-{% highlight code %}
+```code 
 docker build -t nodejs-demo . 
 docker run -p 8080:8080 nodejs-demo 
-{% endhighlight %}
+```
 
 Opening my browser at localhost:8080 I can see my application running as expected. 
 
@@ -67,7 +67,7 @@ But let's now build the application in Docker following the multi-stage build pa
 ### Dockerfile with multi-stage feature
 
 
-{% highlight yaml %}
+```yaml 
 # BASE image
 FROM alpine:3.1 AS base
 
@@ -91,16 +91,16 @@ FROM base AS release
 EXPOSE  8080
 CMD ["node", "src/app.js"]
 
-{% endhighlight %}
+```
 
 The final multi-stage Dockerfile now contains two FROM statements, one for the base image and one for the final image containing the release configuration.
 You can also see that the syntax allows you to name build stage steps too, which is useful for current and future maintainers of the application.
 Node modules required to run the application are now installed in the base image. 
 Like before I ran the following Docker commands to build and run the application:
-{% highlight code %}
+```code 
 docker build -t nodejs-demo-multi-stage . 
 docker run -p 8080:8080 nodejs-demo-multi-stage
-{% endhighlight %}
+```
 The application builds successfully and works as expected. By implementing the multi-stage build functionality, it has reduced the size of the run image and bloat 
 by reducing the number of overall layers, all in a single Dockerfile. 
 

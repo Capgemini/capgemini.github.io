@@ -31,27 +31,27 @@ This is a recap about how we use the isolation of [containers](https://en.wikipe
 
 * We use Docker for running an [ephemeral container with dcos-cli contained](https://hub.docker.com/r/capgemini/dcos-cli/). This means Docker is your only dependency no matter what you want to run.
 
-{% highlight bash %}
+```bash 
 DCOS_CONFIG=/dcos-cli/.dcos/dcos.toml
 SOURCES=${SOURCES:-'[ "https://github.com/mesosphere/multiverse/archive/master.zip", "https://github.com/mesosphere/universe/archive/version-1.x.zip",]'}
 MESOS_MASTER_URL=${MESOS_MASTER_URL:-'http://127.0.0.1:5050'}
 MARATHON_URL=${MARATHON_URL:-'http://127.0.0.1:8080'}
 TOKEN=${TOKEN:-'1234'}
 EMAIL=${EMAIL:-'apollo@capgemini.com'}
-{% endhighlight %}
+```
 
 * The container **creates a temporary config** file from your environment variables, **executes** your command **and dies.** Check out the [source code here](https://github.com/Capgemini/dcos-cli-docker/).
 
-{% highlight bash %}
+```bash 
 docker run -v `pwd`/chronos_config:/config \
            -e MESOS_MASTER_URL='http://172.31.1.11:5050' \
            -e MARATHON_URL='http://172.31.1.11:8080' \
            -it capgemini:dcos-cli package install --options=config --yes chronos
-{% endhighlight %}
+```
 
 * Now it's up to you how to automate it. We use ansible and the [Frameworks role](https://github.com/Capgemini/Apollo/tree/master/roles/frameworks) for [Apollo](https://github.com/Capgemini/Apollo) which looks something like this:
 
-{% highlight yaml %}
+```yaml 
 {% raw %}
 # defaults file for frameworks
 frameworks_dcos_cli_image: capgemini/dcos-cli
@@ -63,9 +63,9 @@ frameworks_list:
   - cassandra
   - chronos
 {% endraw %}  
-{% endhighlight %}
+```
 
-{% highlight yaml %}
+```yaml 
 {% raw %}
 - name: "install dcos-cli package"
   when: "frameworks_{{ item }}_enabled | bool"
@@ -86,7 +86,7 @@ frameworks_list:
   with_items:
     - "{{ frameworks_list }}"
 {% endraw %}    
-{% endhighlight %}
+```
 
 ## The benefits:
 * Reduced impacting surface.

@@ -24,7 +24,7 @@ Recently I've adopted a technique for dealing with these issues, by splitting th
 
 As an example, imagine you've got a `HouseKeeper` class that removes all the old transactions from a system. It uses a timer to trigger this behaviour every ten minutes. It might look something like this in Java 8:
 
-{% highlight java %}
+```java 
 class HouseKeeper {
   private static final long NO_INITIAL_DELAY = 0;
   private static final Duration ONE_DAY = Duration.ofDays(1);
@@ -56,13 +56,13 @@ class HouseKeeper {
     timerService.shutdown();
   }
 }
-{% endhighlight %}
+```
 
 How do you go about testing this? You certainly don't want your tests to have to wait 10 minutes each time they start the `HouseKeeper`, before checking if the class removed any transactions.
 
 You could make the timer duration configurable so that the unit test can reduce the timer period to something much shorter.
 
-{% highlight java %}
+```java 
 class HouseKeeper {
   ...
   private final long period;
@@ -82,11 +82,11 @@ class HouseKeeper {
   }
   ...
 }
-{% endhighlight %}
+```
 
 Now you can write a unit test that reduces the timer period to something more manageable and waits long enough for it to trigger.
 
-{% highlight java %}
+```java 
 public class AHouseKeeper {
   private static final long ONE_SECOND = 1000;
 
@@ -118,7 +118,7 @@ public class AHouseKeeper {
     return result;
   }
 }
-{% endhighlight %}
+```
 
 This works, but it's fragile because its based on timing. External factors like the load on the PC will affect when exactly the timer triggers and when the test fails it will be hard to see the cause of the failure (did the code fail or did we not wait long enough). 
 
@@ -128,7 +128,7 @@ In addition, the wait slows the test suite down. You can probably tolerate a one
 
 Instead of these slow or unreliable tests you could do something different. Let's create a `Clock` interface that you can use to represent different types of timers.
 
-{% highlight java %}
+```java 
 interface Clock {
   void register(Listener listener);
   void start();
@@ -138,11 +138,11 @@ interface Clock {
     void timeElapsed();
   }
 }
-{% endhighlight %}
+```
 
 You now update the `HouseKeeper` class to use an instance of this interface that is passed to its constructor.
 
-{% highlight java %}
+```java 
 public class HouseKeeper {
   ...
   private final Clock clock;
@@ -162,11 +162,11 @@ public class HouseKeeper {
     clock.stop();
   }
 }
-{% endhighlight %}
+```
 
 The rest of the production code will supply the `HouseKeeper` class with an implementation of this interface that works just like before.
 
-{% highlight java %}
+```java 
 class RealClock implements Clock {
   private final long period;
   private final TimeUnit periodTimeUnit;
@@ -197,11 +197,11 @@ class RealClock implements Clock {
     timerService.shutdown();
   }
 }
-{% endhighlight %}
+```
 
 Now you can test the `HouseKeeper` class using a new implementation of `Clock` that lets you control when the time period elapses.
 
-{% highlight java %}
+```java 
 class ManualClock implements Clock {
   private final List<Listener> listeners = new ArrayList<>();
 
@@ -224,7 +224,7 @@ class ManualClock implements Clock {
     listeners.forEach(Listener::timeElapsed);
   }
 }
-{% endhighlight %}
+```
 
 Here's the overall picture.
 
@@ -232,7 +232,7 @@ Here's the overall picture.
 
 The unit test now looks like this.
 
-{% highlight java %}
+```java 
 public class AHouseKeeper {
   @Test
   public void deletesOldTransactionsPeriodically() {
@@ -252,7 +252,7 @@ public class AHouseKeeper {
   }
   ...
 }
-{% endhighlight %}
+```
 
 The `Thread.sleep` has gone so there's no waiting around and the test is fast. More importantly, there's no timer thread being run so if the test fails it must be because the functionality is wrong. Finally, any exceptions thrown from the `HouseKeeper` will be visible to the unit test, making debugging errors easier.
 

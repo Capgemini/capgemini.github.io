@@ -78,7 +78,7 @@ For the purpose of this exercise I decided to use a [static website hosted in Az
 
 Here is the definition of the pipeline in YAML:
 
-{% highlight yaml %}
+```yaml 
 variables:
   documentationRoot: #subpath to the folder where arc42-template.adoc is located,
                      #e.g. after arc42 template download and unzip: arc42-template-EN-withhelp-asciidoc
@@ -122,7 +122,7 @@ steps:
         --destination \$web \
         --account-name "myStorageAccount" \
         --source "$(Build.SourcesDirectory)/$(documentationRoot)/build/html5"
-{% endhighlight %}
+```
 
 ## Conclusion
 

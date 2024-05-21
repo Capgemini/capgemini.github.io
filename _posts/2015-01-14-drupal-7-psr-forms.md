@@ -27,7 +27,7 @@ The information on [autoloading and folder structure for PSR-4 in Drupal 8](http
 
 We can get round this by providing our own `hook_forms()` as laid out in the [Cool](https://www.drupal.org/project/cool) module:
 
-{% highlight php %}
+```php 
 /**
 * Implements hook_forms().
 */
@@ -45,31 +45,31 @@ function psr4_form_forms($form_id, $args) {
 
   return $forms;
 }
-{% endhighlight %}
+```
 
 If you are ok placing your class in the `FormControllers` folder then you can omit the above function to keep your `.module` file simple or you could put the hook in another module. Potentially the [Cool](https://www.drupal.org/project/cool) module could be updated to reflect this.
 
 This class requires a namespace of the form `Drupal\<module_name>\Form`. It also extends the BaseForm class provided by the [Cool](https://www.drupal.org/project/cool) module so we don't need to explicitly create our form functions:
 
-{% highlight php %}
+```php 
 namespace Drupal\psr4_form\Form;
 
 class FormExample extends \Drupal\cool\BaseForm {
   ...
 }
-{% endhighlight %}
+```
 
 Within our FormExample class we need a method `getId()` to expose the `form_id` to Drupal:
 
-{% highlight php %}
+```php 
 public static function getId() {
   return 'psr4_form';
 }
-{% endhighlight %}
+```
 
 And of course we need the form builder:
 
-{% highlight php %}
+```php 
 public static function build() {
   $form = parent::build();
   $form['my_textfield'] = array(
@@ -79,7 +79,7 @@ public static function build() {
 
    return $form;
 }
-{% endhighlight %}
+```
 
 All that is left is to define your validate and submit methods following [the Drupal 8 form API](https://www.drupal.org/node/2117411).
 

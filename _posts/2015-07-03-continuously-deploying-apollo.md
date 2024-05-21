@@ -30,30 +30,30 @@ Every time a Pull Request is created the build steps below will run:
 
 - Syntax checks against all our json packer templates using [packer validate](https://www.packer.io/docs/command-line/validate.html).
 
-{% highlight yaml %}
+```yaml 
 script:
   cwd: packer/
   name: validate packer template for AMI
   code: ./packer validate ubuntu-14.04_amd64-amis.json
-{% endhighlight %}
+```
 
 - Linting checks against the ansible code using our custom [step-ansible-lint](https://github.com/Capgemini/step-ansible-lint) that relies on [https://github.com/willthames/ansible-lint](https://github.com/willthames/ansible-lint).
 
-{% highlight bash %}
+```bash 
 capgemini/ansible-lint:
   name: run ansible-lint against the site.yml playbook
   playbook: site.yml
-{% endhighlight %}
+```
 
 - [Very simplistic Bash unit testing](https://github.com/Capgemini/Apollo/blob/master/bootstrap/tests/test.sh) for ensuring our bash functions do what they are meant to do.
 
-{% highlight yaml %}
+```yaml 
 script:
   name: scripts testing
   cwd: bootstrap/tests
   code: |
     /bin/bash test.sh
-{% endhighlight %}
+```
 
 In the future we might be adding a new step here for "packer push" the images into [Atlas](https://atlas.hashicorp.com/) when merging into master branch.
 
@@ -71,7 +71,7 @@ Every successful build from any specific commit can be deployed either automatic
 
 At the moment we are continuously deploying Apollo into Amazon and Digitalocean using a [step-apollo-deploy](https://github.com/Capgemini/step-apollo-deploy/).
 
-{% highlight yaml %}
+```yaml 
 deploy:
     steps:
     - install-packages:
@@ -84,7 +84,7 @@ deploy:
         artifact_version: $ARTIFACT_VERSION
         terraform_version: 0.5.3
         run_tests: true
-{% endhighlight %}
+```
 
 Environment variables can be set for every target you create in wercker:
 
@@ -99,12 +99,12 @@ We have created [step-apollo-deploy](https://github.com/Capgemini/step-apollo-de
 
 Every change in step-apollo-deploy is also continuously integrated by wercker itself using [step-validate-wercker-step](https://github.com/wercker/step-validate-wercker-step):
 
-{% highlight yaml %}
+```yaml 
 box: wercker/default
 build:
   steps:
     - validate-wercker-step
-{% endhighlight %}
+```
 
 So in essence with both "build" and "deploy" in place we have the ability to automatically triggering a fully tested ephemeral Apollo deployment for any specific commit.
 
@@ -124,10 +124,10 @@ We use ansible roles for installing and running [dockerbench](https://github.com
 
 Testing during a deploy can be optionally enabled using a toggle environment variable.
 
-{% highlight bash %}
+```bash 
 export APOLLO_serverspec_run_tests=true
 export APOLLO_dockerbench_run_test=true
-{% endhighlight %}
+```
 
 ### Dockerbench
 
@@ -141,7 +141,7 @@ The dockerbench project is still fairly young, and is still to settle on a stand
 
 Apollo default deployment provides 3 machines playing mesos master role and running zookeeper and marathon. As some configuration like the ips can be assigned on deployment time we need to populate some of the serverspecs dynamically by using an ansible [j2 template](http://docs.ansible.com/template_module.html).
  
-{% highlight ruby %}
+```ruby 
 {% raw %}
 describe command("curl --silent --show-error --fail --dump-header /dev/stderr --retry 2 http://{{ marathon_hostname }}:8080/v2/info") do
   its(:stdout) { should match '.*"master":"zk://"{{ marathon_peers|join(',') }}/mesos".*' }
@@ -152,12 +152,12 @@ describe command("curl --silent --show-error --fail --dump-header /dev/stderr --
   its(:exit_status) { should eq 0 }
 end
 {% endraw %}
-{% endhighlight %}
+```
 
 
 Below are some examples with more of the serverspecs we run for marathon:
 
-{% highlight ruby %}
+```ruby 
 describe docker_container('marathon') do
   it { should be_running }
   it { should have_volume('/store','/etc/marathon/store') }
@@ -189,19 +189,19 @@ describe command("curl -s 127.0.0.1:8080/v2/apps/serverspecs-app") do
   its(:stdout) { should match '.*"tasksRunning":1.*' }
   its(:exit_status) { should eq 0 }
 end
-{% endhighlight %}
+```
 
 ## Feedback
 
 Finally we get the feeback for the deployment in every cloud in our Slack channel using [wantedly/pretty-slack-notify](https://github.com/wantedly/step-pretty-slack-notify):
 
-{% highlight yaml %}
+```yaml 
 after-steps:
     - wantedly/pretty-slack-notify:
         webhook_url: $SLACK_WEBHOOK_URL
         channel: apollo
         username: wercker-bot
-{% endhighlight %}
+```
 ![Fig 4. Slack notification](/images/2015-07-03-continuously-deploying-apollo/slack.png)
 
 You can check out the [full wercker.yml file here](https://github.com/Capgemini/Apollo/blob/master/wercker.yml)

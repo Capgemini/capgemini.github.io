@@ -46,14 +46,14 @@ Our [Ansible role for Weave is here](https://github.com/Capgemini/Apollo/tree/ma
 
 We configure ```/etc/network/interfaces.d/weave.cfg``` with the following -
 
-{% highlight bash %}
+```bash 
 auto weave
 iface weave inet manual
   pre-up /usr/local/bin/weave create-bridge
   post-up ip addr add dev weave WEAVE_BRIDGE
   pre-down ifconfig weave down
   post-down brctl delbr weave
-{% endhighlight %}
+```
 
 ```WEAVE_BRIDGE``` is a dynamic Ansible variable that changes for each host in the Weave network. For example on HOST1 the WEAVE_BRIDGE would be ```10.2.0.1/16``` but on HOST2 it would be
 ```10.2.0.2/16.```, and so on.
@@ -62,9 +62,9 @@ iface weave inet manual
 
 Next, we bring up the Weave network by executing
 
-{% highlight bash %}
+```bash 
 ifup weave
-{% endhighlight %}
+```
 
 This gives us a network bridge on the host for the Weave network.
 
@@ -75,18 +75,18 @@ This allows us to enable Weave as a service.
 
 Inside that file we have -
 
-{% highlight bash %}
+```bash 
 start on started docker
 stop on stopping docker
-{% endhighlight %}
+```
 
 This ensures that when the Docker service is started, Weave is also started, and similar behaviour occurs on stop.
 
 When the Weave service starts it will launch Weave with the following command -
 
-{% highlight bash %}
+```bash 
 ${WEAVE} launch ${PEERS}
-{% endhighlight %}
+```
 
 Where ```${WEAVE}``` is the path to the Weave binary and ```${PEERS}``` are the other peer nodes in the cluster to join on launch.
 
@@ -127,9 +127,9 @@ To launch it we are going to use [marathonctl](https://github.com/shoenig/marath
 
 We do that by executing -
 
-{% highlight bash %}
+```bash 
 marathonctl -h=MARATHON_IP:MARATHON_PORT app create nodejs-rest-api-v1.json
-{% endhighlight %}
+```
 
 This calls the Marathon REST API to initiate the deployment. When its up you should see something like this in the Marathon web interface, showing that we have 2 instances of our service container running -
 

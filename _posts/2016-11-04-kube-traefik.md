@@ -44,7 +44,7 @@ We'll show how to use [Traefik](https://traefik.io/) for this purpose. Traefik i
 
 We'll deploy a Kubernetes cluster similar to the picture above and will run Traefik as [DaemonSet](http://kubernetes.io/docs/admin/daemons/).
 
-{% highlight yaml %}
+```yaml 
 apiVersion: extensions/v1beta1
 kind: DaemonSet
 metadata:
@@ -87,7 +87,7 @@ spec:
           name: traefik-volume
       nodeSelector:
         role: edge-router
-{% endhighlight %}
+```
 
 The source code is [here](https://github.com/Capgemini/kubeform/blob/master/roles/addons/files/traefik-ingress-controller.yaml)
 

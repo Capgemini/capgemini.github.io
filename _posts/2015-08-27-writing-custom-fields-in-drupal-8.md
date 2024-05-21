@@ -37,7 +37,7 @@ The task in Drupal 8 is founded on the same principles although the implementati
 
 All contrib and custom modules should be placed inside the "modules" folder in your site root. Core-related code is now in "core". However, it's also best practice to have "contrib" and "custom" sub-folder in "modules" for clear separation of these types of modules. So we'll create our "country" folder under modules\custom. What used to go inside \*.info file is now in country.yml, so we create that file too and add the following:
 
-{% highlight yaml %}
+```yaml 
 name: Country
 type: module
 description: Defines a simple country field type.
@@ -46,7 +46,7 @@ version: VERSION
 core: 8.x
 dependencies:
   - field
-{% endhighlight %}
+```
 
 Inside your module directory, you need a "src" subdirectory to keep all your class files. To organise things further, you need a "Plugin" sub-folder in "src". There are different types of plugins e.g. fields, actions, blocks and menus. So you need to create another folder called "Field" inside Plugin and you'll end up with a directory structure like src\Plugin\Field
 
@@ -58,14 +58,14 @@ Next, we need to define our data type, widget and formatter. These will be in cl
 
 The folder is called FieldType, so create it - src\Plugin\Field\FieldType. Create a class, which we shall call "CountryItem". The file is called CountryItem.php and in it we should have:
 
-{% highlight php %}
+```php 
 class CountryItem {
 }
-{% endhighlight %}
+```
 
 How do we define our field type? With the new plugin system, this requires an annotation<sup>[1](#footnote1)</sup> - something like a special comment block to allow core classes know about our field type. Your code should now look like this:
 
-{% highlight php %}
+```php 
 /**
  * Plugin implementation of the 'country' field type.
  *
@@ -80,28 +80,28 @@ How do we define our field type? With the new plugin system, this requires an an
  */
 class CountryItem {
 }
-{% endhighlight %}
+```
 
 The information provided in our annotation is quite similar to that provided when implementing hook_field_info() in Drupal 7. Next, at the top of our file, we add a few things like namespaces and import required core classes. 
 
-{% highlight php %}
+```php 
 namespace Drupal\country\Plugin\Field\FieldType;
 
 use Drupal\Core\Field\FieldItemBase;
 use Drupal\Core\TypedData\DataDefinition;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
-{% endhighlight %}
+```
 
 Then we make our class inherit from core FieldItem class by extending it. 
 
-{% highlight php %}
+```php 
 class CountryItem extends FieldItemBase {
 }
-{% endhighlight %}
+```
 
 There are two functions we must implement in our class -  schema() and propertyDefinitions(). They're as follows:
 
-{% highlight php %}
+```php 
 public static function schema(FieldStorageDefinitionInterface $field_definition) {
     return array(
       'columns' => array(
@@ -116,25 +116,25 @@ public static function schema(FieldStorageDefinitionInterface $field_definition)
       ),
     );
   }
-{% endhighlight %}
+```
 
 Here we define the schema for this field. The column is to be called "value", and will hold a 2-character string, representing the ISO-2 name of countries.  Oh, don't forget to add the constant for the length in your class:
 
-{% highlight php %}
+```php 
 const COUNTRY_ISO2_MAXLENGTH = 2;
-{% endhighlight %}
+```
 
-{% highlight php %}
+```php 
 public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition) {
     $properties['value'] = DataDefinition::create('string')
       ->setLabel(t('Country'));
     return $properties;
   }
-{% endhighlight %}
+```
 
 However, we need to add two methods to make our life easier. Firstly, we want to know when our field is considered empty which is what hook_field_is_empty() does in Drupal 7. Then, we want to add some validation so that the country code we want to store doesn't exceed the maximum length we have defined for our schema. When we are through, our class should look like this:
 
-{% highlight php %}
+```php 
 /**
  * @file
  * Contains \Drupal\country\Plugin\field\field_type\CountryItem.
@@ -214,7 +214,7 @@ class CountryItem extends FieldItemBase {
     return $constraints;
   }
 }
-{% endhighlight %}
+```
 
 ## Data Input
 
@@ -222,7 +222,7 @@ Now we have defined our data type and we want to store the ISO-2 country code. H
 
 We start by creating a class called CountryDefaultWidget in src\Plugin\Field\FieldWidget\CountryDefaultWidget.php with the following code:
 
-{% highlight php %}
+```php 
 namespace Drupal\country\Plugin\Field\FieldWidget;
 
 use Drupal;
@@ -232,11 +232,11 @@ use Drupal\Core\Form\FormStateInterface;
 
 class CountryDefaultWidget extends WidgetBase {
 }
-{% endhighlight %}
+```
 
 There's still an important thing missing from our widget class - annotation of the class as provider of a FieldWidget. Add this just above the class statement;
 
-{% highlight php %}
+```php 
 /**
  * Plugin implementation of the 'country_default' widget.
  *
@@ -248,13 +248,13 @@ There's still an important thing missing from our widget class - annotation of t
  *   }
  * )
  */
-{% endhighlight %}
+```
 
 This is similar to the old array keys for the old hook_widget_info() in Drupal 7. Additional annotation keys may be defined by a hook_field_widget_info_alter() function.
 
 Our CountryDefaultWidget class isn't complete yet. Widgets handle how fields are displayed in edit forms. The missing method we need to implement will do this for us. Add this formElement() method:
 
-{% highlight php %}
+```php 
 public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
     $countries = \Drupal::service('country_manager')->getList();
     $element['value'] = $element + array(
@@ -266,7 +266,7 @@ public function formElement(FieldItemListInterface $items, $delta, array $elemen
       );
     return $element;
 }
-{% endhighlight %}
+```
 
 Other modules may alter the form element provided by this function using hook_field_widget_form_alter() or hook_field_widget_WIDGET_TYPE_form_alter().
 
@@ -276,7 +276,7 @@ This default country widget is a simple widget of select options. Drupal core pr
 
 Let's start off with a complete implementation for this. Create src\Plugin\Field\FieldWidget\CountryAutocompleteWidget.php with this code:
 
-{% highlight php %}
+```php 
 namespace Drupal\country\Plugin\Field\FieldWidget;
 
 use Drupal\Core\Field\FieldItemListInterface;
@@ -297,11 +297,11 @@ use Drupal\Core\Form\FormStateInterface;
  */
 class CountryAutocompleteWidget extends WidgetBase {
 }
-{% endhighlight %}
+```
 
 There's nothing unusual here at all. We need to implement same defaultSettings() and formElement() methods as for the default widget. Add this to the class:
 
-{% highlight php %}
+```php 
 public static function defaultSettings() {
     return array(
       'size' => '60',
@@ -309,13 +309,13 @@ public static function defaultSettings() {
       'placeholder' => '',
     ) + parent::defaultSettings();
   }
-{% endhighlight %}
+```
 
 We want a textfield that's wide enough ('size' => 60). For the autocomplete_route_name key we provide the name of the route from which our autocomplete functionality will return matching values. We'll be implementing that shortly. We don't want anything as the placeholder.
 
 Finally, let's add our formElement() method:
 
-{% highlight php %}
+```php 
 public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
     $countries = \Drupal::service('country_manager')->getList();
     $element['value'] = $element + array(
@@ -330,7 +330,7 @@ public function formElement(FieldItemListInterface $items, $delta, array $elemen
     );
     return $element;
   }
-{% endhighlight %}
+```
 
 This is a standard autocomplete widget. Looking at the FAPI array keys, some are very familiar. #autocomplete_route_name matches what we entered in our defaultSettings() a while ago. The value is retrieved from there with $this->getSetting('autocomplete_route_name'). The same goes for #size and #placeholder. Our #autocomplete_route_parameters has no default value. In order to ensure that the final value to be submitted doesn't include unwanted values, we add #element_validate and enter the name of our callback function. We will also implement this shortly.
 
@@ -338,14 +338,14 @@ This is a standard autocomplete widget. Looking at the FAPI array keys, some are
 
 Create a YAML configuration file called country.routing.yml in your main module directory with the following:
 
-{% highlight yaml %}
+```yaml 
 country.autocomplete:
   path: '/country/autocomplete'
   defaults:
     _controller: '\Drupal\country\Controller\CountryAutocompleteController::autocomplete'
   requirements:
     _permission: 'administer content types'
-{% endhighlight %}
+```
 
 The key or name of the route is country.autocomplete which is how this route will be referred to anywhere in the application. At least a route should define 3 things: path, code to execute and who can access the path.
 
@@ -355,7 +355,7 @@ The key or name of the route is country.autocomplete which is how this route wil
 
 Now we move on to the creation of our controller class. Create a folder called Controller under src. Then add CountryAutocompleteController.php inside it. Add this code:
 
-{% highlight php %}
+```php 
 /**
  * @file
  * Contains \Drupal\country\Controller\CountryAutocompleteController.
@@ -396,13 +396,13 @@ class CountryAutocompleteController {
     return new JsonResponse($matches);
   }
 }
-{% endhighlight %}
+```
 
 Whatever we type in our autocomplete widget will get passed to our autocomplete method. Then, we simply search for it in the array of country names which we pull from the country_manager service we have come across before. Finally, we return any matches or an empty array in a JSON response. 
 
 That looks more like it now and we're nearly there. If you look back at our formElement() method in CountryAutocompleteWidget.php we specified a validation callback. We are going to do that now in our country.module file. Add this code:
 
-{% highlight php %}
+```php 
 /**
  * @file
  * Defines simple country field type.
@@ -423,11 +423,11 @@ function country_autocomplete_validate($element, FormStateInterface $form_state)
     }
   }
 }
-{% endhighlight %}
+```
 
 We get our array of countries, and compare the value we want to send to the database with possible values.  Now that we're here, let's just implement hook_help to give some information about our module. Just add this  below the last use statement:
 
-{% highlight php %}
+```php 
 /**
  * Implements hook_help().
  */
@@ -440,7 +440,7 @@ function country_help($route_name, RouteMatchInterface $route_match) {
       return $output;
   }
 }
-{% endhighlight %}
+```
 
 We have now finished our autocomplete widget and learned something about routing. Not bad at all!
 
@@ -448,7 +448,7 @@ We have now finished our autocomplete widget and learned something about routing
 
 We have everything ready for creating our field and allowing users to input data. Everything should work. There's little work left before we can display the output. That's where the need for a field formatter comes in. Add a new folder: src\Plugin\Field\FieldFormatter and inside it create CountryDefaultFormatter.php. Then add this code.
 
-{% highlight php %}
+```php 
 /**
  * @file
  * Definition of Drupal\country\Plugin\field\formatter\CountryDefaultFormatter.
@@ -474,11 +474,11 @@ use Drupal;
  */
 class CountryDefaultFormatter extends FormatterBase {
 }
-{% endhighlight %}
+```
 
 If we don't do anything now, everything will work except where we expect to see a country name, we will see the ISO-2 which was saved as the value of the field. To display our country name, we need to override the viewElements() method. So let's do it:
 
-{% highlight php %}
+```php 
 /**
  * {@inheritdoc}
  */
@@ -492,7 +492,7 @@ public function viewElements(FieldItemListInterface $items) {
     }
     return $elements;
 }
-{% endhighlight %}
+```
 
 Once again, we get our array of countries, find the country name for our ISO-2 value and return it as markup. Job done. The module we have created is now functional and can now be installed.
 

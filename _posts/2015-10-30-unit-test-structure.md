@@ -35,22 +35,22 @@ In the past I'd let my IDE create a test method for each public method in my pro
 
 Imagine I'm testing a Cache class.
 
-{% highlight java %}
+```java 
 class Cache {
   public void put(String key, Object value) {...}
   public boolean contains(String key) {...}
 }
-{% endhighlight %}
+```
 
 I could write a test for the `put` method. It would add a value and then check that the cache contains it.
 
-{% highlight java %}
+```java 
 @Test public void putTest() {
   Cache cache = new Cache();
   cache.put("key", "value");
   Assert.assertTrue(cache.contains("key");
 }
-{% endhighlight %}
+```
 
 That works, but now when I move on to write a test for the `contains` method I realise that I've already tested that it can tell me if the cache contains a value. I did that in the test I just wrote.
 
@@ -58,17 +58,17 @@ I could ignore this and carry on, but if I do I'll need to write a test that put
 
 What I need to do is test the behaviours of the class and behaviours often span multiple methods. Once I accepted this, it didn't make sense to name my test methods after the production methods, so I started to name them after the behaviour.
 
-{% highlight java %}
+```java 
 @Test public void cacheHoldsCachedValuesByKey() {...}
-{% endhighlight %}
+```
 
 Combine this with the earlier change in test class naming and you get something like this.
 
-{% highlight java %}
+```java 
 class ACache {
   @Test public void holdsCachedValuesByKey() {...}
 }
-{% endhighlight %}
+```
 
 I think that reads pretty nicely, not just in the source code, but even better in the test report.
 
@@ -83,15 +83,15 @@ As you add unit tests you build up a specification of the Production code.
 Sometimes, as I write my tests in this new style, I find it hard to think of the correct name for a test method.
 Imagine I've got a service that doesn't accept bad configurations. What I want to write is something like this.
 
-{% highlight java %}
+```java 
 class AService {
   @Test public void rejectsInvalidConfigurations() {...}
 }
-{% endhighlight %}
+```
 
 But there are lots of different ways that a configuration can be invalid. If I write a test for each configuration corruption I'd end up with something like this.
 
-{% highlight java %}
+```java 
 class AService {
   @Test public void rejectsConfigurationsWithoutASetting() {...}
   @Test public void rejectsConfigurationsWithBlankASetting() {...}
@@ -99,7 +99,7 @@ class AService {
   @Test public void rejectsConfigurationsWithoutBSetting() {...}
   ...
 }
-{% endhighlight %}
+```
 
 That's going to swamp any other tests I write for the service, making it harder for the reader to see the service's specified functionality.
 
@@ -107,7 +107,7 @@ I could put all those test cases inside the single **rejectsInvalidConfiguration
 
 What if I break the one to one mapping between production class and test class? Then I'm free to write tests about concepts other than the production classes.
 
-{% highlight java %}
+```java 
 class AConfigurationIsInvalid {
   @Test public void ifItHasNoASetting() {...}
   @Test public void ifItHasABlankASetting() {...}
@@ -115,7 +115,7 @@ class AConfigurationIsInvalid {
   @Test public void ifItHasNoBSetting() {...}
   ...
 }
-{% endhighlight %}
+```
 
 Even though the concept of configuration validity lives in the Service class (that's where it is checked) I can name my tests as if it lived in another non-existent entity, an **invalid configuration**.
 

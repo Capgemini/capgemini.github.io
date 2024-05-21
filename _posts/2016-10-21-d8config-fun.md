@@ -45,18 +45,18 @@ Here is how the D8config VM differs from Drupal VM:
 * to take advantage of the auto-network plugin, `vagrant_ip` is set to 0.0.0.0. The d8config machine will then have an IP address from 10.20.1.2 to 10.20.1.254;
 * the first synced folder is configured with a relative reference to the Vagrant file itself:
 
-{% highlight yaml %}
+```yaml 
 # The first synced folder will be used for the default Drupal installation, if
 # build_makefile: is 'true'.
 - local_path: ../d8config-site         # Changed from ~/Sites/drupalvm
   destination: /var/www/d8config-site  # Changed from /var/www/drupalvm
   type: nfs
   create: true
-{% endhighlight %}
+```
 
 I'll do the same with subsequent shared folders as we progress - it's a useful way to keep the different repos together in one directory. At the end of the tutorial, you'll have something like:
 
-{% highlight bash %}
+```bash 
 └── projects
     ├── another_project
     ├── d8config
@@ -65,7 +65,7 @@ I'll do the same with subsequent shared folders as we progress - it's a useful w
     │   └── d8config-vm
     ├── my_project
     └── top_secret_project
-{% endhighlight %}
+```
 
 [top][md-toc]
 
@@ -82,16 +82,16 @@ If you have used Drupal VM before but haven't upgraded in a while, there are a l
 
 Create a directory where you're going to keep all of the project assets.
 
-{% highlight bash %}
+```bash 
 $ mkdir d8config
 
 # Change to that directory in your terminal:
 $ cd d8config
-{% endhighlight %}
+```
 
 Clone the [D8config VM repo][d8config-vm]. Or, feel free to fork [D8config VM][d8config-vm] and clone _your version_ of the repo.
 
-{% highlight bash %}
+```bash 
 $ git clone https://github.com/siliconmeadow/d8config-vm.git
 
 # Change to the `d8config-vm` directory:
@@ -102,7 +102,7 @@ $ git checkout CG01
 
 # Bring the vagrant machine up and wait for the provisioning to complete.
 $ vagrant up
-{% endhighlight %}
+```
 
 After successful provisioning you should be able to point your browser at [http://d8config.dev](http://d8config.dev){: rel="nofollow"} and see your barebones Drupal 8 site. Username: `admin`; Password: `admin`.
 
@@ -155,7 +155,7 @@ Every 'site building' exercise with Drupal is a move further away from the confi
 
 I've also added a couple of contributed themes via Drush so the site will no longer look like the default site.
 
-{% highlight bash %}
+```bash 
 # While in your d8config-vm directory:
 $ vagrant ssh
 
@@ -164,7 +164,7 @@ $ cd /var/www/d8config-site/drupal
 
 # Download and install two themes:
 $ drush en integrity adminimal_theme -y
-{% endhighlight %}
+```
 
 For more details on these themes, see [the Integrity theme][integrity] and [the Adminimal theme][adminimal_theme]. As you might expect, I set Integrity as the default theme, and Adminimal as the admin theme via the GUI.
 
@@ -190,23 +190,23 @@ Let's first tweak the `config.yml` in the D8config VM repo, so that we have sync
 1. `git checkout CG02` in the d8config-vm directory (where I've already made the changes for you), or;
 2. Add the following to the `config.yml` in the `vagrant_synced_folders` section:
 
-{% highlight yaml %}
+```yaml 
 # This is so the profile repo can be manipulated on the guest or host.
 - local_path: ../d8config_profile
   destination: /build/d8config/d8config_profile
   type: nfs
   create: true
-{% endhighlight %}
+```
 
 After doing either of the above, do a `vagrant reload` which will both create the directory on the Vagrant host, and mount it from the d8config-vm guest.
 
 Next, let's generate a basic makefile from the site as it now is.
 
-{% highlight bash %}
+```bash 
 # From within the d8config vm:
 $ cd /var/www/d8config-site/drupal
 $ drush generate-makefile /build/d8config/d8config_profile/d8config.make
-{% endhighlight %}
+```
 
 This makefile is now available in the `d8config_profile` directory which is at the same level as your `d8config-vm` directory when viewing on your host machine.
 
@@ -221,26 +221,26 @@ First, our machine name has already been chosen, as I've called the repo `d8conf
 
 Rather than writing the `d8config_profile.info.yml` file from scratch, let's duplicate `standard.info.yml` from the standard profile in Drupal core, as that's what we used to build the vanilla site to begin with. We can then modify it to reflect what we've done since.
 
-{% highlight bash %}
+```bash 
 # From within the /build/d8config/d8config_profile directory in the vagrant machine:
 $ cp /var/www/d8config-site/drupal/core/profiles/standard/standard.info.yml .
 
 $ mv standard.info.yml d8config_profile.info.yml
-{% endhighlight %}
+```
 
 The first five lines of the `d8config_profile.info.yml` need to look like this:
 
-{% highlight yaml %}
+```yaml 
 name: D8config
 type: profile
 description: 'For a Capgemini Engineering Blog tutorial.'
 core: 8.x
 dependencies:
-{% endhighlight %}
+```
 
 At the end of the file it looks like this, which shows the required core modules and adding the modules and themes we've downloaded:
 
-{% highlight yaml %}
+```yaml 
 - automated_cron
 - responsive_image
 - syslog
@@ -263,7 +263,7 @@ themes:
 - seven
 - integrity
 - adminimal_theme
-{% endhighlight %}
+```
 
 Also, don't forget, we uninstalled the comment module, so I've also removed that from the dependencies.
 
@@ -278,13 +278,13 @@ Let's export our configuration using Drush. This is will be far more efficient t
 
 While logged into the vagrant machine and inside the site's root directory:
 
-{% highlight bash %}
+```bash 
 # Create the config/install directory first:
 $ mkdir -p /build/d8config/d8config_profile/config/install
 
 # Export!
 $ drush config-export --destination="/build/d8config/d8config_profile/config/install"
-{% endhighlight %}
+```
 
 When I exported my configuration, there were ~215 files created. Try `ls -1 | wc -l` in the config/install directory to check for yourself.
 
@@ -313,11 +313,11 @@ After doing the export of the configuration in the previous section, I finally s
 
 We need to do two things to make the configuration files usable in this tutorial before committing:
 
-{% highlight bash %}
+```bash 
 # Within the d8config_profile/config/install directory:
 $ rm core.extension.yml update.settings.yml
 $ find ./ -type f -exec sed -i '/^uuid: /d' {} \;
-{% endhighlight %}
+```
 
 The removal of those two files was found to be required thanks to reading [this][d8profile-howto-conf] and [this][stack-ex-file-del]. At this stage, I can confirm these were the only two files necessary for removal, and perhaps as Drupal 8's configuration management becomes more sophisticated, this will not be necessary. The second command will recursively remove the lines with the uuid key/value pairs in all files.
 
@@ -335,20 +335,20 @@ We've done all the preparation, and now need to make some small tweaks and commi
 
 To have the profile be installed by the makefile, add this to the bottom of `d8config.make` (in the [D8config profile][d8config_profile]):
 
-{% highlight yaml %}
+```yaml 
 d8config_profile:
   type: profile
   download:
     type: git
     url: git@github.com:siliconmeadow/d8config_profile.git
     working-copy: true
-{% endhighlight %}
+```
 
 I've committed the changes to the [D8Config profile][d8config_profile]{: rel="nofollow"} and tagged it as `CG02`.
 
 Then the last change to make before testing our solution is to tweak the `config.yml` in the [D8config VM][d8config-vm] repo. Three lines need changing:
 
-{% highlight yaml %}
+```yaml 
 # Change the drush_makefile_path:
 drush_makefile_path: "/build/d8config/d8config_profile/d8config.make"
 
@@ -357,20 +357,20 @@ drupal_install_profile: d8config_profile
 
 # Remove devel from the drupal_enable_modules array:
 drupal_enable_modules: []
-{% endhighlight %}
+```
 
 As you can see, the changes to the vagrant project are all about the profile.
 
 With both the [D8Config VM][d8config-vm] and the [D8Config profile][d8config_profile] in adjacent folders, and confident that this is _all going to work_, from the host do:
 
-{% highlight bash %}
+```bash 
 # From the d8config-vm directory
 $ vagrant destroy
 # Type 'y' when prompted.
 
 # Go!
 $ vagrant up
-{% endhighlight %}
+```
 
 Once the provisioning is complete, you should be able to check that the site is functioning at [http://d8config.dev](http://d8config.dev). Once there, check the presence of the custom content types, taxonomy, expected themes, placement of blocks, etc.
 

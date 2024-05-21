@@ -17,12 +17,12 @@ add infrastructure tests to your regression tests
 
 [ServerSpec][2] is a solid way of testing for this, and can be done as follows:
 
-{% highlight bash %}
+```bash 
 describe command 'openssl s_client -connect localhost:443 -ssl3 < /dev/null' do
     its(:exit_status) { should eq 1 }
     its(:stdout) { should match /no peer certificate available/ }
 end
-{% endhighlight %}
+```
 
 Use of the `< /dev/null` is to force the openssl client to terminate instead of
 waiting for input from the shell as we are only interested in the key exchange.

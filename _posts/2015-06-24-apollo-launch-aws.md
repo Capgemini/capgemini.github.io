@@ -35,14 +35,14 @@ It's worth reading through our [getting started guide for AWS public cloud](http
   - An active account setup on [Amazon AWS](http://aws.amazon.com/)
   - An account setup on [Hashicorp Atlas](https://atlas.hashicorp.com)
   - An SSH key created, ready for pushing to AWS:
-{% highlight bash %}
+```bash 
 cd ~/.ssh
 ssh-keygen -P "" -t rsa -f id_rsa_aws -b 4096 -C "email@example.com"
 openssl rsa -in ~/.ssh/id_rsa_aws -outform pem > id_rsa_aws.pem
 chmod 400 id_rsa_aws.pem
 eval `ssh-agent -s`
 ssh-add id_rsa_aws.pem
-{% endhighlight %}
+```
   - [Terraform](https://terraform.io) installed and in your $PATH
   - [Python](https://www.python.org/) >= 2.7.5 installed along with [pip](https://pip.pypa.io/en/latest/installing.html).
 
@@ -50,11 +50,11 @@ ssh-add id_rsa_aws.pem
 
 To start, lets clone the repo and install some dependencies -
 
-{% highlight bash %}
+```bash 
 git clone https://github.com/Capgemini/Apollo
 cd Apollo
 pip install -r requirements.txt
-{% endhighlight %}
+```
 
 ## Set some configuration variables
 
@@ -62,7 +62,7 @@ Next, we need to set some environment variables in our shell. Usually I like to 
 
 To create the file containing the environment variables ```vi aws-public.env``` and the contents of this file should look similar to this -
 
-{% highlight bash %}
+```bash 
 export APOLLO_PROVIDER=aws-public
 export TF_VAR_access_key=$AWS_ACCESS_KEY_ID
 export TF_VAR_secret_key=$AWS_SECRET_ACCESS_KEY
@@ -71,7 +71,7 @@ export TF_VAR_key_file=~/.ssh/id_rsa_aws.pub
 export TF_VAR_key_name=capgeminiapollo
 export TF_VAR_slaves=2
 export ATLAS_INFRASTRUCTURE=capgemini/apollo-aws-public
-{% endhighlight %}
+```
 
 Lets just step through and explain what each of these variables do -
 
@@ -97,9 +97,9 @@ you already have in your AWS account.
 
 To launch the cluster execute -
 
-{% highlight bash %}
+```bash 
 source aws-public.env && sh bootstrap/apollo-launch.sh
-{% endhighlight %}
+```
 
 This will bring the environment variables into your shell and kick off the launch process
 which should start bootstrapping the cluster on AWS.

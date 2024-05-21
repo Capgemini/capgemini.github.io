@@ -43,7 +43,7 @@ With Meteor being a full-stack JavaScript platform, one would imagine there is c
 
 #### A typical Meteor installation file structure
 
-{% highlight yaml %}
+```yaml 
 imports/
   startup/
     client/
@@ -70,7 +70,7 @@ client/
   main.js                      # client entry point, imports all client code
 server/
   main.js                      # server entry point, imports all server code
-{% endhighlight %}
+```
 
 ## JavaScript and data, together in harmony?
 I wouldn't say that exactly - Meteor uses MongoDB to hold a persistent data layer which exists as long as the server is running. If you are unfamiliar with MongoDB, "collections" (tables) are used to hold "documents" (records).
@@ -78,16 +78,16 @@ I wouldn't say that exactly - Meteor uses MongoDB to hold a persistent data laye
 ### Collections
 Here's where it get's interesting, a collection can either be created for use on the server or use on the client. Client collections are used to store local data for yes you guessed it, the client! These collections act as cached versions of the server side collections. Server collections represent stored data in the MongoDB database and act the same as a standard table.
 
-{% highlight bash %}
+```bash 
 Posts = new Mongo.Collection('posts');
-{% endhighlight %}
+```
 
 ### Publications
 > Meteor is built from the ground up on the Distributed Data Protocol (DDP) to allow data transfer in both directions. Building a Meteor app doesn’t require you to set up REST endpoints to serialize and send data. Instead you create publication endpoints that can push data from server to client.
 
 By defining a publication in the `api` directory (see above), a list of documents stored in a collection is available for the client to subscribe to and receive real-time results. This allows Meteor applications to be reactive and adapt to ever changing data immediately.
 
-{% highlight javascript %}
+```javascript 
 // Server side
 Meteor.publish('posts.all', function() {
   return Posts.find({}, {limit: 10});
@@ -99,7 +99,7 @@ const postsHandle = Meteor.subscribe('posts.all');
 if (postsHandle.ready()) {
   console.log("My subscription is ready!");
 }
-{% endhighlight %}
+```
 
 ## Reactive Nature
 > Meteor officially supports three user interface (UI) rendering libraries, Blaze, React and Angular.
@@ -107,7 +107,7 @@ if (postsHandle.ready()) {
 ### Blaze
 [Blaze](https://guide.meteor.com/blaze.html) was created as part of Meteor when it launched in 2011, and hence is claimed to be most integrated among the three with  Meteor architecture. It uses a [handlebarsJS](http://http://handlebarsjs.com/)-like templating syntax with HTML known as [Spacebars](http://blazejs.org/api/spacebars.html).
 
-{% highlight html %}
+```html 
 <template name="myPage">
   <h1>{{pageTitle}}</h1>
   {% raw %}{{> nav}}
@@ -120,12 +120,12 @@ if (postsHandle.ready()) {
     </div>
   {% raw %}{{/each}}{% endraw %}
 </template>
-{% endhighlight %}
+```
 
 ### React
 [React](https://guide.meteor.com/react.html) with Meteor can be achieved simply by adding the npm React dependency to the installation. This allows you to write React components in JSX as with any other React application.
 
-{% highlight javascript %}
+```javascript 
 import React from 'react';
 export default class HelloWorld extends React.Component {
   render() {
@@ -134,12 +134,12 @@ export default class HelloWorld extends React.Component {
     );
   }
 }
-{% endhighlight %}
+```
 
 ### Angular
 [Angular](https://guide.meteor.com/angular.html) with Meteor is officially supported and there is even a separate dedicated community at [Angular-Meteor.com](http://angular-meteor.com). Although it seems to be a lot more work (bootstrapping) to get both working together effectively than with React or Blaze.
 
-{% highlight javascript %}
+```javascript 
 import { Component } from '@angular/core';
 
 @Component({
@@ -150,7 +150,7 @@ export class PostsPage {
 
   }
 }
-{% endhighlight %}
+```
 
 ## When does a Meteor become an Asteroid?
 As mentioned before, Meteor employs its own fantastic packaging system known as [AtmosphereJS](http://atmospherejs.com), previously developed as an NPM package known as Meteorite ([you can read their full story here](http://blog.percolatestudio.com/engineering/the-atmosphere-story/)).
@@ -162,16 +162,16 @@ As you can imagine, this makes Meteor a pretty powerful platform, and encourages
 
 One can simply browse the [AtmosphereJS website](https://atmospherejs.com) and use the Meteor CLI to install packages:
 
-{% highlight bash %}
+```bash 
 meteor add react-meteor-data
-{% endhighlight %}
+```
 
 ## Mobile
 > Meteor integrates with Cordova, a well-known Apache open source project, to build mobile apps from the same codebase you use to create regular web apps. With the Cordova integration in Meteor, you can take your existing app and run it on an iOS or Android device with a few simple commands.
 
 Cordova wraps HTML/CSS and JS into a native container to target multiple platforms. As a web app in itself, it means the Meteor application can simply be wrapped to support mobile devices immediately. However, as mentioned before - what if the client wants to expand on the mobile version of an application? Fortunately, there are neat conditionals that can be used to identify the user's device:
 
-{% highlight javascript %}
+```javascript 
 if (Meteor.isServer) {
   console.log("Printed on the server");
 }
@@ -181,7 +181,7 @@ if (Meteor.isClient) {
 if (Meteor.isCordova) {
   console.log("Printed only in mobile Cordova apps");
 }
-{% endhighlight %}
+```
 
 However, depending on how different the mobile version is desired to be, one could argue that keeping both together with countless device conditionals would be counter-intuitive. It may make more sense to split the code into two applications and use some funky routing - but that's for another discussion.
 

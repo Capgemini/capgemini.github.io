@@ -37,14 +37,14 @@ The JWT payload contains the claims. The claims are statements about an entity (
 
 OAuth is chattier compared to JWT. This is because OAuth requires the Auth server to verify the validity of the token and the Auth server in turn relies on the information it has stored in a database to make this judgement. OAuth however does have an advantage over JWT in that tokens can be easily revoked. This is particularly a good feature if instant access revocation is desired. The basic OAuth token response is shown below.
 
-{% highlight json %}
+```json 
 {
     "access_token": "foo",
     "token_type": "example",
     "expires_in": 3600,
     "refresh_token": "bar"
 }
-{% endhighlight %}
+```
 
 The relevant attributes are described in the table below.
 
@@ -57,14 +57,14 @@ refresh_token     | The long-lived token which are used to obtain new access tok
 
 As shown in the example OAuth flow above, the client will include the access token in every API request to a resource server. The client will then make use of the refresh token to obtain a new access token. How can we benefit from the inherent performance advantages associated with JWT and the limited access capability provided by OAuth? By issuing an OAuth token with JWT in both access token and refresh tokens as depicted below.
 
-{% highlight json %}
+```json 
 {
     "access_token": "aShortLivedJWT",
     "token_type": "example",
     "expires_in": 3600,
     "refresh_token": "aLongLivedJWT"
 }
-{% endhighlight %}
+```
 
 
 The client will include the short-lived JWT for every call to the resource server, and will make use of the long-lived JWT to obtain a new access token. The short-lived JWT is validated locally. We do however need to keep a record or blacklist of the revoked refresh tokens till they expire. This blacklist will be checked only when the client wishes to refresh the OAuth token. A new access token will not be granted if the refresh token is found in the blacklist. 

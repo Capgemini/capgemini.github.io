@@ -91,14 +91,14 @@ However overall for me the benefits have outweighed the minor disadvantages. The
 Being a NodeJS library Cypress is super easy to get started with. The JavaScript syntax is based off [Mocha](https://mochajs.org) so it is easy to read and already familiar to a lot of developers.
 
 #### 1.	Install with npm
-{% highlight javascript %}
+```javascript 
 npm install cypress --save-dev
-{% endhighlight %}
+```
 
 #### 2.	Launch the test runner
-{% highlight shell %}
+```shell 
 $(npm bin)/cypress open
-{% endhighlight %}
+```
 
 #### 3.	Add a test
 Launching the test runner has conveniently created the directory structure Cypress needs, so just add a `test.spec.js` file under the cypress/integration folder. Cypress will immediately display it in the list of integration tests.
@@ -106,7 +106,7 @@ Launching the test runner has conveniently created the directory structure Cypre
 #### 4.	Write your first test
 In your `test.spec.js` file enter the following:
 
-{% highlight javascript %}
+```javascript 
 describe('My First Test', () => {
   it('Runs a Google search', () => {
     cy.visit('https://google.com');
@@ -114,7 +114,7 @@ describe('My First Test', () => {
     cy.contains('cypress.io');  
   });
 });
-{% endhighlight %}
+```
 
 The above should be fairly self-explanatory due to Cypress’s simple syntax. However to summarise the above runs a google search for *Cypress* and verifies *cypress.io* appears in the search results.
 

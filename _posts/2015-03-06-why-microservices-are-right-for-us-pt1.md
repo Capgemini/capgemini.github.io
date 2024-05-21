@@ -26,10 +26,10 @@ What is more, not only are they human-sized for us as developers, they are also 
 
 But perhaps even better than both these is the fact that Microservices are also consumer-sized.  We write all ours so that with only a Java and Maven dependency installed you can check them out and have them running locally with two commands:
 
-{% highlight php %}
+```php 
 git clone
 mvn spring-boot:run
-{% endhighlight %}
+```
 
 We set up our code so that, when the Microservice starts up, it's automatically in stub-mode, by which I mean it's downstream Microservice and other dependencies are stubbed out. The range of requests you can send in, and the various valid and failure states you'll mimic as a result are specified in standard README.md files at the top of each Microservice git repo.  
 

@@ -31,7 +31,7 @@ The second interesting aspect of this is using Blueprint as the dependency injec
 My resource is a simple blog post which allows one operation on it: getting a single post by id using a path parameter.
 Define your resources as follows:
 
-{% highlight java %}
+```java 
 	@Path("/post/")
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	public class BlogPost {
@@ -43,7 +43,7 @@ Define your resources as follows:
 		}
 	
 	}
-{% endhighlight %}
+```
 
 **The first media type defined in your produces tag will be the default.** If a client does not specify an Accept header
 on its HTTP request then the service will default to returning the first MediaType in the Produces tag.
@@ -51,7 +51,7 @@ on its HTTP request then the service will default to returning the first MediaTy
 ### Camel Route and Blueprint
 I use the fact that the CXFRS component puts the method name of the resource in the operationName header to route each request via a recipient list to a direct endpoint to process it. The restEndpoint field is set by blueprint, utilising it's DI and default property capabilities. The inline processor simply returns a Post object. For anyone not familiar with Camel, the route is by default a request-reply (or in-out in Camel's language) route which means as long as you don't send it somewhere else like an activemq queue then the exchange will be routed back to where it came from i.e. the CXF server, Camel takes care of all the http responding and marshalling for you which is excellent.
 
-{% highlight java %}
+```java 
 	public class RestServiceRouteBuilder extends RouteBuilder {
 	
 		private String restEndpoint;
@@ -81,7 +81,7 @@ I use the fact that the CXFRS component puts the method name of the resource in 
 			this.restEndpoint = restEndpoint;
 		}
 	}
-{% endhighlight %}
+```
 
 Finally, wire it all up in the blueprint. I have given my property placeholder element a persistent-id and an update strategy
 of none. Using these default properties is what makes the service testable because I can swap the service url to a 
@@ -89,7 +89,7 @@ local url in my test. The cxf-server needs to know about it's resources in the s
 automatically give you marshalling to JSON or XML for free. (As long as an annotated object is in the body when it reaches
 the end of the Camel route).
 
-{% highlight xml %}
+```xml 
 	<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
 			   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			   xmlns:camel-cxf="http://camel.apache.org/schema/blueprint/cxf"
@@ -128,7 +128,7 @@ the end of the Camel route).
 		</camel-cxf:rsServer>
 	
 	</blueprint>
-{% endhighlight %}
+```
 
 ### Unit Test
 Using camel-blueprint-test is the hardest part of this as it requires a lot of hidden dependencies. However, it is a useful
@@ -148,12 +148,12 @@ Blueprint testing takes only the first Camel context it finds and loads that. To
 use the bundle filter method. The below example will load any Camel context it finds except bundles whose names start with
 bundle.name.unwanted and bundle.name.unwanted2:
 
-{% highlight java %}
+```java 
 	@Override
     protected String getBundleFilter() {
         return "(&(Bundle-SymbolicName=*)(!(Bundle-SymbolicName=bundle.name.unwanted*))(!(Bundle-SymbolicName=bundle.name.unwanted2*)))";
     }
-{% endhighlight %}
+```
 
  * If you are still receiving exceptions the best thing may be to update the version of your blueprint-test dependency to 
 the latest version to avoid exceptions such as felix complaining about a null pointer in the main thread and 
@@ -168,7 +168,7 @@ This test allows you to use a real HTTP client to test that your service impleme
 This is a much better test than overriding the endpoints with directs and simply testing the processing in the route
 because it gives you confidence in your specification of the CXF server.
 
-{% highlight java %}
+```java 
 	public class RouteTest extends CamelBlueprintTestSupport {
     
         private static final String BASE_URL = "http://localhost:10001/api/";
@@ -222,7 +222,7 @@ because it gives you confidence in your specification of the CXF server.
             assertEquals("My Title", blogPost.getTitle());
         }
     }
-{% endhighlight %}
+```
 
 The end result is a real CXF service being run at test time enabling you to test your full implementation before it's even been deployed!
 

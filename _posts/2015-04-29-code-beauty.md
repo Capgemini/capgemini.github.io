@@ -44,19 +44,19 @@ I could stop here, but there’s one last gotcha regarding code beauty that I th
 
 As an example, you might prefer this code, written in C# in an imperative style.
 
-{% highlight c# %}
+```c# 
 int sum = 0; 
 foreach (int i in mylist)
 {
    sum += (i + 1);
 }
-{% endhighlight %}
+```
 
 Or you might prefer this code, written in Clojure in a functional style.
 
-{% highlight clojure %}
+```clojure 
 (reduce + (map inc mylist))
-{% endhighlight %}
+```
 
 They both do the same thing and your preference probably depends on what sort of code style and language you usually use.
 

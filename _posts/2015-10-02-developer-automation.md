@@ -34,14 +34,14 @@ Before we can begin we need to install [VirtualBox](https://www.virtualbox.org) 
 	
 ### Create Vagrant file and Provisioning Scripts
 **In the root of your project run the following commands:**
-{% highlight bash %}
+```bash 
  vagrant box add hashicorp/precise64
  vagrant init hashicorp/precise64
-{% endhighlight %}
+```
 The first line will download a base image, in this case a 64-bit ubuntu image. The second creates a default vagrantfile.
 
 **Open the vagrantfile and replace the contents with the following:**
-{% highlight ruby %}
+```ruby 
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -70,35 +70,35 @@ Vagrant.configure("2") do |config|
   end
 end
 
-{% endhighlight %}
+```
 The file outlines the virtual machine requirements and the scripts to run for set-up. It'll create a 64-bit Ubuntu virtual machine with 1024mb of memory running on the IP with port forwarding. This is all very familiar if you've worked with a virtual machines before or read our [previous blog post on VirtualBox]({% post_url 2015-02-11-an-introduction-to-virtualbox %}). 
 
 The provisioning steps are the automation of what we as developers would normally do manually. In the example I'm copying a jar file into the machine and then running some bash scripts to install Java and MySQL followed by some additional specific bootstrapping. There's nothing stopping you provisioning in a single script but personally I like to keep things re-usable. For more advanced provisioning you could use puppet or chef. 
 
 **Create a provisioning file for MySQL:**
-{% highlight bash %}
+```bash 
 export DEBIAN_FRONTEND=noninteractive
 apt-get -q -y install mysql-server
-{% endhighlight %}
+```
 p.s. remember to run "mysqladmin -u root password myPrivatePassword" later on to secure the database. This is a non interactive install script.
 
 **Create a provisioning file for Java:**
-{% highlight bash %}
+```bash 
 #!/usr/bin/env bash
 
 echo 'Setting Up Java'
 apt-get update
 apt-get install -y default-jre
-{% endhighlight %}
+```
 
 **Create a provisioning file for bootstrapping:**
-{% highlight bash %}
+```bash 
 #!/usr/bin/env bash
 
 echo 'Create directory structure'
 mkdir ~/MyDir
 mkdir ~/MyDir2
-{% endhighlight %}
+```
 
 ### Vagrant Up
 This may take a while first time, it's setting up the virtual machine and applying the provisioning scripts. After that you'll have a build fully configured. You'll be able to ssh into this machine and manually modify it if you wish. 

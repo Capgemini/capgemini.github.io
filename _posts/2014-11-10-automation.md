@@ -28,7 +28,7 @@ A "behat service" will be created to check if the selenium container is ready us
 
 We use  [fig](http://www.fig.sh/) for running the [containers](https://github.com/docker/docker/blob/master/README.md) and managing our basic UAT environment.
 You can add as many selenium services as you need to your fig.yml and run different behaviour-tests projects simultaneously because as we are [linking containers](http://docs.docker.com/userguide/dockerlinks/) we don't have to worry about port collision troubles.
-{% highlight bash %}
+```bash 
 selenium:
  build: dockerfiles/selenium-image
 behat:
@@ -37,7 +37,7 @@ behat:
   - behat/:/behat/
  links:
   - selenium:selenium
-{% endhighlight %}
+```
 
 Run “fig up” or any other fig command for automating and orchestrating your services.
 
