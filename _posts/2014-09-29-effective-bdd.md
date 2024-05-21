@@ -12,11 +12,11 @@ It's always important to remember that whilst Behat can be just used as a script
 
 Our scenarios should provide the complete documented specification for the software being delivered, and can be executed to provide validation of the system in a timely manner. To illustrate how to create effective Behat features, we'll use the following example requirement written as a typical user story.
 
-{% highlight gherkin %}
+```gherkin 
 As the Corporate Lawyer
 I want to ensure that in addition to entering their details the user agrees to the Terms of Service when signing up
 To ensure that we can justifiably suspend the account if they break the Terms
-{% endhighlight %}
+```
 
 NB two things here
 
@@ -27,7 +27,7 @@ NB two things here
 
 Someone new to Behat will typically write the specification like this:
 
-{% highlight gherkin %}
+```gherkin 
 When I go to "https://accounts.google.com/SignUp"
 And I enter "Larry" in "First"
 And I enter "Page" in "Last"
@@ -35,7 +35,7 @@ And I enter "larry.page@mailinator.com" in "Username"
 etc…
 And I press "Next step"
 Then I should see "In order to use our services, you must agree to Google's Terms of Service."
-{% endhighlight %}
+```
 
 This specification has a number of inherent problems though:
 
@@ -47,7 +47,7 @@ This specification has a number of inherent problems though:
 
 Let's start by rewriting the specification so that it fits the requirement:
 
-{% highlight gherkin %}
+```gherkin 
 Given "<user>" is on the signup page
 And they complete the signup form but do not agree to the terms of service
 Then they should see a warning message telling them to accept the terms of service
@@ -57,7 +57,7 @@ Examples:
 |user|
 |Larry|
 |Sergei|
-{% endhighlight %}
+```
 
 This specification is much better. It describes in plain language, with the minimum of jargon, what needs to be implemented to meet the requirement. It's not brittle - it doesn't rely on any specific implementation, so that if field names change then the specification, quite rightly, isn't affected.
 
@@ -67,58 +67,59 @@ But, where do we implement these new step definitions such as "And they complete
 
 You can read more about how Behat implements the Page Object pattern at [http://extensions.behat.org/page-object][behat_page_object]. As far as our example goes let's take a look at the first couple of steps. We have three distinct components - a user, a page and a form within that page. Let's look at the first step in the specification:
 
-{% highlight gherkin %}
+```gherkin 
 "Given "<user>" is on the signup page"
-{% endhighlight %}
+```
 
 This step is implemented in the SignupPageContext as follows:
 
-{% highlight php startinline%}
+```php
 public function isOnTheSignupPage($name) {
   if (!$this->user = User::load($name)) {
     throw new Exception("Failed to load user for {$name}");
   }
   $this->getPage("Signup Page")->open();
 }
-{% endhighlight %}
+```
 
-User::load simply returns a User object which contains information about a user, such as their name, email address etc - this information is stored in a YAML file so it's not tied to any implementation and can be re-used across the project. This gives us a 'user' with attributes that we can use across all of our specifications.
+User::load simply returns a User object which contains information about a user, such as their name, email address etc - this information is stored in a YAML file, so it's not tied to any implementation and can be re-used across the project. This gives us a 'user' with attributes that we can use across all of our specifications.
 
-$this->getPage("Signup Page")->open() is defined within Behat's PageObjectContext class and auto loads a class we've defined called SignupPage and it simply opens the url stored in that object's $path property.
+`$this->getPage("Signup Page")->open()` is defined within Behat's `PageObjectContext` class and auto-loads a class we've defined called `SignupPage` and it simply opens the url stored in that object's $path property.
 
 The next step "they complete the signup form but do not agree to the terms of service" is again implemented within the SignupPageContext and, after checking that we have a valid user, does the following three things:
 
-{% highlight php startinline%}
+```php
 $this->getPage("Signup Page")->enterUserDetailsOnSignupForm($this->user);
 $this->getPage("Signup Page")->doNotAgreeWithTermsAndConditionsOnSignupForm();
 $this->getPage("Signup Page")->submitSignupForm();
-{% endhighlight %}
+```
 
 These should seem quite explanatory in their intent. Let's examine what the first one does:
-{% highlight php startinline%}
+```php
 $this->getPage("Signup Page")->enterUserDetailsOnSignupForm($this->user);
-{% endhighlight %}
+```
 
 This is implemented within the SignupPage class as follows:
-{% highlight php startinline %}
+```php 
 return $this->getElement('Signup Form')->enterUserDetails($user);
-{% endhighlight %}
+```
 
-this auto loads an object of class SignupFormElement and calls its method enterUserDetails. This encapsulation enables us to re-use the functionality of the signup form on other pages, and prevents pollution of methods between classes.
+this auto-loads an object of class SignupFormElement and calls its method `enterUserDetails`. This encapsulation enables us to re-use the functionality of the signup form on other pages, and prevents pollution of methods between classes.
 
-The enterUserDetails method contains a simple implementation doing exactly what is required to enter the user details in the signup form. Again, this should be self explanatory:
-{% highlight php startinline %}
+The `enterUserDetails` method contains a simple implementation doing exactly what is required to enter the user details in the signup form. Again, this should be self-explanatory:
+
+```php 
 $this->fillField("First", $user->first_name);
 $this->fillField("Last", $user->last_name);
 $this->fillField("Choose your username", $user->email);
 $this->fillField("Create a password", $user->password);
 $this->fillField("Confirm your password", $user->password);
 $this->fillField("Your current email address", $user->email);
-{% endhighlight %}
+```
 
 Finally by taking a look at the layout of the files, we can see that the functionality is clearly separated and encapsulated - each class in the hierarchy is responsible for interacting with a well-defined part of the signup process.
 
-{% highlight gherkin %}
+```gherkin 
  ├── bootstrap
  │   ├── Page
  │   │   ├── Element
@@ -135,7 +136,7 @@ Finally by taking a look at the layout of the files, we can see that the functio
  │   └── WebsiteFeatureContext.php
  └── website
      └── ensuretermsconditions.feature
-{% endhighlight %}
+```
 
 You can read more about features as executable specifications in the excellent ["Specification by Example"][sbe]. More information about Page Objects from Selenium's perspective can be found at <http://code.google.com/p/selenium/wiki/PageObjects>.
 
