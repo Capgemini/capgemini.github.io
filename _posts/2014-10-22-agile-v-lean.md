@@ -34,7 +34,7 @@ For example, an analysis I performed a while ago on a series of project releases
 
 The top image is a [Cumulative Flow Diagram](http://www.slideshare.net/yyeret/explaining-cumulative-flow-diagrams-cfd) (CFD) for a number of releases into production of a product. Each band shows the user stories that were queued or in in-progress at that time. The large steps are where the process was outside of the project team's direct control. The thinner red stripe was where the team were working in an incremental way to develop and test the software within sprints. The green band after the red stripe shows the software "sitting on the shelf" for the next phase.
 
-Restrospectives would centre on the "red stripe". Blockers, knowledge transfer, skills, planning, estimates, etc, etc.
+Retrospectives would centre on the "red stripe". Blockers, knowledge transfer, skills, planning, estimates, etc, etc.
 
 ### Wider Improvement
 
