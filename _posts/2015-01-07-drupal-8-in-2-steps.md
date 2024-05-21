@@ -17,24 +17,24 @@ I took part in the Drupalcon in Amsterdam and I enjoyed a number of really inter
 ## How do I define a module?
 In Drupal 8 to define a module we need only a YAML (.info.yml) file:
 
-**/modules/d8_example_module/d8_example_module.info.yml**
+**`/modules/d8_example_module/d8_example_module.info.yml`**
 
-{% highlight yaml %}
+```yaml
 name: D8 Test Module
 description: D8 Test Module
 type: module
 core: 8.x
 package: Custom
-{% endhighlight %}
+```
 
 In Drupal 8 the .module file is not required anymore, so with only the .info.yml file the module is ready to be enabled.
 
 ## How do I make a page?
 Start creating a controller extending the ControllerBase class and return the output of the page:
 
-**/modules/d8_example_module/src/Controller/D8ExampleModuleController.php**
+**`/modules/d8_example_module/src/Controller/D8ExampleModuleController.php`**
 
-{% highlight php %}
+```php
 namespace Drupal\d8_example_module\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
@@ -50,13 +50,13 @@ class D8ExampleModuleController extends ControllerBase {
     return ['#markup' => $message];
   }
 }
-{% endhighlight %}
+```
 
 Once this is done, within the .routing.yml file we can define the path, the controller, the title and the permissions:
 
 **/modules/d8_example_module/d8_example_module.routing.yml**
 
-{% highlight yaml %}
+```yaml
 d8_example_module.test_page:
   path: '/test-page/{from}/{to}'
   defaults:
@@ -64,14 +64,14 @@ d8_example_module.test_page:
     _title: 'Test Page!'
   requirements:
     _permission: 'access content'
-{% endhighlight %}
+```
 
 ## How do I make content themeable?
 We still have the hook_theme() function to define our theme:
 
 **/modules/d8_example_module/d8_example_module.module**
 
-{% highlight php %}
+```php
 /**
  * Implements hook_theme().
  */
@@ -83,25 +83,25 @@ function d8_example_module_theme() {
 
   return $theme;
 }
-{% endhighlight %}
+```
 
 For the template page Drupal 8 uses **Twig**, a [third-party template language](http://twig.sensiolabs.org/documentation) used by many PHP projects. For more info about Twig have a look at [Twig in Drupal 8](https://www.drupal.org/theme-guide/8/twig). One of the cool parts of Twig is that we can do string translation directly in the template file:
 
 **/modules/d8_example_module/template/d8-theme-page.html.twig**
 
-{% highlight yaml %}
+```twig
 <section>
   {% raw %}{% trans %}{% endraw %}
     <strong>{% raw %}{{ from }}{% endraw %}</strong> to <em>{% raw %}{{ to }}{% endraw %}</em>
   {% raw %}{% endtrans %}{% endraw %}
 </section>
-{% endhighlight %}
+```
 
 And then we assign the theme to the page:
 
-**/modules/d8_example_module/src/Controller/D8ExampleModuleController.php**
+**`/modules/d8_example_module/src/Controller/D8ExampleModuleController.php`**
 
-{% highlight php %}
+```php
 namespace Drupal\d8_example_module\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
@@ -116,24 +116,24 @@ class D8ExampleModuleController extends ControllerBase {
     ];
   }
 }
-{% endhighlight %}
+```
 
 ## How do I define a variable?
 Drupal 8 has a whole new configuration system that uses human-readable [YAML](http://www.yaml.org/) (.yml) text files to store configuration items. For more info have a look at [Managing configuration in Drupal 8](https://www.drupal.org/documentation/administer/config).
 
 We define variables in config/install/*.settings.yml:
 
-**/modules/d8_example_module/config/install/d8_example_module.settings.yml**
+**`/modules/d8_example_module/config/install/d8_example_module.settings.yml`**
 
-{% highlight yaml %}
+```
 default_count: 3
-{% endhighlight %}
+```
 
 The variables will be stored in the database during the installation of the module. We define the schema for the variables in config/schema/*.settings.yml: 
 
-**/modules/d8_example_module/config/schema/d8_example_module.settings.yml**
+**`/modules/d8_example_module/config/schema/d8_example_module.settings.yml`**
 
-{% highlight yaml %}
+```yaml
 d8_example_module.settings:
   type: mapping
   label: 'D8 Example Module settings'
@@ -141,14 +141,14 @@ d8_example_module.settings:
     default_count:
       type: integer
       label: 'Default count'
-{% endhighlight %}
+```
 
 ## How do I make a form?
 To create a form we extend a ConfigFormBase class:
 
-**/modules/d8_example_module/src/Form/TestForm.php**
+**`/modules/d8_example_module/src/Form/TestForm.php`**
 
-{% highlight php %}
+```php
 namespace Drupal\d8_example_module\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
@@ -177,13 +177,13 @@ class TestForm extends ConfigFormBase {
     parent::submitForm($form, $form_state);
   }
 }
-{% endhighlight %}
+```
 
 Then within the .routing.yml file we can define the path, the form, the title and the permissions:
 
-**/modules/d8_example_module/d8_example_module.routing.yml**
+**`/modules/d8_example_module/d8_example_module.routing.yml`**
 
-{% highlight yaml %}
+```yaml
 d8_example_module.test_form:
   path: /admin/config/system/test-form
   defaults:
@@ -191,36 +191,36 @@ d8_example_module.test_form:
     _title: 'Test Form'
   requirements:
     _permission: 'configure_form'
-{% endhighlight %}
+```
 
 We use another YAML file (.permissions.yml) to define permissions:
 
-**/modules/d8_example_module/d8_example_module.permissions.yml**
+**`/modules/d8_example_module/d8_example_module.permissions.yml`**
 
-{% highlight yaml %}
+```yaml
 'configure_form':
   title: 'Access to Test Form'
   description: 'Set the Default Count variable'
-{% endhighlight %}
+```
 
 We also use another YAML file (.links.menu.yml) to define menu links:
 
-**/modules/d8_example_module/d8_example_module.links.menu.yml**
+**`/modules/d8_example_module/d8_example_module.links.menu.yml`**
 
-{% highlight yaml %}
+```yaml
 d8_example_module.test_form:
   title: 'Test Form'
   description: 'Set the Default Count variable'
   route_name: d8_example_module.test_form
   parent: system.admin_config_system
-{% endhighlight %}
+```
 
 ## How do I make a block?
 To create a block we extend a ConfigFormBase class:
 
-**/modules/d8_example_module/src/Plugin/Block/TestBlock.php**
+**`/modules/d8_example_module/src/Plugin/Block/TestBlock.php`**
 
-{% highlight php %}
+```php
 namespace Drupal\d8_example_module\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
@@ -242,12 +242,12 @@ class TestBlock extends BlockBase {
     ];
   }
 }
-{% endhighlight %}
+```
 
 In this way the block is ready to be configured in the CMS (/admin/structure/block).
 Here is an example of a more complex block:
 
-{% highlight php %}
+```php
 namespace Drupal\d8_example_module\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
@@ -294,12 +294,12 @@ class TestBlock extends BlockBase {
     ];
   }
 }
-{% endhighlight %}
+```
 
 ## Structure of a module
 The structure of a module should look like the example module **d8_example_module**:
 
-{% highlight yaml %}
+```
 d8_example_module/
  |
  |- config/
@@ -341,7 +341,7 @@ d8_example_module/
  |- d8_example_module.permissions.yml
  |
  |- d8_example_module.routing.yml
-{% endhighlight %}
+```
 
 **Drupal 8 in 2 steps: Extend a base Class or implement an Interface and tell Drupal about it.**
 
