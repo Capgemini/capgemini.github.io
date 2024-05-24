@@ -51,7 +51,7 @@ Before we close, here's a reading list of the things we've found most useful in 
 
 * [Idempotency is not a Medical Condition - Pat Helland](http://queue.acm.org/detail.cfm?id=2187821)
 * [Martin Fowler - You Must Be This Tall To Use Microservices](http://martinfowler.com/bliki/MicroservicePrerequisites.html)
-* [Adrian Cockroft - Migrating to Microservices](http://qconlondon.com/dl/qcon-london-2014/slides/AdrianCockcroft_MigratingToMicroservices.pdf)
+* [Adrian Cockcroft - Migrating to Microservices](http://qconlondon.com/dl/qcon-london-2014/slides/AdrianCockcroft_MigratingToMicroservices.pdf)
 * [Michael Nygaard - Stability Patterns, and Ant-Patterns...](http://www.slideshare.net/justindorfman/stability-patterns-presentation)
 * [Eric Evans - Domain Driven Design: Tackling Complexity in the Heart of Software](http://www.amazon.co.uk/Domain-driven-Design-Tackling-Complexity-Software/dp/0321125215)
 * [Uncle Bob - Microservices and Jars](http://blog.cleancoder.com/uncle-bob/2014/09/19/MicroServicesAndJars.html)
