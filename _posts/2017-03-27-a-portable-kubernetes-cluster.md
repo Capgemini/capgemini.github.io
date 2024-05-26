@@ -50,7 +50,7 @@ We wrapped our cluster standup procedure in a bash script (later deployed via [C
 
 The 320 second wait required is to allow Route53 to update with the internal DNS names of the cluster masters and nodes - without this wait the subsequent steps 3-5 (which all use the kubectl tool) would fail.  The time chosen was based on average maximum values seen with a safety margin of around 20 seconds.
 
-The full version of our script is available in our [GitHub repository](https://github.com/Capgemini/portable-k8s-demo) at ci/scripts/spin.sh, the system that runs that script requires the kops, kubectl and the AWS CLI as well as openssh and jq (some JSON parsing is required in updating Route53).  The repository has been sanitised but was built in a very short time so little refactoring or optimisation has been done, so use at your own risk!  Please read the README file in the repository which contains important information about the code.  The relative paths to files containing other example code included in this post are shown before each code block.
+The full version of our script is available in our [GitHub repository](https://github.com/Capgemini/portable-k8s-demo) at ci/scripts/spin.sh, the system that runs that script requires the kops, kubectl and the AWS CLI as well as OpenSSH and jq (some JSON parsing is required in updating Route53).  The repository has been sanitised but was built in a very short time so little refactoring or optimisation has been done, so use at your own risk!  Please read the README file in the repository which contains important information about the code.  The relative paths to files containing other example code included in this post are shown before each code block.
 
 ## Grand Designs
 

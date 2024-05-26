@@ -62,11 +62,11 @@ server:
 
 #### Kube Auth Method 
 
-After applying the helmsman state file, we can proceed with configuring the Vault instance. There are two main ways to configure Vault: through the Vault UI or programatically via the CLI. Since we prefer repeatable processes, having our Vault configuration in code is a better approach. Taking it a step further, we could use the [Vault Terraform](https://registry.terraform.io/providers/hashicorp/vault/latest/docs) approach to treat this configuration as infrastructure-as-code. However, that goes beyond the scope of this example. 
+After applying the helmsman state file, we can proceed with configuring the Vault instance. There are two main ways to configure Vault: through the Vault UI or programmatically via the CLI. Since we prefer repeatable processes, having our Vault configuration in code is a better approach. Taking it a step further, we could use the [Vault Terraform](https://registry.terraform.io/providers/hashicorp/vault/latest/docs) approach to treat this configuration as infrastructure-as-code. However, that goes beyond the scope of this example. 
 
 #### Configuration 
 
-Next we need to enable the Kube auth method. The easiest way to do this (programatically) is via the Vault CLI (which comes pre-installed in the Vault container from the installed helm chart).
+Next we need to enable the Kube auth method. The easiest way to do this (programmatically) is via the Vault CLI (which comes pre-installed in the Vault container from the installed helm chart).
 
 `vault auth enable kubernetes` 
 

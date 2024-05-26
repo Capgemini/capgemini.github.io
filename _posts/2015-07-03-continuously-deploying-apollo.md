@@ -63,7 +63,7 @@ You can see the feedback for every build in wercker:
 
 ## Deploy
 
-Wercker allows you to deploy your application into supported platforms like Heroku or Openshift or you can create you own Deployment Target.
+Wercker allows you to deploy your application into supported platforms like Heroku or OpenShift or you can create you own Deployment Target.
 
 Every successful build from any specific commit can be deployed either automatically or manually.
 

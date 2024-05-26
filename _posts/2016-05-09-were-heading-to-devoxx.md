@@ -28,4 +28,4 @@ Don't forget we're hiring (see the ad below this post). Here are just a few of t
  * Surrounded by a growing set of talented and inspiring individuals.
  * Flexible working time and environment.
  * Two weeks of training and conference attendance a year. We love sending people to SkillsMatter’s CodeNode in London.
- * The best tools - we let developers choose Windows, OSX (and in the future Ubuntu – we’re working hard on it) for their corporate machine. We provide tricked out Macbook Pros to our developers if you want one.  We also provide IntelliJ IDEA licences for everyone who’s broken away from Eclipse.
+ * The best tools - we let developers choose Windows, OSX (and in the future Ubuntu – we’re working hard on it) for their corporate machine. We provide tricked out MacBook Pros to our developers if you want one.  We also provide IntelliJ IDEA licences for everyone who’s broken away from Eclipse.

@@ -10,7 +10,7 @@ comments: true
 share: true
 ---
 
-I’m too old to be a front-end developer. Talk of [frameworks](https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282) and [js-library bingo](https://speakerdeck.com/petecampbell/javascript-bingo) makes me feel like a WWII veteran at a segway convention. But then I went to [Devoxx US](https://devoxx.us/) and heard Ben Ilegbodu’s talk, ‘[Navigating the React solar system](https://cfp.devoxx.us/2017/talk/LRN-3691/Navigating_the_React_Solar_System)’, and I thought — it sounds like this stuff is actually getting there. The front end world now looks and sounds much more like the Java world - the same patterns are being used, the same issues are being addressed in similar ways. So when there was a project floating around to migrate an Angular 1 application to a more up-to-date JavaScript framework (don’t ask me why…) I decided to take it on.
+I’m too old to be a front-end developer. Talk of [frameworks](https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282) and [js-library bingo](https://speakerdeck.com/petecampbell/javascript-bingo) makes me feel like a WWII veteran at a Segway convention. But then I went to [Devoxx US](https://devoxx.us/) and heard Ben Ilegbodu’s talk, ‘[Navigating the React solar system](https://cfp.devoxx.us/2017/talk/LRN-3691/Navigating_the_React_Solar_System)’, and I thought — it sounds like this stuff is actually getting there. The front end world now looks and sounds much more like the Java world - the same patterns are being used, the same issues are being addressed in similar ways. So when there was a project floating around to migrate an Angular 1 application to a more up-to-date JavaScript framework (don’t ask me why…) I decided to take it on.
 So, how do you learn React? First thing to know is that React is not a JavaScript framework in itself, so you will need a supporting structure for your application. 
 
 ## 1. Choose your Framework
@@ -56,7 +56,7 @@ Then, in your main app, wrap your components in a <Router> elements and then inc
 
 `<Route exact={true} path=”/” component={Home}/>`
 
-When to use component and when to use render? Well, I found that if you want to pass propeties down to a component, you can’t do it by passing the properties to the Router element. So say I had a sub-component called Comments that needed access to the Comments action, I couldn’t do
+When to use component and when to use render? Well, I found that if you want to pass properties down to a component, you can’t do it by passing the properties to the Router element. So say I had a sub-component called Comments that needed access to the Comments action, I couldn’t do
 `<Route path=”/comment” comment={this.props.comment} component={Comments}/>`
 because this would make the comment parameter accessible to the Route only, and not the Comment component. So I had to create a method like this:
 
@@ -215,7 +215,7 @@ To wire up a React Redux app, you need two methods — mapStateToProps and m
 
 `import * as actions from ‘./myactiondirectory/myactionjsfile’;`
 
-and bindActionCreators() is impoted from ‘redux’ and binds all the methods together. A well named method…
+and `bindActionCreators()` is imported from ‘redux’ and binds all the methods together. A well named method…
 This will allow all your action methods to be visible in your component properties, and it will decide which pieces of state need to notify which reducers when they change. This means that your reducers need only fire and switch through a subset of your state — so in the above example, the posts reducer wouldn’t fire on a comment update.
 Now we need to call connect.
 

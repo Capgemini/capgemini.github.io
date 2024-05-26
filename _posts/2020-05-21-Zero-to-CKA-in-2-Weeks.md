@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Zero to CKA in 2 Weeks"
-subtitle: "Some thoughts on the Certified Kubernetes Adminstrator exam and how I managed to pass it in 2 weeks with no prior knowledge of Kubernetes."
+subtitle: "Some thoughts on the Certified Kubernetes Administrator exam and how I managed to pass it in 2 weeks with no prior knowledge of Kubernetes."
 category: Kubernetes
 tags: [Kubernetes, CKA, Cloud]
 author: [mattantley]

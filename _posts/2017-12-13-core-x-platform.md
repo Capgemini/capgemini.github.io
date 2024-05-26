@@ -12,7 +12,7 @@ share: true
 
 Recently I looked into developing a cross platform .NET Core application. Up to a few years ago a .NET application was developed with the intention to run it on Windows. Not anymore. The landscape for .NET has changed dramatically over the past two years. And that’s probably because the landscape for Microsoft has changed as well.
 
-I understand there may an audience who says "with our programming language we've been able to do cross platform forever". Bear with me. You need to understand that for a developer using Microsoft .NET this is a big change. I went from being someone who found developing on 'not Windows' daunting, to being a developer who now embraces these platforms. For me, I have had to adapt but now have the flexibility to move in different directions based on my particular requirements and constraints at the time. I think open source, cross platform gives you flexibility where you need it most - at the point when you are code complete and need to move forward. Its great to know I have the option to run my code on an operating system of choice. And .NET Core will run most places on premise and anywhere on the cloud. It runs on Amazon ECS just as it can run in Azure, or in a Docker container that runs in Kubernetes or Openshift, or whatever.
+I understand there may an audience who says "with our programming language we've been able to do cross platform forever". Bear with me. You need to understand that for a developer using Microsoft .NET this is a big change. I went from being someone who found developing on 'not Windows' daunting, to being a developer who now embraces these platforms. For me, I have had to adapt but now have the flexibility to move in different directions based on my particular requirements and constraints at the time. I think open source, cross platform gives you flexibility where you need it most - at the point when you are code complete and need to move forward. Its great to know I have the option to run my code on an operating system of choice. And .NET Core will run most places on premise and anywhere on the cloud. It runs on Amazon ECS just as it can run in Azure, or in a Docker container that runs in Kubernetes or OpenShift, or whatever.
 
 Microsoft has been good at allowing developers to be productive relatively quickly, through their frameworks and tools, and that hasn’t changed. Below I demonstrate how to create a cross platform application with a short walk through and the tools you need. But there is more to .NET Core than just cross platform. It allows you to create .NET applications that are faster, cheaper and easier to maintain. Let’s touch on each of those areas. Note that the following applies to .NET Core and not the [.NET Core on the .NET Framework](https://docs.microsoft.com/en-us/dotnet/standard/choosing-core-framework-server).
 
@@ -80,7 +80,7 @@ You now have a project that you can begin to develop in Visual Studio Code. Now 
 
 VS Code will take a little while to download what it needs. Bear with it, its worth the wait. If you look at the Output window (Ctrl+Shift+U) you can see VS Code performing the download. An example on my Windows 10 machine:
 
-![downloading omnisharp](/images/2017-12-13-core-x-platform/omnisharp.png)
+![downloading OmniSharp](/images/2017-12-13-core-x-platform/omnisharp.png)
 
 You will now want to build and run the application. VS Code should provide a prompt to install the dependencies you need:
 

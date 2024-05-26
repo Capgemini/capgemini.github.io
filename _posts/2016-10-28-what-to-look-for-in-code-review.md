@@ -18,7 +18,7 @@ Once bad code has got into a system, it can be difficult to remove. Trying to fi
 Code review shouldn’t be a box-ticking exercise, but it can be helpful to have [a list of common issues][fog creek checklist] to watch out for. As well as the important question of whether the change will actually work, the main areas to consider are:
 
 * Security
-* Perfomance
+* Performance
 * Accessibility
 * Maintainability
 

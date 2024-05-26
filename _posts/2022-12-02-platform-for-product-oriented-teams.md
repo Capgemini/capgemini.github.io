@@ -16,7 +16,7 @@ share: true
 ## Products - Delivering Value
 
 First, some definitions. What do we mean by "Product"? For me, this is a very business-oriented term. Say you're a dairy farm, your products might be milk,
-cheese, ice-cream. This maps to the Agile definiton of "Product" as a vehicle to [deliver value](https://scrumguides.org/scrum-guide.html#product-backlog);
+cheese, ice-cream. This maps to the Agile definition of "Product" as a vehicle to [deliver value](https://scrumguides.org/scrum-guide.html#product-backlog);
 as in "Product Owner" - perhaps the cheesemaker in the dairy - the person who understands how applications impact their business and is ultimately responsible 
 for deciding which software changes are built and released by a team. And the important concepts behind product-oriented teams, for us software engineers,
 are twofold. 

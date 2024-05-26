@@ -88,7 +88,7 @@ When thinking about an area of waste we need to run it through a thought process
 
 #### 5.) Is there any risk to implementing the solution?
 
-  * We need to understand the effects of what we do, if fixing one thing breaks several others is it worthwhile? For instance, if we are updating a class that effects the way a webpage works, have we got a comprehensive set of both unit and automated regression tests we can run, to ensure we have not caused any unwanted side effects?
+  * We need to understand the effects of what we do, if fixing one thing breaks several others is it worthwhile? For instance, if we are updating a class that effects the way a web page works, have we got a comprehensive set of both unit and automated regression tests we can run, to ensure we have not caused any unwanted side effects?
 
 It's also a good idea but not always practical to run a root-cause analysis on why these problems have occurred as well. (If you are unfamiliar: [5 whys wiki](https://en.wikipedia.org/wiki/5_Whys), [5 whys](https://www.mindtools.com/pages/article/newTMC_5W.htm))
 

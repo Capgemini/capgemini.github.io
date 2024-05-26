@@ -46,7 +46,7 @@ For example, if you're using SVG, you could add an ARIA tag in order to portray 
 
 ARIA tags can also be used to describe the application to users of assistive technologies, tags such as `aria-hidden` or `aria-expanded` describe the state of the application, or using tags such as `aria-describedby` to provide assistive technologies with the correct content that goes with another piece of content on the page. When developing an interface, it's always useful to ask yourself, if this needs and if this could be enhanced through the use of relevant ARIA tags
 
-Roles are attributes that can be added to an element, for example, you could have a `<li>` tag, that is sitting inside a menu, adding a role to make it `<li role="menuitem">` will show that this element is inteded to be a menu item. Attaching roles onto any element will provide assistive technologies with information on how to handle a specific element.
+Roles are attributes that can be added to an element, for example, you could have a `<li>` tag, that is sitting inside a menu, adding a role to make it `<li role="menuitem">` will show that this element is intended to be a menu item. Attaching roles onto any element will provide assistive technologies with information on how to handle a specific element.
 
 [Further reading for more information on roles and supported ARIA tags.][globalAriaAndRolesTags]
 

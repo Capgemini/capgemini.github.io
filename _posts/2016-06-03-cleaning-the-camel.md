@@ -64,7 +64,7 @@ final Predicate orderTypeIsSuper
 from("direct:fulfilOrder")
 	.choice()
 		.when(orderTypeIsBasic)
-			.to("direct:fufilBasicOrder")
+			.to("direct:fulfilBasicOrder")
 		.when(orderTypeIsSuper)
 			.to("direct:fulfilSuperOrder")
 		.otherwise()
@@ -151,8 +151,8 @@ from("file:orderReporting")
 				.bean(OrderFileProcessor.class, "transformShopOrderLineMessage")
 			.endChoice()
         .unmarshal(orderDataReportFormat)
-		.aggregate(header(SALES_CHANNEL_ID), new OrderLineAggregrationStrategy())
-        .completionTimeout(orderAggregrationTimeout)
+		.aggregate(header(SALES_CHANNEL_ID), new OrderLineAggregationStrategy())
+        .completionTimeout(orderAggregationTimeout)
 	        .to("file:///temp/order_reporting_output?autoCreate=true")
         .end()
      .end();
@@ -173,8 +173,8 @@ from("direct:getOrderLineDataForSalesChannel")
    ....  
 
 from("direct:writeToReportFile")
-   .aggregate(header(SALES_CHANNEL_ID), new OrderLineAggregrationStrategy())
-      .completionTimeout(orderAggregrationTimeout)
+   .aggregate(header(SALES_CHANNEL_ID), new OrderLineAggregationStrategy())
+      .completionTimeout(orderAggregationTimeout)
 	     .to("file:///temp/order_reporting_output?autoCreate=true")
    .end();
 

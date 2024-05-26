@@ -27,7 +27,7 @@ Let's look at each of those in turn. Some are related to each other, sometimes i
 
 ## Everyone has something to teach
 ![Fig 1. Teaching gives you lots of options when responding to questions](/images/20141105_budo/01_xkcd_comic_teacher_changing.jpg)
-&copy; xckd.com
+&copy; xkcd.com
 
 > A teacher is one who makes himself progressively unnecessary.
 > <cite> Thomas Carruthers
@@ -38,7 +38,7 @@ Pairing with different people, therefore, can help (and has helped me) to think 
 
 ## If you compete instead of collaborating, the end result can suffer
 ![Fig 2. Collaboration is important, but it must be true collaboration](/images/20141105_budo/02_xkcd_interdisciplinary.png)
-&copy; xckd.com
+&copy; xkcd.com
 
 > Every man lives by exchanging.
 > <cite> Adam Smith
@@ -102,7 +102,7 @@ Recognising that different people learn in different ways will become instinctiv
 
 ## Talking is no substitute for doing
 ![Fig 6. If you never move on from planning, you'll get nowhere](/images/20141105_budo/06_xkcd_pep_talk.png)
-&copy; xckd.com
+&copy; xkcd.com
 
 > Think like a man of action, act like a man of thought.
 > <cite> Henri Bergson

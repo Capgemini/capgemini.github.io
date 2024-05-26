@@ -15,7 +15,7 @@ share: true
 
 As mentioned above, in a productionised domain, the set of deployed services and their accompanying resources will grow exponentially. Even when using a package manager like Helm, the sheer amount of deployable resources and packages can become hard to manage. 
 
-If you have ten Helm charts to deploy, you could be running ten install and/or upgrade commands to reach the desired cluster state for any given environment. Furthermore, if you have multiple environments (dev, test, preprod, prod etc), you then have ten commands _per environment_ to run - you can quickly see how this could become dificult - not to mention inefficient - to manage. 
+If you have ten Helm charts to deploy, you could be running ten install and/or upgrade commands to reach the desired cluster state for any given environment. Furthermore, if you have multiple environments (dev, test, preprod, prod etc), you then have ten commands _per environment_ to run - you can quickly see how this could become difficult - not to mention inefficient - to manage. 
 
 ## An Introduction to Helmsman
 

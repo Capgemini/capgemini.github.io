@@ -43,7 +43,7 @@ implement business logic, data structures and administration of a new applicatio
 us the ability to
 model custom objects and store them in the Drupal database; [Views](https://www.drupal.org/project/views) gives us
 the means to retrieve that data and display it in a myriad of ways. Modules
-like [Rules](https://www.drupal.org/project/rules); [Features](https://www.drupal.org/project/features) and [CTools](https://www.drupal.org/project/ctools) provide extensive options for implementing
+like [Rules](https://www.drupal.org/project/rules); [Features](https://www.drupal.org/project/features) and [Chaos Tools](https://www.drupal.org/project/ctools) provide extensive options for implementing
 specific business rules to model your domain specific data and application needs.
 
 This is all well and good, and uses the strengths of Drupal core and the wide range of community [contributed modules](https://www.drupal.org/project/project_module) to enable

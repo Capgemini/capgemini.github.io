@@ -131,7 +131,7 @@ The obvious solution is to run multiple tests in parallel. After investigation t
 
 SpecFlow has a tool called SpecFlow+ Runner. This is a paid-for addition. We're not against purchasing extra software, but for this aspect of the project we're trying to avoid tie-in to a particular tool. From the documentation it was also unclear if this tool would definitely help us.
 
-A tool called PNunit came up. Unfortunately that tool doesn't really run tests in parallel. What it does is split tests into sets to distribute across many build agents - not really what we are looking for.
+A tool called PNUnit came up. Unfortunately that tool doesn't really run tests in parallel. What it does is split tests into sets to distribute across many build agents - not really what we are looking for.
 
 ### Set Tests Running and Collect Results Later
 

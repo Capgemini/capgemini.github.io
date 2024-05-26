@@ -123,7 +123,7 @@ These files could really be any format but I have picked files containing JSON f
     "isActive": true,
     "accountType": "current",
     "balance": "$1,227.39",
-    "name": "Ford Mcgowan",
+    "name": "Ford McGowan",
     "company": "SKINSERVE",
     "email": "fordmcgowan@example.com",
     "phone": "+1 (932) 403-2763",

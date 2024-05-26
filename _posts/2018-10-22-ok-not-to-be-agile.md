@@ -37,7 +37,7 @@ Our recent project's take on Agile for Integration involved, again, going back t
 
 #### Company-wide Software Installations
 
-Here is a second scenario where Agile is misused, and one with which you are probably familar:
+Here is a second scenario where Agile is misused, and one with which you are probably familiar:
 
 **Programme director:** Where is the project plan?
 

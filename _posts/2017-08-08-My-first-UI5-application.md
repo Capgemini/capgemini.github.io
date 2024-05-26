@@ -38,7 +38,7 @@ You must have version 1.7 or higher installed to proceed, if you do not meet thi
 Now that we've cleared the pre-requisites, we can download the IDE!
 
 #### Step 1
-Proceed to the [SAP Development tools](https://tools.hana.ondemand.com/#sapui5) webpage and download the relevant package for your environment.
+Proceed to the [SAP Development tools](https://tools.hana.ondemand.com/#sapui5) web page and download the relevant package for your environment.
 
 #### Step 2
 Extract the zipped files to either somewhere on your harddrive e.g. `C:\SAPWebIDE` on Windows, or to `/Applications/SAPWebIDE/` on OS-X.
