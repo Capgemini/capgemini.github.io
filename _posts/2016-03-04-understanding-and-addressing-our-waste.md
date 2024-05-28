@@ -96,7 +96,7 @@ It's also a good idea but not always practical to run a root-cause analysis on w
 An application takes 20 minutes to build and deploy locally and you need to do this to see any change you make (even if it's a HTML change - bit of a dramatisation as there are normally workarounds).
 
 #### What is the "real" problem?
-The problem may feel like a number of things e.g. a redesign of our system is needed (this may be our root cause), the sympton we see is that when a developers makes a change, it takes 20 minutes to see if it renders as expected on the UI. However the real problem here is that the developer keeps getting distrupted, so they are likely to get frustrated if this happens constantly as it's delaying them completing a task.
+The problem may feel like a number of things e.g. a redesign of our system is needed (this may be our root cause), the symptom we see is that when a developers makes a change, it takes 20 minutes to see if it renders as expected on the UI. However the real problem here is that the developer keeps getting disrupted, so they are likely to get frustrated if this happens constantly as it's delaying them completing a task.
 
 #### Is the problem within our remit/interest to fix?
 Yes, both within in our remit and interest to fix.

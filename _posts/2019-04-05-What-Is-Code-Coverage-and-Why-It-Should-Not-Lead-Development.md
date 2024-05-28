@@ -36,7 +36,7 @@ Let’s look at an example in somewhat pseudo code, let’s say you have a servi
         String data;
     
         if (contentTypeFlag.equals("JSON")) {
-            data = getJSONnDataFromDatabase();
+            data = getJSONDataFromDatabase();
         } else if (contentTypeFlag.equals("xml")) {
             data = getXMLDataFromDatabase();
         }

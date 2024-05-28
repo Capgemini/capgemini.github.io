@@ -31,7 +31,7 @@ This is very appealing and would obviously save a lot of time, but should we con
 #### A powerful, large ecosystem of packages
 > Use popular frameworks and tools, right out-of-the-box.
 
-As an open-source platform, Meteor does have a collaborative community base. As we'll discuss later, the package system implemented in every Meteor installation provides a simple and effective way of incorporating modules, addons, plugins (or whatever else you would like to call them) into a site by using a simple CLI. I'm always in favour of not having to re-invent the wheel everytime I write code.
+As an open-source platform, Meteor does have a collaborative community base. As we'll discuss later, the package system implemented in every Meteor installation provides a simple and effective way of incorporating modules, addons, plugins (or whatever else you would like to call them) into a site by using a simple CLI. I'm always in favour of not having to re-invent the wheel every time I write code.
 
 ## Application Structure
 With Meteor being a full-stack JavaScript platform, one would imagine there is code to manage both front-end and back-end requests/responses. Now how is this achieved? Let's take a look at the typical file structure a Meteor application must follow:
@@ -191,7 +191,7 @@ It's rather easy to find a wide range of resources, tutorials and even books for
 ### IDE's & Tools
 Many Integrated Development Environments (IDE) have started to incorporate working with Meteor with new plugins and tools. You can see some of these below:
 
-#### JetBrains Webstorm 9
+#### JetBrains WebStorm 9
 WebStorm 9 [integrates with Meteor](https://www.jetbrains.com/webstorm/help/using-meteor.html) including automatic recognition of Meteor projects, coding assistance, running and debugging apps.
 
 #### Atom

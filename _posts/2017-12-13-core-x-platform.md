@@ -36,7 +36,7 @@ Well, a key concept in .NET Core (not the .NET Framework) is side-by-side. It me
 
 ### Example
 
-Below is a short walk through to create a new cross platform .NET Core Web Api. You will need to download and install the [NET Core SDK](https://www.microsoft.com/net/download) and [Visual Studio Code](https://code.visualstudio.com/download) (probably in that order). You will also need [OmniSharp](https://github.com/OmniSharp/omnisharp-vscode) which is the engine that powers C# in Visual Studio Code, but you dont need to download that explictly, VS Code will do that for you (more on that later). I have tested the following on a Mac, Ubuntu 16.04 and Windows. These steps are the same across all three and that highlights an important point - a consistent tooling experience across all platforms.
+Below is a short walk through to create a new cross platform .NET Core Web Api. You will need to download and install the [NET Core SDK](https://www.microsoft.com/net/download) and [Visual Studio Code](https://code.visualstudio.com/download) (probably in that order). You will also need [OmniSharp](https://github.com/OmniSharp/omnisharp-vscode) which is the engine that powers C# in Visual Studio Code, but you dont need to download that explicitly, VS Code will do that for you (more on that later). I have tested the following on a Mac, Ubuntu 16.04 and Windows. These steps are the same across all three and that highlights an important point - a consistent tooling experience across all platforms.
 
 Once the .NET Core SDK has been installed, open a terminal window (or PowerShell). Note that if you are using PowerShell replace the '&&' with a ';' to chain up commands. 
 

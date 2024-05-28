@@ -9,7 +9,7 @@ comments: true
 share: true
 ---
 
-Here in the [Applied Innovation Exchange](https://appliedinnovationexchange.com/) we get to be part of some pretty excellent events. One notable example is ["Capgemini Week of Innovation Networks"](https://medium.com/applied-innovation-exchange/capgeminis-week-of-innovation-networks-cwin-kick-off-at-the-aie-ase-london-dda138951833) (CWIN) which happened in November 2017 on the 8th floor of our Holborn office. As part of this 5 start-ups were invited to pitch their businesses to the attendees, set up stands, demo their application or work and be involved with a round table/panel question time.
+Here in the [Applied Innovation Exchange](https://appliedinnovationexchange.com/) we get to be part of some pretty excellent events. One notable example is ["Capgemini Week of Innovation Networks"](https://medium.com/applied-innovation-exchange/capgeminis-week-of-innovation-networks-cwin-kick-off-at-the-aie-ase-london-dda138951833), which happened in November 2017 on the 8th floor of our Holborn office. As part of this 5 start-ups were invited to pitch their businesses to the attendees, set up stands, demo their application or work and be involved with a round table/panel question time.
 
 I loved hearing about the innovations and the way they were using technology to solve old problems such as payroll, inaccessible banks for the developing work and privacy in big data. I had a great conversation with one start-up about the challenges of rolling out a [Blockchain](https://en.wikipedia.org/wiki/Blockchain) platform, which got me thinking: what's the most difficult thing about putting some Blockchain in production?
 

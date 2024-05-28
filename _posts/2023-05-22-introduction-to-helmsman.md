@@ -252,7 +252,7 @@ Earlier on we stated that Service A doesn't have any additional requirements bey
 
 #### Service A
 
-Service A _only_ needs to specifiy the environment it sits within and some basic information about the deployment; name, image and container port, everything else is already defined in the base service chart that we're using (as defined in the Helmsman `dev.yaml` state file). 
+Service A _only_ needs to specify the environment it sits within and some basic information about the deployment; name, image and container port, everything else is already defined in the base service chart that we're using (as defined in the Helmsman `dev.yaml` state file). 
 
 ```
 metadata:

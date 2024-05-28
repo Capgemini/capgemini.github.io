@@ -115,7 +115,7 @@ class PlayerContractListenerTest {
 }
 ```
 
-`@ExtendWith` allows us to specify both the `PactConsumerTestExt` and the `MockitoExtention` to initialise our Mockito/Pact annotations.
+`@ExtendWith` allows us to specify both the `PactConsumerTestExt` and the `MockitoExtension` to initialise our Mockito/Pact annotations.
 
 `@PactTestFor` at the class level allows us to specify the providerName, this value is important as it will need to match the name used when we build the provider tests. `providerType` indicates that this is a test for an asynchronous system and the `pactVersion` allows us to declare the Pact version (V3 in this case).
 
