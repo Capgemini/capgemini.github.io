@@ -1,10 +1,10 @@
 
 .notepad-author-info {
-  padding: 2rem 1rem;
   background: $grey-lighter;
+  padding: 2rem 0;
 
   @include breakpoint(tablet) {
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 
   h2 {
@@ -15,10 +15,13 @@
 .notepad-post-author {
   @extend %notepad-clearfix;
   padding: 0 1.875rem;
-  text-align: center;
 
   @include breakpoint(mobileonly) {
     padding: 0 0.75rem;
+  }
+
+  .row-even & {
+    text-align: right;
   }
 
   h1 {
@@ -49,16 +52,19 @@
 }
 
 .notepad-post-author-avatar {
-  max-width: 50%;
-  float: none;
-  margin-right: 0;
-  margin-bottom: 1rem;
-  border-radius: 50%;
+  .row-odd & {
+    float: left;
+  }
 
-  @include breakpoint(mobileonly) {
-    width: 7.5rem;
-    height: 7.5rem;
-    padding: 0;
+  .row-even & {
+    float: right;
+  }
+  
+  img {
+    float: none;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 50%;
   }
 }
 
@@ -85,24 +91,3 @@
   padding-left: 0;
   margin-bottom: 1rem;
 }
-
-@include breakpoint(tablet) {
-  .notepad-post-author-avatar {
-    .row-odd & {
-      float: left;
-    }
-
-    .row-even & {
-      float: right;
-    }
-  }
-
-  .notepad-post-author {
-    text-align: left;
-
-    .row-even & {
-      text-align: right;
-    }
-  }
-}
-

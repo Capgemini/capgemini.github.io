@@ -1,8 +1,10 @@
 {% assign author_classes = 'author-info columns' %}
 <div class="author-info-wrapper clearfix">
   {% if author.avatar %}
-    {% assign author_classes = author_classes | append: ' medium-9' %}
-    <img itemprop="image" src="{{ author.avatar }}" class="notepad-post-author-avatar medium-3 columns" alt="">
+    {% assign author_classes = author_classes | append: ' small-8 medium-9' %}
+    <div class="notepad-post-author-avatar small-4 medium-3 columns">
+      <img itemprop="image" src="{{ author.avatar }}" class="author-avatar" alt="{{ author.name }}">
+    </div>
   {% endif %}
   
   <div class="{{ author_classes }}">
