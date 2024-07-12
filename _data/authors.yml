@@ -638,3 +638,10 @@ enamul_ali:
     description: "Enamul Ali is a Software Engineer at Capgemini, currently working in Custom Cloud Applications."
     avatar: /images/authors/enamul-ali.jpg
     team: java
+tom_spencer:
+    name: Tom Spencer
+    github: TomSpencerLondon
+    linkedin: https://www.linkedin.com/in/tom-spencer/
+    description: "Tom is a Software Engineer at Capgemini, with an interest in security, web applications and cloud computing"
+    avatar: /images/authors/tom-spencer.jpeg
+    team: java
