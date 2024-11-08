@@ -645,3 +645,11 @@ tom_spencer:
     description: "Tom is a Software Engineer at Capgemini, with an interest in security, web applications and cloud computing"
     avatar: /images/authors/tom-spencer.jpeg
     team: java
+charles_ofoegbu:
+    name: Tochukwu (Charles) Ofoegbu
+    github: cofoegbu
+    linkedin: http://uk.linkedin.com/in/tcofoegbu
+    description: "Charles is a Software Engineer at Capgemini, with an interest in delivering software solutions efficiently through automation and cloud technologies."
+    avatar:  /images/authors/charles-ofoegbu.jpeg
+    team: java
+
