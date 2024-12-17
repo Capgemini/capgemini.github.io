@@ -27,15 +27,6 @@
     {% endunless %}
   
     <ul class="no-bullet author-social-links">
-      {% if author.twitter %}
-      <li>
-        <a class="twitter-icon" href="https://twitter.com/{{ author.twitter }}" title="@{{ author.twitter }} Twitter">
-          <svg class="icon">
-            <use xlink:href="#twitter"></use>
-          </svg>&nbsp;Follow @{{ author.twitter }} on Twitter
-        </a>
-      </li>
-      {% endif %}
   
       {% if author.linkedin %}
       {% assign name = author.name | split: ' ' %}
