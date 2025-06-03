@@ -17,6 +17,13 @@ permalink: /404.html
 </div>
 
 <script>
+
+  // Add Google Analytics event.
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event' : 'page not found'
+  });
+  
   // on 2016-02-01 GitHub Pages upgraded to Jekyll3, which broke all blog posts with trailing slashes.
   // Try redirecting to no-slash version.
   var url = location.href;
