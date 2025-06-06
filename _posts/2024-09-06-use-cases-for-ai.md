@@ -2,11 +2,13 @@
 layout: post
 title: "Use Cases for AI"
 summary: "What should we be using AI for?"
-category: AI, Development
+category: AI
 tags: [AI, Machine Learning, Development, Testing]
 author: [sasaunde]
 comments: true
 share: true
+redirect_from:
+  - /ai,%20development/use-cases-for-ai/
 ---
 
 # Use Cases for Generative AI
