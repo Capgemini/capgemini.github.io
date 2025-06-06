@@ -2,7 +2,7 @@
 layout: post
 title: "The Hard Truths of Modernising Legacy Applications: Costs, Complexities, and Cloud-Native Benefits"
 summary: "Insights into the real-world challenges engineers and organisations face during legacy application modernisation, based on my hands-on experience across multiple modernisation projects"
-category: Development, Cloud Native
+category: Development
 tags: [Legacy Applications, Modernisation, Cloud Native]
 author: [charles_ofoegbu]
 comments: true
