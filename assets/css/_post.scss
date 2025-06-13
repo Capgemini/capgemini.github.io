@@ -279,6 +279,26 @@
   }
 }
 
+.footnotes {
+  
+  ol::before {
+    display: block;
+    content: "Footnotes";
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0 0 .75rem -1.25rem;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .reversefootnote {
+    font-size: 0.8rem;
+    margin-left: .5rem;
+  }
+}
+
 .notepad-post-share {
   padding: 3.75rem 0;
   font-size: 1.875rem;
