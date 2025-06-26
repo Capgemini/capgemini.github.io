@@ -10,7 +10,7 @@ tom_phethean:
     twitter: tsphethean
     github: tsphethean
     drupal: tsphethean
-    linkedin: http://uk.linkedin.com/in/tsphethean/en
+    linkedin: https://uk.linkedin.com/in/tsphethean/en
     description: "Tom is the Head of Web Platforms at Capgemini."
     avatar: https://avatars0.githubusercontent.com/u/638181?v=3&s=200
     team: web_platforms
@@ -26,7 +26,7 @@ alex_moreno:
 andrew_harmel-law:
     name: Andrew Harmel-Law
     twitter: al94781
-    linkedin: http://uk.linkedin.com/in/andrewbrucelaw/en
+    linkedin: https://uk.linkedin.com/in/andrewharmellaw
     github: andrewharmellaw
     description: "Andrew is the Java / Open Source Team Lead at Capgemini UK."
     avatar: https://avatars0.githubusercontent.com/u/1553476?v=3&s=460
@@ -60,7 +60,7 @@ malcolm_young:
 john_shaw:
     name: John Shaw
     twitter: johnfcshaw
-    linkedin: http://uk.linkedin.com/in/johnfcshaw/en
+    linkedin: https://uk.linkedin.com/in/johnfcshaw
     github: johnshaw1000
     description: "John is a Software Engineer and Agile enthusiast at Capgemini."
     avatar: https://avatars.githubusercontent.com/u/5745442?v=3
@@ -102,7 +102,7 @@ sasaunde:
     name: Sarah Saunders
     twitter: sasaunde
     description: "Sarah is a Senior Java Developer and Agile Evangelist at Capgemini"
-    linkedin: http://uk.linkedin.com/in/sarahsaunders1
+    linkedin: https://uk.linkedin.com/in/sarahsaunders1
     avatar: https://avatars1.githubusercontent.com/u/8041184?s=400&u=7cc5c2a724da9da59f02c5031a338574748b972f&v=4
 oliverpolden:
     name: Oliver Polden
@@ -113,10 +113,10 @@ geoff_lawrence:
     name: Geoff Lawrence
     twitter: geoffdoesstuff
     github: glawrence
-    linkedin: http://uk.linkedin.com/in/geofflawrence
+    linkedin: https://uk.linkedin.com/in/geofflawrence
     description: "Geoff is a Solution Engineer who enjoys both code and infrastructure but most of all loves building solutions, whatever the technology"
     team: java
-    avatar: https://avatars0.githubusercontent.com/u/1067355?v=3&s=200
+    avatar: /images/authors/geoff-lawrence.jpeg
 nick_walter:
     name: Nick Walter
     twitter: njwalter78
@@ -125,7 +125,7 @@ nick_walter:
     avatar: /images/authors/nick-walter.jpeg
 jon_hatfield:
     name: Jon Hatfield
-    linkedin: http://uk.linkedin.com/in/jonhatfield
+    linkedin: https://uk.linkedin.com/in/jonhatfield
     description: "Jon is a software engineer lead who likes good design and engineering principles"
     ex: true
 john_nash:
@@ -188,11 +188,12 @@ levi_govaerts:
 shana_dacres:
     name: Shana Dacres
     twitter: ms_dacres
-    linkedin: https://uk.linkedin.com/in/shana-dacres-ba18b444
+    linkedin: https://www.linkedin.com/in/shanadacres-lawrence/
     description: "Shana is a Software Engineer Lead at Capgemini UK."
     team: java
     github: lilmissShana
     avatar: https://avatars0.githubusercontent.com/u/15094437?v=3&s=200
+    ex: true
 phil_hardwick:
     name: Phil Hardwick
     github: PhilHardwick
@@ -491,6 +492,7 @@ cburns:
     description: "Chris is a software engineer who is interested in everything and anything from software design, development and delivery and all the bits in between."
     avatar: /images/authors/chris-burns.jpeg
     team: java
+    ex: true
 rhysjtevans:
     name: Rhys Evans
     github: rhysjtevans
@@ -499,6 +501,7 @@ rhysjtevans:
     description: "Rhys is a senior DevOps engineer at Capgemini and is an immense PowerShell Core advocate."
     avatar: https://avatars0.githubusercontent.com/u/26367633?s=460&v=4
     team: devops
+    ex: true
 harmelodic:
     name: Matt Smith
     github: Harmelodic
@@ -560,6 +563,7 @@ kali:
     description: "Kamar is a software engineer at Capgemini working on the Open Source Cloud Engineering team."
     avatar: https://avatars3.githubusercontent.com/u/69761722?s=400&u=deb864a932e768237d7a3fb62166520a133f2ef3&v=4
     team: java
+    ex: true
 jon_smith:
     name: Jonathan Smith
     description: "Jon has been with Capgemini since March 2019. He is a software developer specialising in Java."
@@ -588,6 +592,7 @@ lewis_vince:
     description: "Lewis is a senior full-stack engineer in Capgemini's Open Source Cloud Engineering team."
     avatar: https://avatars.githubusercontent.com/u/8005421?v=4
     team: java
+    ex: true
 shemsedin_callaki:
     name: Shemsedin Callaki
     github: Shemsedin
@@ -648,7 +653,7 @@ tom_spencer:
 charles_ofoegbu:
     name: Tochukwu (Charles) Ofoegbu
     github: cofoegbu
-    linkedin: http://uk.linkedin.com/in/tcofoegbu
+    linkedin: https://uk.linkedin.com/in/tcofoegbu
     description: "Charles is a Software Engineer at Capgemini, with an interest in delivering software solutions efficiently through automation and cloud technologies."
     avatar:  /images/authors/charles-ofoegbu.jpeg
     team: java

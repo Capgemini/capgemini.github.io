@@ -1,12 +1,14 @@
 title:            Capgemini Software Engineering
+description:      The Capgemini Software Engineering team blog, by engineers, for engineers
 logo:             logo.svg
 disqus_shortname: capgeminiengineering
 share:            true
-dropcap:			true
+dropcap:          true
 # Change url to your domain. Leave localhost server or blank when working locally.
 # or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same
 # whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
-url:        	 'https://capgemini.github.io'
+url:              'https://capgemini.github.io'
+repository:       'Capgemini/capgemini.github.io'
 
 # Owner/author information
 owner:

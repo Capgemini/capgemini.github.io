@@ -1,9 +1,12 @@
+name: local-capgemini-blog
+
 services:
   jekyll:
     image: jekyll/jekyll
+    container_name: jekyll
     volumes:
       - .:/srv/jekyll
       - ./vendor/bundle/:/usr/local/bundle
     ports:
       - "4000:4000"
-    command: jekyll serve --force_polling --drafts --future
+    command: jekyll serve --force_polling --drafts --future #--incremental
