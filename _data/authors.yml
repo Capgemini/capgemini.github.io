@@ -436,6 +436,7 @@ kriss:
     description: "Kriss Sulikowski is a Software Engineer at Capgemini, with an interest in .NET, .NET Core, DevOps, Microsoft Dynamics 365, software engineering."
     team: microsoftnetazure
     avatar: /images/authors/krzysztof.jpeg
+    ex: true
 jay_barden:
     name: Jay Barden
     twitter: jbarden7
@@ -443,7 +444,7 @@ jay_barden:
     linkedin: https://www.linkedin.com/in/jason-barden-8a715419/
     description: "Jay is a Senior Software Engineer at Capgemini. His interests include .NET, C#, TDD, Devops, Azure and Open Source."
     team: microsoftnetazure
-    avatar: https://secure.gravatar.com/avatar/a1d3199309999360768307a436593cdc
+    avatar: https://secure.gravatar.com/avatar/a1d3199309999360768307a436593cdc?s=200
 ian_crow:
     name: Ian Crow
     github: capgemini101
@@ -628,7 +629,7 @@ julie_vaccalluzzo:
     linkedin: https://www.linkedin.com/in/julievaccalluzzo/
     description: "Julie is a Software Engineer at Capgemini, with an interest in all things web, AI and Data Visualisation"
     team: web_platforms
-    avatar: "https://secure.gravatar.com/avatar/53708d12513167de1cb3e98067695dbf"
+    avatar: "https://secure.gravatar.com/avatar/53708d12513167de1cb3e98067695dbf?s=200"
 papa_anthony:
     name: Papa Anthony
     github: PapaAAnthony
