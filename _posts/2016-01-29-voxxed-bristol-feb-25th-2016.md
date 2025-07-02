@@ -60,4 +60,4 @@ You can also catch us at Devoxx UK from the 8th to 10th of June 2016.
 
 #### More information:
 * [Meet our people](https://capgemini.github.io/blog/team-promo-movie)
-* [Capgemini UK careers site](https://www.uk.capgemini.com/careers)
+* [Capgemini UK careers site](https://www.capgemini.com/gb-en/careers/)

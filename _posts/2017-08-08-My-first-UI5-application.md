@@ -46,9 +46,9 @@ Extract the zipped files to either somewhere on your harddrive e.g. `C:\SAPWebID
 Your workspace will be a folder inside of this directory called `serverworkspace`, I would keep back-ups of this folder if you aren't using source control!
 
 #### Step 3
-To run the SAP Web IDE locally you should enter your install folder and enter the `eclipse` folder and run `orion.exe`, this will run the IDE for you to access at the ip [`localhost:8080`](http://localhost:8080) and you will be on your own SAP Web IDE!
+To run the SAP Web IDE locally you should enter your install folder and enter the `eclipse` folder and run `orion.exe`, this will run the IDE for you to access at `localhost:8080` and you will be on your own SAP Web IDE!
 
-**Note**: For those that don't know, localhost is analagous to the ip `127.0.0.1`, so you can also access the IDE from [`http://127.0.0.1:8080`](http://127.0.0.1:8080).
+**Note**: For those that don't know, localhost is analagous to the ip `127.0.0.1`, so you can also access the IDE from `http://127.0.0.1:8080`.
 
 ---
 

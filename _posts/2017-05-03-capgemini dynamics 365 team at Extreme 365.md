@@ -106,6 +106,3 @@ The road map contained the most interesting information but disappointingly it h
 It&#39;s important to know where Microsoft Dynamics 365 is heading as those who prepare today will be successful tomorrow.
 
 More details can be found at [Extreme 2017](http://extremecrm.com/).
-
-[cap open positions]: https://www.uk.capgemini.com/careers/jobs/microsoft-dynamics-crm-developer-0
-[ben twitter]: https://twitter.com/benhosk

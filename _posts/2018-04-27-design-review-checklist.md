@@ -99,7 +99,7 @@ I've only briefly touched on a few points here, and some of them are big enough 
 [code reviews]: https://capgemini.github.io/learning/better-learning-code-reviews/
 [GDPR]: https://www.econsultancy.com/blog/69253-gdpr-10-examples-of-best-practice-ux-for-obtaining-marketing-consent
 [SVG]: https://capgemini.github.io/frontend/jekyll-svg-icons/
-[truncation]: https://mark.ie/blog/web-development/conversation-i-have-nearly-every-designer
+[truncation]: https://mark.ie/blog/a-conversation-i-have-with-nearly-every-designer/
 [grumpy]: https://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/
 [hide]: https://thenextweb.com/dd/2015/10/28/9-responsive-design-mistakes-you-dont-want-to-make/
 [real content]: https://www.creativebloq.com/features/design-with-real-content-for-a-better-ux

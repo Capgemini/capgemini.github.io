@@ -85,7 +85,7 @@ If you have any suggestions for improvement, please let me know using the issue 
 [Image Styles Display]: https://www.drupal.org/project/imagestyles
 [Spalp]: https://capgemini.github.io/drupal/spalp/
 [duck]: https://en.wikipedia.org/wiki/Rubber_duck_debugging
-[grain]: https://www.frankchimero.com/writing/the-webs-grain/
+[grain]: https://frankchimero.com/blog/2015/the-webs-grain/
 [grumpy]: https://humanwhocodes.com/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/
 [estimates]: https://capgemini.github.io/agile/estimation/
 [open source]: https://capgemini.github.io/tags/#Open%20source

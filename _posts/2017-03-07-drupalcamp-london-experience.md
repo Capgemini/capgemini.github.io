@@ -43,8 +43,8 @@ In the meantime I will be attending some Drupal meetups and trying to get involv
 
 
 [drupalcamp london]: https://drupalcamp.london
-[cap open positions]: https://www.uk.capgemini.com/careers/apply-now
-[cap career development]: https://www.uk.capgemini.com/careers/your-career-path/learning-development
+[cap open positions]: https://www.capgemini.com/gb-en/careers
+[cap career development]: https://www.capgemini.com/gb-en/careers/your-career-path/learning-development
 [matt twitter]: https://twitter.com/nmdmatt
 [danese twitter]: https://twitter.com/DivaDanese
 [malcom presentation]: /presentations/drupalcamp-code-review/

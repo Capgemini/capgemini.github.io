@@ -59,5 +59,5 @@ Just keep your eyes peeled in case you win and we get in touch...
 ## Join us?
 
 We’re involved in tons of conferences / meet-ups and our people attended, speak and help organise them too ([Women of Silicon Roundabout](https://capgemini.github.io/learning/women-in-tech-conf), [Lead Developer Conference](https://capgemini.github.io/learning/lead-developer/), [ContainerSched](https://capgemini.github.io/devops/sponsoring-containersched/), [FATJIL](https://capgemini.github.io/blog/capgemini-hiring-fatjil/) –just to show off a bit). 
-We're really keen on developing and expanding the knowledge of our people, it's part of our culture and it’s who we are. If your interested in joining us [our eyes are always open for the best talent on the block](https://www.uk.capgemini.com/careers/apply-now). 
+We're really keen on developing and expanding the knowledge of our people, it's part of our culture and it’s who we are. If your interested in joining us [our eyes are always open for the best talent on the block](https://www.capgemini.com/gb-en/careers). 
 

@@ -105,7 +105,7 @@ if (postsHandle.ready()) {
 > Meteor officially supports three user interface (UI) rendering libraries, Blaze, React and Angular.
 
 ### Blaze
-[Blaze](https://guide.meteor.com/blaze.html) was created as part of Meteor when it launched in 2011, and hence is claimed to be most integrated among the three with  Meteor architecture. It uses a [handlebarsJS](http://http://handlebarsjs.com/)-like templating syntax with HTML known as [Spacebars](http://blazejs.org/api/spacebars.html).
+[Blaze](https://guide.meteor.com/blaze.html) was created as part of Meteor when it launched in 2011, and hence is claimed to be most integrated among the three with  Meteor architecture. It uses a [handlebarsJS](https://handlebarsjs.com/)-like templating syntax with HTML known as [Spacebars](http://blazejs.org/api/spacebars.html).
 
 ```html 
 <template name="myPage">

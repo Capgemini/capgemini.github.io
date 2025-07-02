@@ -9,7 +9,7 @@ share: true
 description: "Hackathon experience on DevOps, BlueMix and Leadership model"
 ---
 
-Recently, I took part in a DevOps Hackathon organised by our [Capgemini University](https://www.uk.capgemini.com/careers/your-career-path/capgemini-university) in Les Fontaines. It was part of the overall Talent Week program which had an underlying theme "Leading All the Way".
+Recently, I took part in a DevOps Hackathon organised by our [Capgemini University](https://www.capgemini.com/gb-en/careers/why-join-capgemini/learning-and-development/) in Les Fontaines. It was part of the overall Talent Week program which had an underlying theme "Leading All the Way".
 Twenty four Capgemini Engineers with different technology backgrounds from six countries took part. We were to come up with an innovative solution for a real-life challenge faced by one of our clients, not unlike the unfortunate event in [Nice](http://www.bbc.com/news/entertainment-arts-36802565), and implement it with a DevOps mindset using [IBM Bluemix Platform](http://www.ibm.com/cloud-computing/bluemix/).
 The teams were assessed based on several criteria such as Approach, Innovation, Fitness for Purpose and Level of Engagement.
 

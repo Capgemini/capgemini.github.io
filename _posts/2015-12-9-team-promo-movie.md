@@ -37,4 +37,4 @@ We are currently recruiting permanent positions for:
 * Test Managers and Analysts
 * Project Managers and Business Analysts
 
-**Visit our [careers site](https://www.uk.capgemini.com/careers/apply-now) for more information or connect with us on [Linkedin](https://www.linkedin.com/company/capgemini).**
+**Visit our [careers site](https://www.capgemini.com/gb-en/careers/) for more information or connect with us on [Linkedin](https://www.linkedin.com/company/capgemini).**

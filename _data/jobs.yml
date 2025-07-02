@@ -4,11 +4,11 @@ default:
     description: "If you like the sound of what you've read and would like to join our team, we're hiring!"
 drupal:
     title: Join our Drupal team
-#    link: https://www.uk.capgemini.com/careers/jobs/senior-drupal-developer
+#    link: https://www.capgemini.com/gb-en/careers/jobs/senior-drupal-developer
     categories: [Drupal]
 java:
     title: Join our Java team
-#    link: https://www.uk.capgemini.com/careers/jobs/java-developer-0
+#    link: https://www.capgemini.com/gb-en/careers/jobs/java-developer-0
     categories: [Java, Scala]
 devops:
     title: Join our DevOps team
@@ -20,7 +20,7 @@ dynamics365:
     categories: [dynamics365]
 norway:
     title: Join our team in Norway
-#    link: http://jobb.capgemini.no
+#    link: https://www.capgemini.com/no-no/careers/
 architecture:
     title: Join our Architecture team
     link: https://www.capgemini.com/gb-en/careers/job-search/?search_term=Architecture&utm_source=githubmsblog&utm_medium=referral&utm_campaign=tracking

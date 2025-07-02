@@ -64,4 +64,4 @@ That's it for this post - we have other potential benefits that we're tracking a
 In the meantime, if you have any comments / questions, please share them in the comments section below, or tweet we on [@al94781](https://twitter.com/al94781).  I'd love to hear from you.
 
 ## Want to Work With Us?
-Fancy working as part of the team I'm talking about, or on any other number of exciting Digital projects?  Let us know because, [we're _always_ hiring](http://www.uk.capgemini.com/careers/job-opportunities).
+Fancy working as part of the team I'm talking about, or on any other number of exciting Digital projects?  Let us know because, [we're _always_ hiring](https://www.capgemini.com/gb-en/careers/).

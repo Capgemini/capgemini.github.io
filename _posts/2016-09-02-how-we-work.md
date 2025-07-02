@@ -130,7 +130,7 @@ But beyond this we're not going to formalise your development - that's up to you
 ## Like the sound of this? Come and join us!
 If this sounded like kind of place you'd like to work, we're glad.  There's a link at the bottom of this page to go to our job board. Alternatively you can contact either of us on Twitter.  We'd love to hear from you.
 
-[capgemini values]: https://www.uk.capgemini.com/careers/working-at-capgemini/our-values-culture
+[capgemini values]: https://www.capgemini.com/gb-en/about-us/who-we-are/values-and-ethics/
 [transparency]: https://capgemini.github.io/devops/transparency-of-things/
 [culture]: https://capgemini.github.io/development/techniques-for-a-better-culture
 [admit it]: https://capgemini.github.io/development/its-sometimes-clever-to-admit/

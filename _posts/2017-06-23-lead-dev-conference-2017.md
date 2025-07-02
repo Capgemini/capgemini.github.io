@@ -83,7 +83,7 @@ Overall, it was a great conference - well organised, with helpful friendly staff
 [donut]: http://larahogan.me/donuts/
 [slides]: http://2017.theleaddeveloper.com/blog/2017-06-12-slides-from-the-lead-developer-uk-2017 
 [purdah]: https://en.wikipedia.org/wiki/Purdah_(pre-election_period)
-[diversity]: https://www.uk.capgemini.com/careers/working-at-capgemini/respect-for-diversity
+[diversity]: https://www.capgemini.com/gb-en/about-us/csr/diversity-and-inclusion/
 [crystal]: https://speakerdeck.com/chuff18/tech-hiring-f
 [cate]: http://2017.theleaddeveloper.com/talks#cate-huston
 [jill]: http://2017.theleaddeveloper.com/talks#jill-wetzler

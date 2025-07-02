@@ -27,4 +27,4 @@ We are currently recruiting permanent positions for:
 * Test Managers and Analysts
 * Project Managers and Business Analysts
 
-**Sign up on [meetup.com](http://www.meetup.com/Find-A-tech-Job-In-London/events/226399944/), visit our [careers site](https://www.uk.capgemini.com/careers/apply-now) for more information  or connect with us on [Linkedin](https://www.linkedin.com/company/capgemini).**
+**Sign up on [meetup.com](http://www.meetup.com/Find-A-tech-Job-In-London/events/226399944/), visit our [careers site](https://www.capgemini.com/gb-en/careers) for more information  or connect with us on [Linkedin](https://www.linkedin.com/company/capgemini).**

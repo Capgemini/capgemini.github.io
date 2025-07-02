@@ -16,7 +16,7 @@ We are sharing our latest evolution, licensed under the [creative commons Attrib
 
 When documenting the grades our objectives were to:
 
-* be [actively inclusive](https://www.uk.capgemini.com/our-active-inclusion-strategy) (to ensure that we not only attract and recruit a diverse group of people, but also retain and develop those individuals once they are part of [our team](https://www.uk.capgemini.com/careers/meet-our-people))
+* be [actively inclusive](https://www.uk.capgemini.com/our-active-inclusion-strategy) (to ensure that we not only attract and recruit a diverse group of people, but also retain and develop those individuals once they are part of [our team](https://www.capgemini.com/gb-en/careers/meet-our-people))
 * be team-owned (it's ours!)
 * be generic (it won't be tied to technologies, so it is less likely to go out of date this way)
 * allow it to evolve (we can change it)
@@ -28,4 +28,4 @@ When documenting the grades our objectives were to:
 
 We have found the ladder has aided us in several ways. When hiring it's helped recruiters to understand what we expect from candidates. During interviews it assists us to see where someone would fit. When people join us the ladder provides a terms of reference for the expectations we have of you. Continuing through your career the ladder then assists forming the basis to understand how you can grow and demonstrate abilities to justify progression to more senior positions within the team.
 
-We've published it on our [GitHub](https://github.com/Capgemini/grade-ladder) and as a [GitHub Pages site](https://capgemini.github.io/grade-ladder/). If this sounds like the kind of place you'd like to work then you can check out our latest opportunities [here](https://www.uk.capgemini.com/careers).
+We've published it on our [GitHub](https://github.com/Capgemini/grade-ladder) and as a [GitHub Pages site](https://capgemini.github.io/grade-ladder/). If this sounds like the kind of place you'd like to work then you can check out our latest opportunities [here](https://www.capgemini.com/gb-en/careers/).

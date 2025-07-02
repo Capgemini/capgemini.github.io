@@ -524,7 +524,7 @@ If any accessibility bugs are found, we encourage consumers to raise issues on t
 
 ## Thinking of contributing?
 
-- If you would like to know more about the library, feel free to contact [Daniele Zurico](daniele.zurico@capgemini.com) or [Isaac Babalola](isaac.babalola@capgemini.com).
+- If you would like to know more about the library, feel free to contact [Daniele Zurico](mailto:daniele.zurico@capgemini.com) or [Isaac Babalola](mailto:isaac.babalola@capgemini.com).
 
 - If you are interested in using the library, it is now publicly available on [npm](https://www.npmjs.com/package/@capgeminiuk/dcx-react-library).
 
