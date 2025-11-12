@@ -2,7 +2,7 @@
 layout: post
 title: "The Standard Model: Fundamental Forces of Software Engineering"
 summary: "Just as the universe is governed by a handful of fundamental forces, software engineering is also shaped by three irreducible forces, drawn from the deep structure of our discipline; they define what is possible, what is difficult, and why certain patterns of success and failure recur."
-category: Software Engineering
+category: Engineering
 author: stuart_williams
 tags: [Development, Engineering, Learning, Methodology, Theory]
 comments: true
