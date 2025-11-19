@@ -138,6 +138,13 @@
     margin: 0 auto 2em;
     max-width: $width-full;
     font-size: 1.125rem;
+    line-height: 1.5;
+
+    th,
+    td {
+      font-size: inherit;
+      line-height: inherit;
+    }
   }
 
   img {
