@@ -3,7 +3,7 @@ layout: post
 title: "Capgemini UK Engineering's Response to the Google (Anti-)Diversity Manifesto"
 description: "We feel it incumbent upon us to clearly state what we think makes a great engineering team."
 category: Engineering
-author: [_capgemini_uk_engineers]
+author: [capgemini_uk_engineers]
 tags: [Skills, Engineering, Diversity, Culture]
 share: true
 ---
