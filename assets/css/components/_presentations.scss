@@ -23,14 +23,15 @@
 
 .presentation-preview {
   min-height: 14rem;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .presentation-thumbnail {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .presentation-event {
