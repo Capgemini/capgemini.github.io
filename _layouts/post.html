@@ -3,7 +3,7 @@
   {% assign authors = authors | push: site.data.authors[auth] %}
 {% endfor %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 {% include head.html %}
 </head>
@@ -30,7 +30,7 @@
       </div>
     </header>
 
-    <article class="notepad-post-content post tag-simple">
+    <article class="notepad-post-content post tag-simple" lang={{ page.language | default: "en-GB" }}>
       <div class="article-body" itemprop="description articleBody">{{ content }}</div>
     </article>
       <div class="cf"></div>

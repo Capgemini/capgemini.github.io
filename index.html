@@ -19,7 +19,7 @@ tags: [Capgemini, engineering, blog]
       </div>
       <div class="small-12 medium-9 large-10 columns">
         <header class="notepad-post-header">
-          <h3 class="notepad-post-title">
+          <h3 class="notepad-post-title" lang={{ post.language | default: "en-GB" }}>
             <a href="{{ post.url }}">{{ post.title }}{% if post.subtitle %}
               <span class="post-subtitle">{{ post.subtitle }}</span>
               {% endif %}</a>
@@ -38,7 +38,7 @@ tags: [Capgemini, engineering, blog]
             By {{ authornames | join: ', ' }}
           </p>
         </header>
-        <section class="notepad-post-excerpt">
+        <section class="notepad-post-excerpt" lang={{ post.language | default: "en-GB" }}>
           <p>
             {% if post.summary %}
               {{ post.summary }}

@@ -1,4 +1,4 @@
-<h1 itemprop="name">{{ page.title }}{% if page.subtitle %}
+<h1 itemprop="name" lang={{ page.language | default: "en-GB" }}>{{ page.title }}{% if page.subtitle %}
   <span class="post-subtitle">{{ page.subtitle }}</span>
   {% endif %}
 </h1>
