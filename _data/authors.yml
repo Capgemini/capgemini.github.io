@@ -666,4 +666,10 @@ stuart_williams:
     description: "Stuart is Head of Software Engineering at Capgemini."
     avatar:  /images/authors/stuart-williams.jpg
     team: default
-
+sindre_kjelsrud:
+    name: Sindre Kjelsrud
+    github: sindrekjelsrud
+    linkedin: https://www.linkedin.com/in/sindrekjelsrud/
+    description: "Sindre is a Software Engineer at Capgemini, with an interest in open source and free software."
+    avatar:  /images/authors/sindre_kjelsrud.jpg
+    team: default

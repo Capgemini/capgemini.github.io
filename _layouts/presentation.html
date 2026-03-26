@@ -43,6 +43,8 @@
           {% assign videoembed = page.video | replace: "watch?v=", "embed/" %}
           {% elsif page.video contains "vimeo" %}
           {% assign videoembed = page.video | replace: "vimeo.com", "player.vimeo.com/video" %}
+          {% elsif page.video contains ".mp4" %}
+          {% assign videoembed = page.video %}
           {% endif %}
           <div class="small-12 medium-8 small-centered columns">
             <h2><a href="{{ page.video }}">Video</a></h2>

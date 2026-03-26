@@ -11,4 +11,10 @@
   {% endif %}
 </p>
 
+{% if page.language %}
+  {% for language in site.data.languages %}
+    {% if page.language == language.code %}<p>This talk was given in <span>{{ language.name }}.</span></p>{% endif %}
+  {% endfor %}
+{% endif %}
+
 {% include post-meta-author.html %}
