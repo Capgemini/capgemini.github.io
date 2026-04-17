@@ -673,3 +673,10 @@ sindre_kjelsrud:
     description: "Sindre is a Software Engineer at Capgemini, with an interest in open source and free software."
     avatar:  /images/authors/sindre_kjelsrud.jpg
     team: default
+tonystr:
+    name: Tony Strømsnæs
+    github: tonystr
+    linkedin: https://www.linkedin.com/in/tonystr/
+    description: "Tony is a Norwegian Software Engineer, interested in all things tech."
+    avatar: /images/authors/tonystr.png
+    team: default
