@@ -6,7 +6,11 @@ services:
     container_name: jekyll
     volumes:
       - .:/srv/jekyll
-      - ./vendor/bundle/:/usr/local/bundle
+      - jekyll_gems:/usr/local/bundle
     ports:
       - "4000:4000"
-    command: jekyll serve --force_polling --drafts --future #--incremental
+    command: >
+      sh -c "bundle install && jekyll serve --force_polling --drafts --future"
+
+volumes:
+  jekyll_gems:
