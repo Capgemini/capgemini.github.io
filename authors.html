@@ -14,12 +14,7 @@ chart: true
   {% assign author = authorloop[1] %}
   {% unless author.ex %}
     {% include author-posts-capture.html %}
-    {% if posts_by_author.size > 0 or presentations_by_author.size > 0 %}
-      <div class="notepad-author-info row row-{{ rowstyle }}" id="author-{{ author.name | slugify }}">
-        {% include author-info.html %}
-        {% include author-posts.html %}
-      </div>
-    {% endif %}
+    {% include author-loop.html %}
   {% endunless %}
 {% endfor %}
 

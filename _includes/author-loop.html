@@ -1,0 +1,6 @@
+{% if posts_by_author.size > 0 or presentations_by_author.size > 0 %}
+  <div class="notepad-author-info row row-{{ rowstyle }}">
+    {% include author-info.html %}
+    {% include author-posts.html %}
+  </div>
+{% endif %}
