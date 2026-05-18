@@ -11,4 +11,3 @@ image: https://i.vimeocdn.com/video/644892159_640.jpg
 slides: https://www.slideshare.net/RichardMcMenamin2/using-react-native-to-create-a-reusable-mobile-app-architecture
 slidesembed: https://www.slideshare.net/slideshow/embed_code/key/8KhUZ87Av4tOBO
 ---
-[View the video](https://skillsmatter.com/skillscasts/10369-lightning-talk-using-react-native-to-create-a-reusable-mobile-app-architecture-intermediate#video)

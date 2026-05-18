@@ -11,4 +11,3 @@ image: https://i.vimeocdn.com/video/584777623_640.jpg
 slides: https://www.slideshare.net/RichardMcMenamin2/using-react-js-to-drive-change-at-a-car-maker
 slidesembed: https://www.slideshare.net/slideshow/embed_code/key/cweQ7MidPrvQnD
 ---
-[View the video](https://skillsmatter.com/skillscasts/8467-using-react-to-drive-change-at-a-car-maker#video)

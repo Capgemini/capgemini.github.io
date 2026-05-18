@@ -11,7 +11,7 @@ summary: "The Capgemini UK Platform Engineering team is sponsoring ContainerSche
 ---
 ## We’re Sponsoring ContainerSched! (London 8-9 June)
 
-Coinciding with our [our sponsorship of Devoxx UK](https://capgemini.github.io/agile/were-heading-to-devoxx/) we're also sponsoring, talking at and attending [ContainerSched 2016](https://skillsmatter.com/conferences/7429-containersched-2016-the-container-and-scheduler-conference) at the same time!
+Coinciding with our [our sponsorship of Devoxx UK](https://capgemini.github.io/agile/were-heading-to-devoxx/) we're also sponsoring, talking at and attending ContainerSched 2016 at the same time!
 
 ContainerSched UK has two days packed full of platform and container goodies, with everything from Mesos to Kubernetes, Calico to Weave and Docker to Rkt. We're looking forward to meeting, learning and talking all things DevOps, containers and schedulers!
 
