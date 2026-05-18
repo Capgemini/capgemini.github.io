@@ -39,37 +39,33 @@
           {{ content }}
 
           {% if page.video %}
-          {% if page.video contains "youtube" %}
-          {% assign videoembed = page.video | replace: "watch?v=", "embed/" %}
-          {% elsif page.video contains "vimeo" %}
-          {% assign videoembed = page.video | replace: "vimeo.com", "player.vimeo.com/video" %}
-          {% elsif page.video contains ".mp4" %}
-          {% assign videoembed = page.video %}
-          {% endif %}
-          <div class="small-12 medium-8 small-centered columns">
+            {% if page.video contains "youtube" %}
+              {% assign videoembed = page.video | replace: "watch?v=", "embed/" %}
+            {% elsif page.video contains "vimeo" %}
+              {% assign videoembed = page.video | replace: "vimeo.com", "player.vimeo.com/video" %}
+            {% elsif page.video contains ".mp4" %}
+              {% assign videoembed = page.video %}
+            {% endif %}
             <h2><a href="{{ page.video }}">Video</a></h2>
             <div class="flex-video">
               <iframe src="{{ videoembed }}" class="presentation-content presentation-video">
                 <p>Your browser does not support iframes. Please visit <a href="{{ page.video }}">{{ page.video }}</a> to view the presentation.</p>
               </iframe>
             </div>
-          </div>
           {% endif %}
 
           {% if page.slides %}
-          {% if page.slidesembed %}
-          {% assign slidesembed = page.slidesembed %}
-          {% else %}
-          {% assign slidesembed = page.slides %}
-          {% endif %}
-          <div class="small-12 medium-8 small-centered columns">
+            {% if page.slidesembed %}
+              {% assign slidesembed = page.slidesembed %}
+            {% else %}
+              {% assign slidesembed = page.slides %}
+            {% endif %}
             <h2><a href="{{ page.slides }}">Slides</a></h2>
             <div class="flex-video">
               <iframe src="{{ slidesembed }}" class="presentation-content presentation-slides">
                 <p>Your browser does not support iframes. Please visit <a href="{{ page.slides }}">{{ page.slides }}</a> to view the presentation.</p>
               </iframe>
             </div>
-          </div>
           {% endif %}
 
         </div>
