@@ -680,3 +680,9 @@ tonystr:
     description: "Tony is a Norwegian Software Engineer, interested in all things tech."
     avatar: /images/authors/tonystr.png
     team: default
+sahitya_pai:
+    name: Sahitya Pai
+    linkedin: https://www.linkedin.com/in/sahitya-pai
+    description: "Sahitya is a Software Engineer specialising in web development, cloud, and DevOps, with an enduring curiosity for the ideas behind the systems we build."
+    avatar: /images/authors/sahitya-pai.jpg
+    team: default
