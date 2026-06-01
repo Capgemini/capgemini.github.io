@@ -16,7 +16,7 @@ featured: false
 
 As a relatively new developer (I've only been writing code and learning for just over 3 years) this has been a bit of a revelation for me. I'm sure for most seasoned developers this is old news but it's improved my productivity no end and it's worth making a habit of it.
 
-So you've found this new library and it looks really cool, nice syntax, good abstractions and you want to try it. But after doing their "hello world", you want to do something more "real world" and you find you don't know how to do what you want from the README.md. Working with Open Source projects I increasingly find myself looking at sparse documentation thinking, "I'm sure it said it could do this, but there's not an example of it here". So what do you do when there's no documentation for your idea, but you know it can be done?
+So you've found this new library and it looks really cool, nice syntax, good abstractions and you want to try it. But after doing their "hello world", you want to do something more "real world" and you find you don't know how to do what you want from the README.md. Working with open source projects I increasingly find myself looking at sparse documentation thinking, "I'm sure it said it could do this, but there's not an example of it here". So what do you do when there's no documentation for your idea, but you know it can be done?
 
 When in this situation, I start a process of looking through a number of places that I haven't before. This is not just googling for the answer for hours until I find some obscure forum post of someone who's done the same.
 

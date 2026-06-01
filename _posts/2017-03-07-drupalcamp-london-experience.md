@@ -33,7 +33,7 @@ I am very happy to have met some friendly people and I am committed to help and 
 
 ## Non-session perspective
 
-As I had other duties I couldn't attend all sessions. But I was able to attend some sessions and the Keynotes, with special mention to the Saturday keynote from [Matt Glaman][matt twitter], it was very motivational and made me think anyone could evolve as a developer if they try and search the resources to get the knowledge. And the closing keynote from [Danese Cooper][danese twitter] was very inspirational as well about what Open Source is and what should be, and that we, the developers, have the power to make it happen. And we could also enjoy Malcom Young's presentation about [Code Reviews][malcom presentation]. 
+As I had other duties I couldn't attend all sessions. But I was able to attend some sessions and the Keynotes, with special mention to the Saturday keynote from [Matt Glaman][matt twitter], it was very motivational and made me think anyone could evolve as a developer if they try and search the resources to get the knowledge. And the closing keynote from [Danese Cooper][danese twitter] was very inspirational as well about what open source is and what should be, and that we, the developers, have the power to make it happen. And we could also enjoy Malcom Young's presentation about [Code Reviews][malcom presentation]. 
 
 ## Conclusion
 

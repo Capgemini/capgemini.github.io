@@ -9,7 +9,7 @@ tags: [.NET, .NET Core, Docker, DevOps]
 comments: true
 share: true
 ---
-Since starting on my journey down the Microsoft Open Source road, one of the things I have been introduced to is Docker. Increasingly, I have looked for opportunities where I can use Docker when developing my .NET applications. DevOps has always seemed like a good fit. 
+Since starting on my journey down the Microsoft open source road, one of the things I have been introduced to is Docker. Increasingly, I have looked for opportunities where I can use Docker when developing my .NET applications. DevOps has always seemed like a good fit. 
 
 I like the consistency Docker gives me. I can develop, build, test and publish my applications in a consistent environment. It also means transitioning my .NET Application across environments should be relatively frictionless (if I choose to deploy as a Docker container).
 

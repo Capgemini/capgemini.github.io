@@ -4,7 +4,7 @@ title: "Modern Frontends live"
 subtitle: "a summary of ‘uncut gems’"
 summary: "Take aways worth knowing for frontend developers"
 category: Frontend
-tags: [Frontend, Browser, Web, Open Source]
+tags: [Frontend, Browser, Web, Open source]
 author: [julie_vaccalluzzo]
 comments: true
 share: true

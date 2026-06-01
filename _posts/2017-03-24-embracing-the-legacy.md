@@ -43,7 +43,7 @@ I believe there are several important aspects to ‘Embracing the Legacy’ and 
 
 From personal experience this is a biggie. I joined a project recently and got landed with a role that involved the transformation of an old legacy system. Did I get slightly disappointed when I knew how old the system was and the technology stack it utilised? Yes. However, I looked at the technology stack, the requirements of the Proof of Concept (*PoC*) we were tasked with, and thought to myself; ‘I could instil some change here for the better’. One key aspect of the PoC was to move away from proprietary software and go open source.
 
-*Open Source*...
+*Open source*...
 
 Those two words immediately open up the door for change and the chance to bring in some new technologies that could not only mean fresh skills, but also a more up-to-date tech stack to work with. Moreover, the first win I had was to move away from using Rational ClearCase for our version control system (*I did tell you it was an old legacy system*...), and start using Git.
 

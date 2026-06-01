@@ -4,7 +4,7 @@ title: "Platforms to support Product Oriented Teams"
 subtitle: "How to create a truly usable accelerator to allow dev teams to focus on business needs"
 summary: "For a dev team to be fully product-oriented with sprints delivering only business value, there must be a supporting platform to manage more technical requirements. What would this platform look like?"
 category: DevSecOps
-tags: [Cloud, Platforms, Product Centric, Open Source]
+tags: [Cloud, Platforms, Product Centric, Open source]
 author: [sasaunde]
 comments: true
 share: true

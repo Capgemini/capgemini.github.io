@@ -1,7 +1,7 @@
 ---
 layout: presentation
 category: Presentations
-tags: [Open Source]
+tags: [Open source]
 author: [sindre_kjelsrud]
 comments: true
 title: Introduction to Open Source

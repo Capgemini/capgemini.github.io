@@ -3,7 +3,7 @@ layout: post
 title: "There isn't a module for that already?"
 description: "Working with the grain of web technology to give clients what they need, rather than struggling against it to try and give them what they want. Along the way, introducing two new Drupal modules: CKEditor Datetime and Image Styles Display"
 category: Drupal
-tags: [Development, Open Source]
+tags: [Development, Open source]
 author: malcolm_young
 comments: true
 share: true
