@@ -30,7 +30,7 @@ let gulp = require('gulp');
 ```
 
 ### Installing Gulp
-To install Gulp you should run the following in the route directory of your project (you can use the `-g` flag to install globally):
+To install Gulp you should run the following in the root directory of your project (you can use the `-g` flag to install globally):
 
 ```
 npm install --save-dev gulp
