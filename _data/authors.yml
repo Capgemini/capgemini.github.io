@@ -686,3 +686,10 @@ sahitya_pai:
     description: "Sahitya is a Software Engineer specialising in web development, cloud, and DevOps, with an enduring curiosity for the ideas behind the systems we build."
     avatar: /images/authors/sahitya-pai.jpg
     team: default
+maream_sefan:
+    name: Maream Sefan
+    github: Mareamsefan
+    linkedin: https://www.linkedin.com/in/maream-sefan/
+    description: "Cloud-focused developer with strong skills in object-oriented programming languages and experience with frontend technologies. Completed a bachelor thesis on Terraform and cloud solutions, with a strong interest in infrastructure as code, cloud platforms, and automation. Also passionate about cybersecurity and machine learning, bringing versatile technical expertise to innovative projects."
+    team: default
+    avatar: /images/authors/maream-sefan.jpeg
