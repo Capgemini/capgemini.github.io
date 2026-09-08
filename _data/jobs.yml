@@ -16,7 +16,7 @@ devops:
     categories: [DevOps]
 dynamics365:
     title: Join our Microsoft Dynamics 365 team
-    link: https://www.capgemini.com/gb-en/careers/jobs/microsoft-dynamics-crm-developer/?utm_source=githubmsblog&utm_medium=referral&utm_campaign=tracking
+#    link: https://www.capgemini.com/gb-en/careers/jobs/microsoft-dynamics-crm-developer/?utm_source=githubmsblog&utm_medium=referral&utm_campaign=tracking
     categories: [dynamics365]
 norway:
     title: Join our team in Norway
@@ -35,7 +35,7 @@ microsoftnetazure:
     categories: [Microsoft, .NET, Azure]
 web_platforms:
     title: Join our Web Platforms team
-    link: https://www.capgemini.com/gb-en/careers/jobs/senior-front-end-developer/
+#    link: https://www.capgemini.com/gb-en/careers/jobs/senior-front-end-developer/
     categories: [Frontend, React]
 Digital_Security_and_Trust:
     title: Join our Digital Security and Trust Team

@@ -163,6 +163,6 @@ If you're planning a cloud migration or stuck in the middle of one, take a step 
 **Are you just moving old problems to a new place, or solving them for good?** The journey isn’t 
 easy. But staying stuck in the past is far riskier than taking the bold step forward.
 
-[^DBXLabs]: [DBX Labs $46 Million Cost Savings](https://www.dbxlabs.com/dollar46-million-cost-savings-legacy-system-migration-to-postgresql-success-story)
+[^DBXLabs]: [DBX Labs $46 Million Cost Savings](https://web.archive.org/web/20250719122415/https://www.dbxlabs.com/dollar46-million-cost-savings-legacy-system-migration-to-postgresql-success-story)
 [^EnterpriseDB]: [Open Source is the New Data Center Standard](https://www.enterprisedb.com/blog/open-source-new-data-center-standard)
 [^ScaleGrid]: [PostgreSQL vs. Oracle: Difference in Costs...](https://scalegrid.io/blog/postgresql-vs-oracle-difference-in-costs-ease-of-use-functionality)

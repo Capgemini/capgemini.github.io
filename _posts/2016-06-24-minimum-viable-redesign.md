@@ -50,9 +50,9 @@ Along with software upgrades, redesigns should be considered as part of a busine
 [zen]: http://www.csszengarden.com/
 [dates at random]: http://www.red-route.org/quotes/ellen-ullman-dates-chosen-random
 [style guides]: https://capgemini.github.io/drupal/component-based-design/
-[triangle]: https://www.atlassian.com/agile/agile-iron-triangle
+[triangle]: https://www.atlassian.com/agile/agile-at-scale/agile-iron-triangle
 [kent beck]: https://twitter.com/kentbeck/status/596007846887628801
-[gallery]: http://red-route.org/articles/the%20gallery%20guide
+[gallery]: https://red-route.org/tags/the-gallery-guide
 [impact mapping]: https://www.impactmapping.org/
 [pareto]: https://en.wikipedia.org/wiki/Pareto_principle
 [not enough information]: https://capgemini.github.io/learning/how-not-to-lead/#not-enough-information

@@ -42,7 +42,7 @@ Code reviews are an ideal place to encourage a mindset of [caring about quality]
 
 The code review can also be a springboard for conversation, and an opportunity to explain the thinking behind a code change (although beware of the temptation to [bikeshed](https://en.wikipedia.org/wiki/Parkinson%27s_law_of_triviality)).
 
-For these reasons, the reviewers shouldn't just be the senior devs - quality is everybody's responsibility. Similarly, the senior members of the team shouldn't imagine that [their code doesn't need to be reviewed](http://blog.8thcolor.com/en/2014/04/5-reasons-you-are-not-doing-code-reviews/). Reviewers don't need to be the subject matter experts for that feature. Even if the review comments are "I don't understand this code" - that's a sign that the code may need more comments. In fact, code reviews are a great way to ease people into learning about new areas of your codebase.
+For these reasons, the reviewers shouldn't just be the senior devs - quality is everybody's responsibility. Similarly, the senior members of the team shouldn't imagine that [their code doesn't need to be reviewed](https://web.archive.org/web/20210614021923/http://blog.8thcolor.com/en/2014/04/5-reasons-you-are-not-doing-code-reviews/). Reviewers don't need to be the subject matter experts for that feature. Even if the review comments are "I don't understand this code" - that's a sign that the code may need more comments. In fact, code reviews are a great way to ease people into learning about new areas of your codebase.
 
 ### Lessons learned
 Everyone makes mistakes, and if you don't realise that it's a mistake, you'll never be able to learn.
