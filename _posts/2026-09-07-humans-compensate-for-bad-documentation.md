@@ -3,7 +3,7 @@ layout: post
 title: "The Documentation You Have Is Not The Documentation Your AI Needs"
 description: "Stale documentation was tolerable for humans. AI reads it just as confidently, and gets it just as wrong."
 summary: "Legacy systems like SharePoint and Documentum are full of outdated documentation describing how systems used to work. Humans compensated by checking dates and asking colleagues; AI does not, and treats stale information with the same confidence as accurate information. Drawing on Gartner, Deloitte, and Forbes Technology Council research, the piece argues documentation has to be fixed before AI sits on top of it, since MCP and similar access layers only amplify whatever quality already exists rather than fixing it."
-author: eirik_sander_fjeld
+author: eirik_sander-fjeld
 team: default
 category: Engineering
 tags: [AI, Documentation, Enterprise Software, MCP, Legacy Systems, Platform Engineering]
