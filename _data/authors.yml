@@ -693,3 +693,10 @@ maream_sefan:
     description: "Cloud-focused developer with strong skills in object-oriented programming languages and experience with frontend technologies. Completed a bachelor thesis on Terraform and cloud solutions, with a strong interest in infrastructure as code, cloud platforms, and automation. Also passionate about cybersecurity and machine learning, bringing versatile technical expertise to innovative projects."
     team: default
     avatar: /images/authors/maream-sefan.jpeg
+eirik_sander-fjeld:
+    name: Eirik Sander-Fjeld
+    github: eiriksf-capgemini
+    linkedin: https://www.linkedin.com/in/eiriksf
+    description: "Platform-focused DevOps Engineer and Tech Lead with strong skills in Infrastructure as Code, Kubernetes-based application environments, CI/CD and GitOps delivery models. Also passionate about AI-assisted developer tooling and cloud native projects."
+    team: default
+    avatar: /images/authors/eirik_sander-fjeld.png
