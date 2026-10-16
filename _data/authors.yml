@@ -700,3 +700,10 @@ eirik_sander-fjeld:
     description: "Platform-focused DevOps Engineer and Tech Lead with strong skills in Infrastructure as Code, Kubernetes-based application environments, CI/CD and GitOps delivery models. Also passionate about AI-assisted developer tooling and cloud native projects."
     team: default
     avatar: /images/authors/eirik_sander-fjeld.png
+salvatore_seidita:
+    name: Salvatore Seidita
+    github: six-fingers
+    linkedin: https://uk.linkedin.com/in/salvatoreseidita
+    description: "Senior Full Stack Engineer at Capgemini moving into Software Architecture"
+    avatar: /images/authors/salvatore-seidita.jpg
+    team: default
